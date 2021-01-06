@@ -542,112 +542,6 @@ service
 *****************************************:*/
 .service {
   padding: 125px 0;
-  /**** ABOUT US ****/
-  /**** contact ****/
-}
-
-.service .about {
-  padding: 100px 0;
-}
-
-.service .about_txt {
-  margin-bottom: 80px;
-  text-align: center;
-}
-
-@media screen and (max-width: 769px) and (min-width: 480px) {
-  .service .about .section_inner {
-    margin: 0 20px 50px 20px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .service .about .section_inner {
-    width: 90%;
-  }
-}
-
-.service .about_box {
-  margin-bottom: 50px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media screen and (max-width: 769px) and (min-width: 480px) {
-  .service .about_box {
-    margin: 0 20px 50px 20px;
-  }
-}
-
-.service .about_box:nth-child(even) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -webkit-flex-direction: row-reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
-.service .about_box:last-child {
-  margin-bottom: 0;
-}
-
-.service .about_box_left {
-  width: 30%;
-  padding: 20px;
-  text-align: center;
-}
-
-.service .about_box_right {
-  width: 70%;
-  padding: 20px;
-  background: #f3f3f3;
-}
-
-.service .about_icon {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-}
-
-.service .about_dl {
-  width: 70%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.service .about_dt {
-  width: 25%;
-}
-
-.service .about_dd {
-  width: 75%;
-}
-
-.service .top_contact {
-  padding: 100px 0;
-}
-
-.service .top_contact .section_inner {
-  width: 50%;
-  margin-bottom: 100px;
-}
-
-@media screen and (max-width: 480px) {
-  .service .top_contact .section_inner {
-    width: 80%;
-  }
-}
-
-.service .top_contact_txt {
-  margin-bottom: 80px;
-}
-
-.service .top_contact .btn {
-  text-align: center;
 }
 
 .service_content {
@@ -832,6 +726,112 @@ skill
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+/**** ABOUT US ****/
+.about {
+  padding: 100px 0;
+}
+
+.about_txt {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .about .section_inner {
+    margin: 0 20px 50px 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about .section_inner {
+    width: 90%;
+  }
+}
+
+.about_box {
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .about_box {
+    margin: 0 20px 50px 20px;
+  }
+}
+
+.about_box:nth-child(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.about_box:last-child {
+  margin-bottom: 0;
+}
+
+.about_box_left {
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+}
+
+.about_box_right {
+  width: 70%;
+  padding: 20px;
+  background: #f3f3f3;
+}
+
+.about_icon {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.about_dl {
+  width: 70%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about_dt {
+  width: 25%;
+}
+
+.about_dd {
+  width: 75%;
+}
+
+/**** contact ****/
+.top_contact {
+  padding: 100px 0;
+}
+
+.top_contact .section_inner {
+  width: 50%;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 480px) {
+  .top_contact .section_inner {
+    width: 80%;
+  }
+}
+
+.top_contact_txt {
+  margin-bottom: 80px;
+}
+
+.top_contact .btn {
+  text-align: center;
 }
 
 /****************************************:

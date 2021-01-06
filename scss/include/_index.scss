@@ -24,106 +24,6 @@ service
 .service {
     padding: 125px 0;
 
-    /**** ABOUT US ****/
-    .about {
-        padding: 100px 0;
-
-        &_txt {
-            margin-bottom: 80px;
-            text-align: center;
-        }
-
-        & .section_inner {
-
-            @include tab {
-                margin: 0 20px 50px 20px;
-            }
-
-            @include SP {
-                width: 90%;
-            }
-        }
-
-        &_box {
-            margin-bottom: 50px;
-            display: flex;
-
-            @include tab {
-                margin: 0 20px 50px 20px;
-            }
-
-            &:nth-child(even) {
-                flex-direction: row-reverse;
-            }
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-
-            &_left {
-                width: 30%;
-                padding: 20px;
-                text-align: center;
-
-            }
-
-            &_right {
-                width: 70%;
-                padding: 20px;
-                background: #f3f3f3;
-            }
-        }
-
-        &_icon {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-        }
-
-        &_dl {
-            width: 70%;
-            display: flex;
-        }
-
-        &_dt {
-            width: 25%;
-        }
-
-        &_dd {
-            width: 75%;
-        }
-
-    }
-
-
-
-    /**** contact ****/
-    .top_contact {
-
-        padding: 100px 0;
-
-        // & .section_ttl{
-        //   margin-bottom: 50px;
-        // }
-
-        & .section_inner {
-            width: 50%;
-            margin-bottom: 100px;
-
-            @include SP {
-                width: 80%;
-            }
-        }
-
-        &_txt {
-            margin-bottom: 80px;
-        }
-
-        & .btn {
-            text-align: center;
-        }
-    }
-
 
 
     &_content {
@@ -272,5 +172,107 @@ skill
         margin: 0 4vw;
         display: flex;
         align-items: center;
+    }
+}
+
+
+
+/**** ABOUT US ****/
+.about {
+    padding: 100px 0;
+
+    &_txt {
+        margin-bottom: 80px;
+        text-align: center;
+    }
+
+    & .section_inner {
+
+        @include tab {
+            margin: 0 20px 50px 20px;
+        }
+
+        @include SP {
+            width: 90%;
+        }
+    }
+
+    &_box {
+        margin-bottom: 50px;
+        display: flex;
+
+        @include tab {
+            margin: 0 20px 50px 20px;
+        }
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &_left {
+            width: 30%;
+            padding: 20px;
+            text-align: center;
+
+        }
+
+        &_right {
+            width: 70%;
+            padding: 20px;
+            background: #f3f3f3;
+        }
+    }
+
+    &_icon {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+
+    &_dl {
+        width: 70%;
+        display: flex;
+    }
+
+    &_dt {
+        width: 25%;
+    }
+
+    &_dd {
+        width: 75%;
+    }
+
+}
+
+
+
+/**** contact ****/
+.top_contact {
+
+    padding: 100px 0;
+
+    // & .section_ttl{
+    //   margin-bottom: 50px;
+    // }
+
+    & .section_inner {
+        width: 50%;
+        margin-bottom: 100px;
+
+        @include SP {
+            width: 80%;
+        }
+    }
+
+    &_txt {
+        margin-bottom: 80px;
+    }
+
+    & .btn {
+        text-align: center;
     }
 }
