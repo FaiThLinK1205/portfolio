@@ -1,0 +1,49 @@
+// mixin
+
+
+/********* PCファーストmixin*********************/
+
+//タブレット（PCファースト）
+@mixin tab {
+    @media screen and (max-width: $widthTab) and (min-width: $widthSP) {
+        @content;
+    }
+}
+
+
+
+//スマホ（PCファースト）
+@mixin SP {
+    @media screen and (max-width: $widthSP) {
+        @content;
+    }
+}
+
+
+
+
+/*************
+
+font-size定義
+
+**************/
+//$sizeにpx表示を入れて使う
+
+@mixin rem($size) {
+    font-size: $size + px; /*IE9以前に対応する*/
+    font-size: ($size / 16) + rem;
+}
+
+
+/*************
+
+flex定義
+
+**************/
+
+
+@mixin flex($justify: space-between, $wrap: nowrap) {
+    display: flex;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+}

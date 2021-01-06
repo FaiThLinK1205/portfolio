@@ -1,0 +1,39 @@
+// サイト共通で必要になる設定値
+// 変数定義用
+
+
+/**********
+
+変数管理
+
+**********/
+
+//color
+$cWhite: #fafafa;
+$cBlack: #333333;
+$cBlue: #00a0e9;
+
+// $cBgColor: #fffff6;
+
+
+
+//font-family
+$fontMain: "Noto Sans JP" "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",
+            Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+
+
+/*************
+
+レスポンシブ
+
+**************/
+
+
+// ブレイクポイント
+$widthPc: 1024px;
+$widthTab: 769; // PCファースト用
+$widthSP: 480px;
+
+
+
