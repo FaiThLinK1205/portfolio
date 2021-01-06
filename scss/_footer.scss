@@ -3,3 +3,22 @@
 footer
 
 *****************************************:*/
+
+.footer{
+  color: $cWhite;
+  line-height: 100px;
+  text-align: center;
+  background: $cBlue;
+
+  &_txt{
+    @include rem(20);
+
+    @include tab{
+      @include rem(10);
+    }
+    
+    @include SP{
+      @include rem(10);
+    }
+  }
+}
