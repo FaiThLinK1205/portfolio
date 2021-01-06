@@ -739,6 +739,10 @@ skill
   }
 }
 
+.about .section_ttl:after {
+  content: "ABOUT US";
+}
+
 .about_txt {
   margin-bottom: 80px;
   text-align: center;
@@ -871,6 +875,10 @@ skill
   .top_contact {
     padding: 50px 0;
   }
+}
+
+.top_contact .section_ttl:after {
+  content: "CONTACT";
 }
 
 .top_contact .section_inner {
