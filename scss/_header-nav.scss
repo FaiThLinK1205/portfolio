@@ -4,6 +4,52 @@ header
 
 *****************************************:*/
 
+.header {
+  width: 100%;
+  margin-top: 30px;
+  line-height: 55px;
+
+  @include tab {
+    line-height: 40px;
+  }
+
+  @include SP {
+    line-height: 28px;
+  }
+
+  @include flex();
+  align-items: center;
+
+  &_ttl {
+
+    @include rem(48);
+
+    @include tab {
+      @include rem(40);
+    }
+
+    @include SP {
+      @include rem(25);
+    }
+  }
+
+
+  &_logo {
+    width: 10%;
+    margin-left: 50px;
+    margin-right: 20px;
+
+    @include tab {
+      margin-left: 10px;
+    }
+
+    @include SP {
+      width: 7.5%;
+      margin-left: 5px;
+      margin-right: 8px;
+    }
+  }
+}
 
 
 
@@ -11,9 +57,350 @@ header
 
 /****************************************:
 
-nav (ハンバーガーメニュー含む)
+nav
 
 *****************************************:*/
 
+.nav {
+  margin-right: 50px;
+
+  @include tab {
+    margin: 0 auto;
+  }
+
+  @include SP {
+    margin: 0 auto;
+  }
+
+  &_list {
+    display: flex;
+    color: $cBlue;
+
+    @include tab {
+      display: block;
+    }
+
+    @include SP {
+      display: block;
+    }
+  }
+
+  &_item {
+    width: 150px;
+    @include rem(18);
+    text-align: center;
+    font-weight: bold;
+
+    &:hover {
+      color: $cBlack;
+    }
+
+    @include tab {
+      width: 100%;
+      @include rem(30);
+    }
+
+  }
+
+  &_en {
+    display: block;
+  }
+}
+
+/****************************************:
+
+ハンバーガーメニュー
+
+*****************************************:*/
+
+@include tab {
+  #nav-toggle {
+    position: fixed;
+    top: 32px;
+    right: 50px;
+    height: 40px;
+    cursor: pointer;
+
+    >div {
+      position: relative;
+      width: 50px;
+    }
+
+    span {
+      width: 100%;
+      height: 3px;
+      left: 0;
+      display: block;
+      background: #333;
+      position: absolute;
+      transition: transform .6s ease-in-out, top .5s ease;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 14px;
+      }
+
+      &:nth-child(3) {
+        top: 28px;
+      }
+    }
+
+  }
+
+  .open {
+    #nav-toggle span {
+      background: $cWhite;
+
+      &:nth-child(1) {
+        top: 15px;
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        top: 15px;
+        width: 0;
+        left: 50%;
+      }
+
+      &:nth-child(3) {
+        top: 15px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  /* z-index */
+  #nav-toggle {
+    z-index: 1000;
+  }
+
+  #gloval-nav {
+    background: $cBlack;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 990;
+    text-align: center;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity .6s ease, visibility .6s ease;
+  }
 
 
+  #gloval-nav {
+    a {
+      padding: 30px 0;
+      display: block;
+      text-decoration: none;
+      transition: color .6s ease;
+
+      &:hover {
+        color: $cWhite;
+      }
+    }
+
+    ul {
+
+      li {
+        opacity: 0;
+        transform:translateX(200px);
+        transition: transform .6s ease, opacity .2s ease;
+
+        &:nth-child(2) {
+          transition-delay: .15s;
+        }
+
+        &:nth-child(3) {
+          transition-delay: .3s;
+        }
+
+        &:nth-child(4) {
+          transition-delay: .45s;
+        }
+
+        &:nth-child(5) {
+          transition-delay: .6s;
+        }
+
+        &:nth-child(6) {
+          transition-delay: .75s;
+        }
+
+        &:nth-child(7) {
+          transition-delay: .9s;
+        }
+      }
+    }
+  }
+
+  /* open */
+  .open {
+    overflow: hidden;
+
+    #gloval-nav {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    #gloval-nav li {
+      opacity: 1;
+      transform: translateX(0);
+      transition: transform 1s ease, opacity .9s ease;
+    }
+  }
+}
+
+@include SP {
+  #nav-toggle {
+    position: fixed;
+    top: 31px;
+    right: 20px;
+    height: 25px;
+    cursor: pointer;
+
+    >div {
+      position: relative;
+      width: 30px;
+    }
+
+    span {
+      width: 100%;
+      height: 1px;
+      left: 0;
+      display: block;
+      background: #333;
+      position: absolute;
+      transition: transform .6s ease-in-out, top .5s ease;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 10px;
+      }
+
+      &:nth-child(3) {
+        top: 20px;
+      }
+    }
+
+  }
+
+  .open {
+    #nav-toggle span {
+      background: $cWhite;
+
+      &:nth-child(1) {
+        top: 15px;
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        top: 15px;
+        width: 0;
+        left: 50%;
+      }
+
+      &:nth-child(3) {
+        top: 15px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  /* z-index */
+  #nav-toggle {
+    z-index: 1000;
+  }
+
+  #gloval-nav {
+    background: $cBlack;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 990;
+    text-align: center;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity .6s ease, visibility .6s ease;
+  }
+
+
+  #gloval-nav {
+    a {
+      padding: 20px 0;
+      display: block;
+      text-decoration: none;
+      transition: color .6s ease;
+
+      &:hover {
+        color: $cWhite;
+      }
+    }
+
+    ul {
+
+      li {
+        opacity: 0;
+        transform: translateX(200px);
+        transition: transform .6s ease, opacity .2s ease;
+
+        &:nth-child(2) {
+          transition-delay: .15s;
+        }
+
+        &:nth-child(3) {
+          transition-delay: .3s;
+        }
+
+        &:nth-child(4) {
+          transition-delay: .45s;
+        }
+
+        &:nth-child(5) {
+          transition-delay: .6s;
+        }
+
+        &:nth-child(6) {
+          transition-delay: .75s;
+        }
+
+        &:nth-child(7) {
+          transition-delay: .9s;
+        }
+      }
+    }
+  }
+
+  /* open */
+  .open {
+    overflow: hidden;
+
+    #gloval-nav {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    #gloval-nav li {
+      opacity: 1;
+      transform: translateX(0);
+      transition: transform 1s ease, opacity .9s ease;
+    }
+  }
+}
