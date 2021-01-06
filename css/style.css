@@ -120,6 +120,7 @@ section
 @media screen and (max-width: 480px) {
   .about_txt {
     margin-bottom: 20px;
+    padding: 0 10px;
   }
 }
 
