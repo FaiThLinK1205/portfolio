@@ -21,52 +21,110 @@
     <!-- ヘッダー -->
     <header class="header">
       <h1 class="header_ttl">
-        <a href="index.html">
-          <img src="" alt="">
-        </a>
+        <a href="index.html"><img src="img/common/header-logo.png" alt="ロゴ画像" class="header_logo">FaiTh LinK</a>
       </h1><!-- /.header_ttl -->
 
       <!-- ハンバーガーメニュー部分 -->
-      <div class="nav_ham">
-
-      </div><!-- ハンバーガーメニューここまで -->
+      <div id="nav-toggle">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <!-- ハンバーガーメニューここまで -->
 
 
       <!-- ナビ -->
-      <nav class="nav" id="nav">
-        <ul class="nav_list">
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-        </ul>
-      </nav>
-      <!-- /.nav -->
+      <div id="gloval-nav">
+        <nav class="nav">
+          <ul class="nav_list">
+            <li class="nav_item">
+              <a href="#" data-nav-section="SERVICE" class="nav_link"><span class="nav_en"
+                  onmouseover="this.innerText='サービス'" onmouseout="this.innerText='SERVICE'">SERVICE</span></a>
+            </li>
+            <!-- /.nav_item -->
+            <li class="nav_item">
+              <a href="#" data-nav-section="PORTFOLIO" class="nav_link"><span class="nav_en"
+                  onmouseover="this.innerText='ポートフォリオ'" onmouseout="this.innerText='PORTFOLIO'">PORTFOLIO</span></a>
+            </li>
+            <!-- /.nav_item -->
+            <li class="nav_item">
+              <a href="#" data-nav-section="SKILL" class="nav_link"><span class="nav_en"
+                  onmouseover="this.innerText='スキル'" onmouseout="this.innerText='SKILL'">SKILL</span></a>
+            </li>
+            <!-- /.nav_item -->
+            <li class="nav_item">
+              <a href="#" data-nav-section="ABOUT US" class="nav_link"><span class="nav_en"
+                  onmouseover="this.innerText='自己紹介'" onmouseout="this.innerText='ABOUT US'">ABOUT US</span></a>
+            </li>
+            <!-- /.nav_item -->
+            <li class="nav_item">
+              <a href="#" data-nav-section="CONTACT" class="nav_link"><span class="nav_en"
+                  onmouseover="this.innerText='お問い合わせ'" onmouseout="this.innerText='CONTACT'">CONTACT</span></a>
+            </li>
+            <!-- /.nav_item -->
+          </ul>
+        </nav>
+        <!-- /.nav -->
+      </div>
     </header>
-
 
     <!-- メインコンテンツ -->
     <main>
+<<<<<<< HEAD
+      <!--serviceセクションここから-->
+      <section class="service">
+        <h2 class="section_ttl">SERVICE</h2>
+        <div class="section_inner">
+          <div class="service_content">
+
+            <div class="service_box">
+              <h3 class="service_ttl">デザイン</h3><!-- /.service_ttl -->
+              <div class="service_imgbox">
+                <img src="img/section-service/design.svg" alt="デザインサービス">
+              </div><!-- /.service_imgbox -->
+              <p class="service_txt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus delectus minus placeat
+                ad, quibusdam quidem recusandae. Earum ipsa voluptate officia fuga alias expedita natus minus dolorum
+                excepturi nihil! Aliquid.
+              </p><!-- /.service_txt -->
+            </div><!-- /.service_box -->
+
+            <div class="service_box">
+              <h3 class="service_ttl">コーディング</h3><!-- /.service_ttl -->
+              <div class="service_imgbox">
+                <img src="img/section-service/pc.svg" alt="コーディングサービス">
+              </div><!-- /.service_imgbox -->
+              <p class="service_txt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus delectus minus placeat
+                ad, quibusdam quidem recusandae. Earum ipsa voluptate officia fuga alias expedita natus minus dolorum
+                excepturi nihil! Aliquid.
+              </p><!-- /.service_txt -->
+            </div><!-- /.service_box -->
+
+            <div class="service_box">
+              <h3 class="service_ttl">改修・修正</h3><!-- /.service_ttl -->
+              <div class="service_imgbox">
+                <img src="img/section-service/fix2.svg" alt="改修・修正サービス">
+              </div><!-- /.service_imgbox -->
+              <p class="service_txt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus delectus minus placeat
+                ad, quibusdam quidem recusandae. Earum ipsa voluptate officia fuga alias expedita natus minus dolorum
+                excepturi nihil! Aliquid.
+              </p><!-- /.service_txt -->
+            </div><!-- /.service_box -->
+
+
+          </div><!-- /.service_content -->
+        </div>
+=======
       <!--ここからセクション （セクションの数だけコピーして使う）-->
       <section class="section">
         <h2 class="section_ttl"></h2>
         <div class="section_inner"></div>
+<<<<<<< HEAD
+=======
       </section>
       
       
@@ -313,8 +371,87 @@
           <p class="btn">ボタンに置き換え</p>
 
         </div>
+>>>>>>> 08f101cf5c27f39de14f93c49bb2fe2faeb3aa11
+>>>>>>> 277452cf9166c289f5a2c21343bfb8984f3fd765
       </section>
-      <!--//ここまでセクション-->
+      <!--//serviceセクションここまで-->
+
+      <!-- portfolioセクションここから -->
+      <section class="portfolio">
+        <h2 class="section_ttl">PORTFOLIO</h2>
+        <div class="section_inner">
+          <div class="portfolio_content">
+            <div class="portfolio_imgbox">
+              <img src="img/section-portfolio/portfolio1.png" alt="ポートフォリオ">
+            </div><!-- /.portfolio_imgbox -->
+            <div class="portfolio_txtbox">
+              <h3 class="portfolio_ttl">石井花壇（模写サイト）</h3><!-- /.portfolio_ttl -->
+              <p class="portfolio_txt">ユーザー名：<span class="portfolio_spa">FaiThLinK</span></p><!-- /.portfolio_txt -->
+              <p class="portfolio_txt">パスワード：<span class="portfolio_spa">1230</span></p><!-- /.portfolio_txt -->
+
+              <p class="portfolio_txt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatum nostrum,
+                magnam libero vel.
+
+              </p><!-- /.portfolio_txt -->
+
+              <button>詳細はこちらへ</button>
+
+            </div><!-- /.portfolio_txtbox -->
+
+          </div><!-- /.portfolio_content -->
+
+        </div><!-- /.section_inner -->
+
+
+      </section><!-- /.portfolio -->
+      <!-- portfolioセクションここまで -->
+
+      <!-- skillセクションここから -->
+      <section class="skill">
+        　<h2 class="section_ttl">SKILL</h2>
+        <div class="section_inner">
+          <div class="skill_content">
+            <div class="skill_box">
+              <div class="skill_imgbox">
+                <img src="img/section-skill/html-5.svg" alt="スキル,html">
+              </div><!-- /.skill_imgbox -->
+              <div class="skill_imgbox">
+                <img src="img/section-skill/css-3.svg" alt="スキル,css">
+              </div><!-- /.skill_imgbox -->
+            </div><!-- /.skill_box -->
+            <div class="skill_box">
+              <div class="skill_imgbox">
+                <img src="img/section-skill/javascript.svg" alt="スキル,JavaScript">
+              </div><!-- /.skill_imgbox -->
+              <div class="skill_imgbox">
+                <img src="img/section-skill/jQuery.png" alt="スキル,jQuery">
+              </div><!-- /.skill_imgbox -->
+            </div><!-- /.skill_box -->
+            <div class="skill_box">
+              <div class="skill_imgbox">
+                <img src="img/section-skill/git.svg" alt="スキル,Git">
+              </div><!-- /.skill_imgbox -->
+              <div class="skill_imgbox">
+                <img src="img/section-skill/github.svg" alt="スキル,Github">
+              </div><!-- /.skill_imgbox -->
+            </div><!-- /.skill_box -->
+            <div class="skill_box">
+              <div class="skill_imgbox">
+                <img src="img/section-skill/sass.svg" alt="スキル,Sass">
+              </div><!-- /.skill_imgbox -->
+              <div class="skill_imgbox">
+                <img src="img/section-skill/responsive.svg" alt="スキル, レスポンシブ">
+              </div><!-- /.skill_imgbox -->
+            </div><!-- /.skill_box -->
+          </div><!-- /.skill_content -->
+        </div><!-- /.section_inner -->
+
+
+
+      </section><!-- /.skill -->
+      <!-- skillセクションここまで -->
+
 
     </main>
 
