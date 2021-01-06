@@ -11,6 +11,149 @@
 
 
 
+/****************************************:
+
+section
+
+*****************************************:*/
+
+
+/**** ABOUT US ****/
+.about {
+  padding: 100px 0;
+
+  @include SP {
+    padding: 50px 0;
+  }
+
+  &_txt {
+    margin-bottom: 80px;
+    text-align: center;
+
+    @include SP {
+      margin-bottom: 20px;
+      padding: 0 10px;
+    }
+  }
+
+  &_box {
+    margin-bottom: 50px;
+    display: flex;
+
+    @include tab {
+      margin: 0 20px 50px 20px;
+    }
+
+    @include SP {
+      margin-bottom: 30px;
+      display: block;
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &_left {
+      width: 30%;
+      padding: 20px;
+      text-align: center;
+
+      @include SP {
+        width: 100%;
+      }
+
+    }
+
+    &_right {
+      width: 70%;
+      padding: 20px;
+      background: #f3f3f3;
+
+      @include SP {
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &_icon {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+    @include tab {
+      width: 180px;
+      height: 180px;
+    }
+  }
+
+  &_dl {
+    width: 100%;
+    display: flex;
+
+    @include SP {
+      width: 100%;
+    }
+  }
+
+  &_dt {
+    width: 25%;
+
+    @include tab {
+      width: 38%;
+    }
+
+    @include SP {
+      width: 45%;
+    }
+  }
+
+  &_dd {
+    width: 100%;
+
+    @include SP {
+      width: 55%;
+    }
+  }
+
+}
+
+
+
+/**** contact ****/
+.top_contact {
+
+  padding: 100px 0;
+
+  @include SP {
+    padding: 50px 0;
+  }
+
+  & .section_inner {
+    width: 40%;
+    margin-bottom: 100px;
+
+    @include tab {
+      width: 70%;
+    }
+
+    @include SP {
+      width: 80%;
+    }
+  }
+
+  &_txt {
+    margin-bottom: 80px;
+  }
+
+  & .btn {
+    text-align: center;
+  }
+}
 
 
 
