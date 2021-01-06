@@ -17,12 +17,163 @@ fv
 
 /****************************************:
 
-section
+service
 
 *****************************************:*/
 
+.service {
+    padding: 125px 0 ;
+
+    background-color: silver;
+
+    &_content {
+        @include flex($justify:center);
+        padding: 0 25px;
+    }
+
+    .section_ttl {
+
+        &:after {
+            content: 'SERVICE';
+        }
 
 
+    }
+
+    &_box {
+
+        @include flex;
+        width: 350px;
+        flex-direction: column;
+        text-align: center;
+        margin-right: 40px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+
+    &_imgbox {
+        width: 120px;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    &_ttl {
+        margin-bottom: 25px;
+        @include rem(24);
+
+
+
+    }
+
+    &_txt {
+
+        padding: 30px;
+        text-align: left;
+        background-color: rgba($cBlue, 0.2);
+        color: $cBlack;
+
+
+
+    }
+}
+
+
+/****************************************:
+
+portfolio
+
+*****************************************:*/
+.portfolio {
+    padding: 125px 0;
+
+    background-color: skyblue;
+
+    &_content {
+        padding: 0 25px;
+        @include flex($justify:center);
+    }
+
+    .section_ttl {
+
+        &:after {
+            content: 'PORTFOLIO';
+        }
+
+    }
+
+
+    &_imgbox {
+        height: 100%;
+        margin-right: 50px;
+        box-shadow: 0px 10px 10px 0px rgba($cBlack, 0.5);
+    }
+
+    &_txtbox {
+        width: 80%;
+
+    }
+
+    &_ttl {
+        margin-bottom: 25px;
+        @include rem(24);
+
+    }
+
+    &_txt {
+        text-align: left;
+        line-height: 2;
+        @include rem(20);
+    }
+
+    &_spa {
+        color: $cBlue;
+    }
+
+
+
+
+}
+
+/****************************************:
+
+skill
+
+*****************************************:*/
+
+.skill {
+    padding: 125px 0;
+    background-color: silver;
+
+    .section_ttl {
+
+        &:after {
+            content:'SKILL';
+        }
+    }
+
+    &_content {
+        @include flex($justify: center,$wrap:wrap);
+        margin: 0 auto;
+        padding: 0 25px;
+    }
+
+    &_box {
+        @include flex;
+        margin: 50px auto;
+    }
+    
+    &_imgbox {
+        display: block;
+        width: 150px;
+        height: 100%;
+        margin: 0 4vw;
+        display: flex;
+        align-items: center;
+    }
+}
 
 
 
