@@ -17,260 +17,151 @@ fv
 
 /****************************************:
 
-service
+section
 
 *****************************************:*/
 
-.service {
-    padding: 125px 0;
 
-    /**** ABOUT US ****/
-    .about {
-        padding: 100px 0;
+/**** ABOUT US ****/
+.about{
+  padding: 100px 0;
 
-        &_txt {
-            margin-bottom: 80px;
-            text-align: center;
-        }
+  @include SP{
+    padding: 50px 0;
+  }
 
-        & .section_inner {
+  &_txt{
+    margin-bottom: 80px;
+    text-align: center;
 
-            @include tab {
-                margin: 0 20px 50px 20px;
-            }
+    @include SP{
+      margin-bottom: 20px;
+      padding: 0 10px;
+    }
+  }
 
-            @include SP {
-                width: 90%;
-            }
-        }
+  &_box{
+    margin-bottom: 50px;
+    display: flex;
 
-        &_box {
-            margin-bottom: 50px;
-            display: flex;
+    @include tab {
+      margin: 0 20px 50px 20px;
+    }
 
-            @include tab {
-                margin: 0 20px 50px 20px;
-            }
+    @include SP{
+      margin-bottom: 30px;
+      display: block;
+    }
 
-            &:nth-child(even) {
-                flex-direction: row-reverse;
-            }
+    &:nth-child(even){
+      flex-direction: row-reverse;
+    }
+    
+    &:last-child{
+      margin-bottom: 0;
+    }
 
-            &:last-child {
-                margin-bottom: 0;
-            }
+    &_left{
+      width: 30%;
+      padding: 20px;
+      text-align: center;
 
-            &_left {
-                width: 30%;
-                padding: 20px;
-                text-align: center;
-
-            }
-
-            &_right {
-                width: 70%;
-                padding: 20px;
-                background: #f3f3f3;
-            }
-        }
-
-        &_icon {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-        }
-
-        &_dl {
-            width: 70%;
-            display: flex;
-        }
-
-        &_dt {
-            width: 25%;
-        }
-
-        &_dd {
-            width: 75%;
-        }
+      @include SP{
+        width: 100%;
+      }
 
     }
 
+    &_right{
+      width: 70%;
+      padding: 20px;
+      background: #f3f3f3;
 
-
-    /**** contact ****/
-    .top_contact {
-
-        padding: 100px 0;
-
-        // & .section_ttl{
-        //   margin-bottom: 50px;
-        // }
-
-        & .section_inner {
-            width: 50%;
-            margin-bottom: 100px;
-
-            @include SP {
-                width: 80%;
-            }
-        }
-
-        &_txt {
-            margin-bottom: 80px;
-        }
-
-        & .btn {
-            text-align: center;
-        }
-    }
-
-
-
-    &_content {
-        @include flex($justify:center);
-        padding: 0 25px;
-    }
-
-    .section_ttl {
-
-        &:after {
-            content: 'SERVICE';
-        }
-
-
-    }
-
-    &_box {
-
-        @include flex;
-        width: 350px;
-        flex-direction: column;
-        text-align: center;
-        margin-right: 40px;
-
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-
-
-    &_imgbox {
-        width: 120px;
-        margin: auto;
-        margin-bottom: 50px;
-    }
-
-    &_ttl {
-        margin-bottom: 25px;
-        @include rem(24);
-
-
-
-    }
-
-    &_txt {
-
-        padding: 30px;
-        text-align: left;
-        background-color: rgba($cBlue, 0.2);
-        color: $cBlack;
-
-
-
-    }
-}
-
-
-/****************************************:
-
-portfolio
-
-*****************************************:*/
-.portfolio {
-    padding: 125px 0;
-
-    background-color: skyblue;
-
-    &_content {
-        padding: 0 25px;
-        @include flex($justify:center);
-    }
-
-    .section_ttl {
-
-        &:after {
-            content: 'PORTFOLIO';
-        }
-
-    }
-
-
-    &_imgbox {
-        height: 100%;
-        margin-right: 50px;
-        box-shadow: 0px 10px 10px 0px rgba($cBlack, 0.5);
-    }
-
-    &_txtbox {
-        width: 80%;
-
-    }
-
-    &_ttl {
-        margin-bottom: 25px;
-        @include rem(24);
-
-    }
-
-    &_txt {
-        text-align: left;
-        line-height: 2;
-        @include rem(20);
-    }
-
-    &_spa {
-        color: $cBlue;
-    }
-
-
-
-
-}
-
-/****************************************:
-
-skill
-
-*****************************************:*/
-
-.skill {
-    padding: 125px 0;
-    background-color: silver;
-
-    .section_ttl {
-
-        &:after {
-            content: 'SKILL';
-        }
-    }
-
-    &_content {
-        @include flex($justify: center, $wrap:wrap);
+      @include SP {
+        width: 90%;
         margin: 0 auto;
-        padding: 0 25px;
+      }
+    }
+  }
+
+  &_icon{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+    @include tab{
+      width: 180px;
+      height: 180px;
+    }
+  }
+
+  &_dl{
+    width: 100%;
+    display: flex;
+
+    @include SP{
+      width: 100%;
+    }
+  }
+
+  &_dt{
+    width: 25%;
+
+    @include tab{
+      width: 38%;
     }
 
-    &_box {
-        @include flex;
-        margin: 50px auto;
+    @include SP{
+      width: 45%;
     }
+  }
 
-    &_imgbox {
-        display: block;
-        width: 150px;
-        height: 100%;
-        margin: 0 4vw;
-        display: flex;
-        align-items: center;
+  &_dd{
+    width: 100%;
+
+    @include SP{
+      width: 55%;
     }
+  }
+
 }
+
+
+
+/**** contact ****/
+.top_contact{
+  
+  padding: 100px 0;
+
+  @include SP{
+    padding: 50px 0;
+  }
+
+  & .section_inner{
+    width: 40%;
+    margin-bottom: 100px;
+
+    @include SP{
+      width: 80%;
+    }
+  }
+
+  &_txt{
+    margin-bottom: 80px;
+  }
+
+  & .btn{
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
