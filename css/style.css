@@ -46,6 +46,7 @@ body {
   /*IE9以前に対応する*/
   font-size: 3.125rem;
   color: #00a0e9;
+  margin-bottom: 50px;
 }
 
 .section_ttl:after {
@@ -536,32 +537,37 @@ fv
 *****************************************:*/
 /****************************************:
 
-section
+service
 
 *****************************************:*/
-/**** ABOUT US ****/
-.about {
+.service {
+  padding: 125px 0;
+  /**** ABOUT US ****/
+  /**** contact ****/
+}
+
+.service .about {
   padding: 100px 0;
 }
 
-.about_txt {
+.service .about_txt {
   margin-bottom: 80px;
   text-align: center;
 }
 
-@media screen and (max-width: 769) and (min-width: 480px) {
-  .about .section_inner {
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .service .about .section_inner {
     margin: 0 20px 50px 20px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .about .section_inner {
+  .service .about .section_inner {
     width: 90%;
   }
 }
 
-.about_box {
+.service .about_box {
   margin-bottom: 50px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -569,13 +575,13 @@ section
   display: flex;
 }
 
-@media screen and (max-width: 769) and (min-width: 480px) {
-  .about_box {
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .service .about_box {
     margin: 0 20px 50px 20px;
   }
 }
 
-.about_box:nth-child(even) {
+.service .about_box:nth-child(even) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
   -webkit-flex-direction: row-reverse;
@@ -583,29 +589,29 @@ section
           flex-direction: row-reverse;
 }
 
-.about_box:last-child {
+.service .about_box:last-child {
   margin-bottom: 0;
 }
 
-.about_box_left {
+.service .about_box_left {
   width: 30%;
   padding: 20px;
   text-align: center;
 }
 
-.about_box_right {
+.service .about_box_right {
   width: 70%;
   padding: 20px;
   background: #f3f3f3;
 }
 
-.about_icon {
+.service .about_icon {
   width: 200px;
   height: 200px;
   border-radius: 50%;
 }
 
-.about_dl {
+.service .about_dl {
   width: 70%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -613,36 +619,219 @@ section
   display: flex;
 }
 
-.about_dt {
+.service .about_dt {
   width: 25%;
 }
 
-.about_dd {
+.service .about_dd {
   width: 75%;
 }
 
-/**** contact ****/
-.top_contact {
+.service .top_contact {
   padding: 100px 0;
 }
 
-.top_contact .section_inner {
+.service .top_contact .section_inner {
   width: 50%;
   margin-bottom: 100px;
 }
 
 @media screen and (max-width: 480px) {
-  .top_contact .section_inner {
+  .service .top_contact .section_inner {
     width: 80%;
   }
 }
 
-.top_contact_txt {
+.service .top_contact_txt {
   margin-bottom: 80px;
 }
 
-.top_contact .btn {
+.service .top_contact .btn {
   text-align: center;
+}
+
+.service_content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  padding: 0 25px;
+}
+
+.service .section_ttl:after {
+  content: 'SERVICE';
+}
+
+.service_box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  width: 350px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin-right: 40px;
+}
+
+.service_box:last-child {
+  margin-right: 0;
+}
+
+.service_imgbox {
+  width: 120px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.service_ttl {
+  margin-bottom: 25px;
+  font-size: 24px;
+  /*IE9以前に対応する*/
+  font-size: 1.5rem;
+}
+
+.service_txt {
+  padding: 30px;
+  text-align: left;
+  background-color: rgba(0, 160, 233, 0.2);
+  color: #333333;
+}
+
+/****************************************:
+
+portfolio
+
+*****************************************:*/
+.portfolio {
+  padding: 125px 0;
+  background-color: skyblue;
+}
+
+.portfolio_content {
+  padding: 0 25px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+}
+
+.portfolio .section_ttl:after {
+  content: 'PORTFOLIO';
+}
+
+.portfolio_imgbox {
+  height: 100%;
+  margin-right: 50px;
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(51, 51, 51, 0.5);
+          box-shadow: 0px 10px 10px 0px rgba(51, 51, 51, 0.5);
+}
+
+.portfolio_txtbox {
+  width: 80%;
+}
+
+.portfolio_ttl {
+  margin-bottom: 25px;
+  font-size: 24px;
+  /*IE9以前に対応する*/
+  font-size: 1.5rem;
+}
+
+.portfolio_txt {
+  text-align: left;
+  line-height: 2;
+  font-size: 20px;
+  /*IE9以前に対応する*/
+  font-size: 1.25rem;
+}
+
+.portfolio_spa {
+  color: #00a0e9;
+}
+
+/****************************************:
+
+skill
+
+*****************************************:*/
+.skill {
+  padding: 125px 0;
+  background-color: silver;
+}
+
+.skill .section_ttl:after {
+  content: 'SKILL';
+}
+
+.skill_content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.skill_box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  margin: 50px auto;
+}
+
+.skill_imgbox {
+  display: block;
+  width: 150px;
+  height: 100%;
+  margin: 0 4vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /****************************************:
@@ -669,7 +858,7 @@ footer
   font-size: 1.25rem;
 }
 
-@media screen and (max-width: 769) and (min-width: 480px) {
+@media screen and (max-width: 769px) and (min-width: 480px) {
   .footer_txt {
     font-size: 10px;
     /*IE9以前に対応する*/
