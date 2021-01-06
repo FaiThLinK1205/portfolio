@@ -92,3 +92,31 @@ section
 footer
 
 *****************************************:*/
+.footer {
+  color: #fafafa;
+  line-height: 100px;
+  text-align: center;
+  background: #00a0e9;
+}
+
+.footer_txt {
+  font-size: 20px;
+  /*IE9以前に対応する*/
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 769) and (min-width: 480px) {
+  .footer_txt {
+    font-size: 10px;
+    /*IE9以前に対応する*/
+    font-size: 0.625rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer_txt {
+    font-size: 10px;
+    /*IE9以前に対応する*/
+    font-size: 0.625rem;
+  }
+}
