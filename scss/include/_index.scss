@@ -141,6 +141,10 @@ section
     width: 40%;
     margin-bottom: 100px;
 
+    @include tab{
+      width: 70%;
+    }
+
     @include SP{
       width: 80%;
     }
