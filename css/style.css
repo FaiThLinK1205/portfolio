@@ -39,11 +39,30 @@ body {
 }
 
 .section_ttl {
+  display: block;
+  position: relative;
+  text-align: center;
   font-size: 50px;
   /*IE9以前に対応する*/
   font-size: 3.125rem;
+  color: #00a0e9;
+}
+
+.section_ttl:after {
+  content: '';
+  position: absolute;
   display: block;
-  text-align: center;
+  top: -35px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  z-index: -1;
+  font-size: 60px;
+  /*IE9以前に対応する*/
+  font-size: 3.75rem;
+  opacity: .1;
+  letter-spacing: .2em;
+  color: #333333;
 }
 
 .section_inner {
@@ -520,6 +539,112 @@ fv
 section
 
 *****************************************:*/
+/**** ABOUT US ****/
+.about {
+  padding: 100px 0;
+}
+
+.about_txt {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+@media screen and (max-width: 769) and (min-width: 480px) {
+  .about .section_inner {
+    margin: 0 20px 50px 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about .section_inner {
+    width: 90%;
+  }
+}
+
+.about_box {
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 769) and (min-width: 480px) {
+  .about_box {
+    margin: 0 20px 50px 20px;
+  }
+}
+
+.about_box:nth-child(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.about_box:last-child {
+  margin-bottom: 0;
+}
+
+.about_box_left {
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+}
+
+.about_box_right {
+  width: 70%;
+  padding: 20px;
+  background: #f3f3f3;
+}
+
+.about_icon {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.about_dl {
+  width: 70%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about_dt {
+  width: 25%;
+}
+
+.about_dd {
+  width: 75%;
+}
+
+/**** contact ****/
+.top_contact {
+  padding: 100px 0;
+}
+
+.top_contact .section_inner {
+  width: 50%;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 480px) {
+  .top_contact .section_inner {
+    width: 80%;
+  }
+}
+
+.top_contact_txt {
+  margin-bottom: 80px;
+}
+
+.top_contact .btn {
+  text-align: center;
+}
+
 /****************************************:
 
 
@@ -530,3 +655,32 @@ section
 footer
 
 *****************************************:*/
+.footer {
+  width: 100%;
+  color: #fafafa;
+  line-height: 100px;
+  text-align: center;
+  background: #00a0e9;
+}
+
+.footer_txt {
+  font-size: 20px;
+  /*IE9以前に対応する*/
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 769) and (min-width: 480px) {
+  .footer_txt {
+    font-size: 10px;
+    /*IE9以前に対応する*/
+    font-size: 0.625rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer_txt {
+    font-size: 10px;
+    /*IE9以前に対応する*/
+    font-size: 0.625rem;
+  }
+}
