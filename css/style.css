@@ -106,20 +106,20 @@ section
   padding: 100px 0;
 }
 
+@media screen and (max-width: 480px) {
+  .about {
+    padding: 50px 0;
+  }
+}
+
 .about_txt {
   margin-bottom: 80px;
   text-align: center;
 }
 
-@media screen and (max-width: 769) and (min-width: 480px) {
-  .about .section_inner {
-    margin: 0 20px 50px 20px;
-  }
-}
-
 @media screen and (max-width: 480px) {
-  .about .section_inner {
-    width: 90%;
+  .about_txt {
+    margin-bottom: 20px;
   }
 }
 
@@ -131,9 +131,16 @@ section
   display: flex;
 }
 
-@media screen and (max-width: 769) and (min-width: 480px) {
+@media screen and (max-width: 769px) and (min-width: 480px) {
   .about_box {
     margin: 0 20px 50px 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about_box {
+    margin-bottom: 30px;
+    display: block;
   }
 }
 
@@ -155,10 +162,23 @@ section
   text-align: center;
 }
 
+@media screen and (max-width: 480px) {
+  .about_box_left {
+    width: 100%;
+  }
+}
+
 .about_box_right {
   width: 70%;
   padding: 20px;
   background: #f3f3f3;
+}
+
+@media screen and (max-width: 480px) {
+  .about_box_right {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 .about_icon {
@@ -168,24 +188,54 @@ section
 }
 
 .about_dl {
-  width: 70%;
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
+@media screen and (max-width: 480px) {
+  .about_dl {
+    width: 100%;
+  }
+}
+
 .about_dt {
-  width: 25%;
+  width: 20%;
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .about_dt {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about_dt {
+    width: 45%;
+  }
 }
 
 .about_dd {
   width: 75%;
 }
 
+@media screen and (max-width: 480px) {
+  .about_dd {
+    width: 55%;
+  }
+}
+
 /**** contact ****/
 .top_contact {
   padding: 100px 0;
+}
+
+@media screen and (max-width: 480px) {
+  .top_contact {
+    padding: 50px 0;
+  }
 }
 
 .top_contact .section_inner {
@@ -226,16 +276,16 @@ footer
 }
 
 .footer_txt {
-  font-size: 20px;
+  font-size: 15px;
   /*IE9以前に対応する*/
-  font-size: 1.25rem;
+  font-size: 0.9375rem;
 }
 
-@media screen and (max-width: 769) and (min-width: 480px) {
+@media screen and (max-width: 769px) and (min-width: 480px) {
   .footer_txt {
-    font-size: 10px;
+    font-size: 12px;
     /*IE9以前に対応する*/
-    font-size: 0.625rem;
+    font-size: 0.75rem;
   }
 }
 

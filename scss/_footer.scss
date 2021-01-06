@@ -12,10 +12,10 @@ footer
   background: $cBlue;
 
   &_txt{
-    @include rem(20);
+    @include rem(15);
 
     @include tab{
-      @include rem(10);
+      @include rem(12);
     }
     
     @include SP{

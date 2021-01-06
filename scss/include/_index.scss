@@ -26,19 +26,16 @@ section
 .about{
   padding: 100px 0;
 
+  @include SP{
+    padding: 50px 0;
+  }
+
   &_txt{
     margin-bottom: 80px;
     text-align: center;
-  }
-
-  & .section_inner {
-
-    @include tab{
-      margin: 0 20px 50px 20px;
-    }
 
     @include SP{
-      width: 90%;
+      margin-bottom: 20px;
     }
   }
 
@@ -48,6 +45,11 @@ section
 
     @include tab {
       margin: 0 20px 50px 20px;
+    }
+
+    @include SP{
+      margin-bottom: 30px;
+      display: block;
     }
 
     &:nth-child(even){
@@ -63,12 +65,21 @@ section
       padding: 20px;
       text-align: center;
 
+      @include SP{
+        width: 100%;
+      }
+
     }
 
     &_right{
       width: 70%;
       padding: 20px;
       background: #f3f3f3;
+
+      @include SP {
+        width: 90%;
+        margin: 0 auto;
+      }
     }
   }
 
@@ -79,16 +90,34 @@ section
   }
 
   &_dl{
-    width: 70%;
+    width: 100%;
     display: flex;
+
+    @include SP{
+      width: 100%;
+    }
   }
 
   &_dt{
-    width: 25%;
+    width: 20%;
+
+    @include tab{
+      width: 30%;
+    }
+
+    @include SP{
+      width: 45%;
+    }
   }
 
   &_dd{
     width: 75%;
+
+
+
+    @include SP{
+      width: 55%;
+    }
   }
 
 }
@@ -100,9 +129,9 @@ section
   
   padding: 100px 0;
 
-  // & .section_ttl{
-  //   margin-bottom: 50px;
-  // }
+  @include SP{
+    padding: 50px 0;
+  }
 
   & .section_inner{
     width: 50%;
