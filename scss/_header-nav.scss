@@ -6,7 +6,9 @@ header
 
 .header {
   width: 100%;
-  margin-top: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: rgba($color: $cWhite, $alpha: .5);
   line-height: 55px;
 
   @include tab {
@@ -23,6 +25,7 @@ header
   &_ttl {
 
     @include rem(45);
+    color: #000;
 
     @include tab {
       @include rem(40);
