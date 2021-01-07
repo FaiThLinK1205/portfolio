@@ -96,7 +96,7 @@ body {
     font-size: 20px;
     /*IE9以前に対応する*/
     font-size: 1.25rem;
-    top: -20px;
+    top: -12 px;
   }
 }
 
