@@ -49,6 +49,22 @@ body {
   margin-bottom: 50px;
 }
 
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .section_ttl {
+    font-size: 35px;
+    /*IE9以前に対応する*/
+    font-size: 2.1875rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section_ttl {
+    font-size: 20px;
+    /*IE9以前に対応する*/
+    font-size: 1.25rem;
+  }
+}
+
 .section_ttl:after {
   content: '';
   position: absolute;
@@ -64,6 +80,24 @@ body {
   opacity: .1;
   letter-spacing: .2em;
   color: #333333;
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .section_ttl:after {
+    font-size: 35px;
+    /*IE9以前に対応する*/
+    font-size: 2.1875rem;
+    top: -20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section_ttl:after {
+    font-size: 20px;
+    /*IE9以前に対応する*/
+    font-size: 1.25rem;
+    top: -20px;
+  }
 }
 
 .section_inner {
@@ -535,11 +569,6 @@ button
 fv
 
 *****************************************:*/
-main {
-  width: 100%;
-  padding: 0 20px;
-}
-
 /****************************************:
 
 service
@@ -784,6 +813,10 @@ skill
 
 .skill .section_ttl:after {
   content: 'SKILL';
+}
+
+.skill_ttl {
+  text-align: center;
 }
 
 .skill_content {

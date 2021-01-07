@@ -34,7 +34,13 @@ body {
     color: $cBlue;
     margin-bottom: 50px;
 
-    // text-shadow: 3px -2px 5px $cBlack;
+    @include tab {
+        @include rem(35);
+    }
+
+    @include SP {
+        @include rem(20);
+    }
 
 
     &:after {
@@ -49,6 +55,16 @@ body {
         opacity: .1;
         letter-spacing: .2em;
         color: $cBlack;
+
+        @include tab {
+            @include rem(35);
+            top: -20px;
+        }
+
+        @include SP {
+            @include rem(20);
+            top: -20px;
+        }
     }
 
 }
