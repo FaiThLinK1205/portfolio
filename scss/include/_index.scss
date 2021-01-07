@@ -13,10 +13,6 @@ fv
 
 
 
-main {
-    width: 100%;
-    padding: 0 20px;
-}
 
 /****************************************:
 
@@ -228,6 +224,10 @@ skill
         &:after {
             content: 'SKILL';
         }
+    }
+
+    &_ttl {
+        text-align: center;
     }
 
     &_content {
