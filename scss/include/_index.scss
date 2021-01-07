@@ -13,7 +13,10 @@ fv
 
 
 
-
+main {
+    width: 100%;
+    padding: 0 20px;
+}
 
 /****************************************:
 
@@ -22,13 +25,23 @@ service
 *****************************************:*/
 
 .service {
-    padding: 125px 0;
+    padding: 100px 0;
+
+    @include SP {
+        padding: 50px 0;
+    }
+
 
 
 
     &_content {
         @include flex($justify:center);
         padding: 0 25px;
+
+
+        @include SP {
+            flex-direction: column;
+        }
     }
 
     .section_ttl {
@@ -50,6 +63,20 @@ service
 
         &:last-child {
             margin-right: 0;
+
+            @include SP {
+                margin-right: initial;
+            }
+        }
+
+        @include tab {
+            margin-right: 30px;
+        }
+
+        @include SP {
+            margin-bottom: 50px;
+            margin-right: 0;
+            width: 100%;
         }
     }
 
@@ -58,6 +85,10 @@ service
         width: 120px;
         margin: auto;
         margin-bottom: 50px;
+
+        @include tab {
+            width: 80px;
+        }
     }
 
     &_ttl {
@@ -87,20 +118,41 @@ portfolio
 
 *****************************************:*/
 .portfolio {
-    padding: 125px 0;
+    padding: 100px 0;
 
-    background-color: skyblue;
+    @include SP {
+        padding: 50px 0;
+    }
+
+
 
     &_content {
         padding: 0 25px;
         @include flex($justify:center);
+
+        @include tab {
+            display: block;
+        }
+
+        @include SP {
+            display: block;
+        }
     }
+
 
     .section_ttl {
 
         &:after {
             content: 'PORTFOLIO';
+
+            @include SP {
+                @include rem(25);
+                top: 20;
+            }
+
+
         }
+
 
     }
 
@@ -109,10 +161,26 @@ portfolio
         height: 100%;
         margin-right: 50px;
         box-shadow: 0px 10px 10px 0px rgba($cBlack, 0.5);
+
+        @include tab {
+            margin-right: 0;
+            margin-bottom: 50px;
+        }
+
+        @include SP {
+            margin-right: 0;
+            margin-bottom: 50px;
+        }
     }
 
     &_txtbox {
         width: 80%;
+
+        @include SP {
+            width: 100%;
+        }
+
+        ;
 
     }
 
@@ -126,6 +194,10 @@ portfolio
         text-align: left;
         line-height: 2;
         @include rem(20);
+
+        @include tab {
+            line-height: 2.2;
+        }
     }
 
     &_spa {
@@ -144,8 +216,12 @@ skill
 *****************************************:*/
 
 .skill {
-    padding: 125px 0;
-    background-color: silver;
+    padding: 100px 0;
+
+    @include SP {
+        padding: 50px 0;
+    }
+
 
     .section_ttl {
 
@@ -163,6 +239,10 @@ skill
     &_box {
         @include flex;
         margin: 50px auto;
+
+        @include SP {
+            margin: 25px auto;
+        }
     }
 
     &_imgbox {
@@ -172,6 +252,15 @@ skill
         margin: 0 3vw;
         display: flex;
         align-items: center;
+
+        @include tab {
+            width: 70px;
+            margin: 0 4vw;
+        }
+
+        @include SP {
+            width: 80px;
+        }
     }
 }
 
@@ -183,6 +272,13 @@ skill
 
     @include SP {
         padding: 50px 0;
+    }
+
+    .section_ttl {
+
+        &:after {
+            content: "ABOUT US";
+        }
     }
 
     &_txt {
@@ -290,6 +386,12 @@ skill
 
     @include SP {
         padding: 50px 0;
+    }
+
+    .section_ttl {
+        &:after {
+            content: "CONTACT";
+        }
     }
 
     & .section_inner {

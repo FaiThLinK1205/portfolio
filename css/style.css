@@ -535,13 +535,24 @@ button
 fv
 
 *****************************************:*/
+main {
+  width: 100%;
+  padding: 0 20px;
+}
+
 /****************************************:
 
 service
 
 *****************************************:*/
 .service {
-  padding: 125px 0;
+  padding: 100px 0;
+}
+
+@media screen and (max-width: 480px) {
+  .service {
+    padding: 50px 0;
+  }
 }
 
 .service_content {
@@ -557,6 +568,16 @@ service
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
   padding: 0 25px;
+}
+
+@media screen and (max-width: 480px) {
+  .service_content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .service .section_ttl:after {
@@ -589,10 +610,36 @@ service
   margin-right: 0;
 }
 
+@media screen and (max-width: 480px) {
+  .service_box:last-child {
+    margin-right: initial;
+  }
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .service_box {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .service_box {
+    margin-bottom: 50px;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
 .service_imgbox {
   width: 120px;
   margin: auto;
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .service_imgbox {
+    width: 80px;
+  }
 }
 
 .service_ttl {
@@ -615,8 +662,13 @@ portfolio
 
 *****************************************:*/
 .portfolio {
-  padding: 125px 0;
-  background-color: skyblue;
+  padding: 100px 0;
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio {
+    padding: 50px 0;
+  }
 }
 
 .portfolio_content {
@@ -634,8 +686,29 @@ portfolio
           flex-wrap: nowrap;
 }
 
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .portfolio_content {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio_content {
+    display: block;
+  }
+}
+
 .portfolio .section_ttl:after {
   content: 'PORTFOLIO';
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio .section_ttl:after {
+    font-size: 25px;
+    /*IE9以前に対応する*/
+    font-size: 1.5625rem;
+    top: 20;
+  }
 }
 
 .portfolio_imgbox {
@@ -645,8 +718,28 @@ portfolio
           box-shadow: 0px 10px 10px 0px rgba(51, 51, 51, 0.5);
 }
 
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .portfolio_imgbox {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio_imgbox {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+}
+
 .portfolio_txtbox {
   width: 80%;
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio_txtbox {
+    width: 100%;
+  }
 }
 
 .portfolio_ttl {
@@ -664,6 +757,12 @@ portfolio
   font-size: 1.25rem;
 }
 
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .portfolio_txt {
+    line-height: 2.2;
+  }
+}
+
 .portfolio_spa {
   color: #00a0e9;
 }
@@ -674,8 +773,13 @@ skill
 
 *****************************************:*/
 .skill {
-  padding: 125px 0;
-  background-color: silver;
+  padding: 100px 0;
+}
+
+@media screen and (max-width: 480px) {
+  .skill {
+    padding: 50px 0;
+  }
 }
 
 .skill .section_ttl:after {
@@ -713,6 +817,12 @@ skill
   margin: 50px auto;
 }
 
+@media screen and (max-width: 480px) {
+  .skill_box {
+    margin: 25px auto;
+  }
+}
+
 .skill_imgbox {
   display: block;
   width: 150px;
@@ -728,6 +838,19 @@ skill
           align-items: center;
 }
 
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .skill_imgbox {
+    width: 70px;
+    margin: 0 4vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skill_imgbox {
+    width: 80px;
+  }
+}
+
 /**** ABOUT US ****/
 .about {
   padding: 100px 0;
@@ -737,6 +860,10 @@ skill
   .about {
     padding: 50px 0;
   }
+}
+
+.about .section_ttl:after {
+  content: "ABOUT US";
 }
 
 .about_txt {
@@ -871,6 +998,10 @@ skill
   .top_contact {
     padding: 50px 0;
   }
+}
+
+.top_contact .section_ttl:after {
+  content: "CONTACT";
 }
 
 .top_contact .section_inner {
