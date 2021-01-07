@@ -1031,9 +1031,99 @@ skill
 
 /****************************************:
 
-
+contact
 
 *****************************************:*/
+.contact {
+  padding: 130px 0 104px;
+}
+
+.contact_ttl {
+  margin-bottom: 30px;
+  color: #000;
+  font-size: 40px;
+  /*IE9以前に対応する*/
+  font-size: 2.5rem;
+}
+
+.contact_txt {
+  width: 700px;
+  margin-bottom: 30px;
+}
+
+.contact_form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.contact_form_ttl {
+  margin: 13px 0 13px;
+  font-size: 16px;
+  /*IE9以前に対応する*/
+  font-size: 1rem;
+}
+
+.contact_form_box {
+  width: 480px;
+  margin-bottom: 20px;
+  line-height: 30px;
+}
+
+.contact_form_Txtbox {
+  width: 600px;
+  margin-bottom: 50px;
+}
+
+.labelItem_name {
+  position: relative;
+}
+
+.labelItem_name:after {
+  position: absolute;
+  content: '必須';
+  top: 0;
+  left: 60px;
+  color: #fff;
+  background-color: red;
+}
+
+.labelItem_email {
+  position: relative;
+}
+
+.labelItem_email:after {
+  position: absolute;
+  content: '必須';
+  top: 0;
+  left: 120px;
+  color: #fff;
+  background-color: red;
+}
+
+.labelItem_contact {
+  position: relative;
+}
+
+.labelItem_contact:after {
+  position: absolute;
+  content: '必須';
+  top: 0;
+  left: 140px;
+  color: #fff;
+  background-color: red;
+}
+
 /****************************************:
 
 footer
