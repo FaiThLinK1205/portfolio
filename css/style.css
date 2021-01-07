@@ -111,9 +111,9 @@ header
 }
 
 .header_ttl {
-  font-size: 48px;
+  font-size: 45px;
   /*IE9以前に対応する*/
-  font-size: 3rem;
+  font-size: 2.8125rem;
 }
 
 @media screen and (max-width: 769px) and (min-width: 480px) {
@@ -133,9 +133,9 @@ header
 }
 
 .header_logo {
-  width: 10%;
-  margin-left: 50px;
-  margin-right: 20px;
+  width: 53px;
+  margin-left: 20px;
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 769px) and (min-width: 480px) {
@@ -158,7 +158,7 @@ nav
 
 *****************************************:*/
 .nav {
-  margin-right: 50px;
+  margin-right: 20px;
 }
 
 @media screen and (max-width: 769px) and (min-width: 480px) {
@@ -194,7 +194,7 @@ nav
 }
 
 .nav_item {
-  width: 150px;
+  width: 130px;
   font-size: 18px;
   /*IE9以前に対応する*/
   font-size: 1.125rem;
