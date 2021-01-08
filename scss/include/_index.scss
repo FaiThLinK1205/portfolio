@@ -145,6 +145,7 @@ portfolio
 
     &_content {
         padding: 0 25px;
+        margin-bottom: 50px;
         @include flex($justify:center);
 
         @include tab {
@@ -161,12 +162,6 @@ portfolio
 
         &:after {
             content: 'PORTFOLIO';
-
-            @include SP {
-                @include rem(25);
-                top: 20;
-            }
-
 
         }
 

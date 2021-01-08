@@ -728,6 +728,7 @@ portfolio
 
 .portfolio_content {
   padding: 0 25px;
+  margin-bottom: 50px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -755,15 +756,6 @@ portfolio
 
 .portfolio .section_ttl:after {
   content: 'PORTFOLIO';
-}
-
-@media screen and (max-width: 480px) {
-  .portfolio .section_ttl:after {
-    font-size: 25px;
-    /*IE9以前に対応する*/
-    font-size: 1.5625rem;
-    top: 20;
-  }
 }
 
 .portfolio_imgbox {
