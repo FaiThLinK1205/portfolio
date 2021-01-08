@@ -83,6 +83,10 @@ service
         @include flex($justify:center);
         padding: 0 25px;
 
+        // @include tab {
+        //     @include flex($wrap:wrap);
+        // }
+
 
         @include SP {
             flex-direction: column;
@@ -129,7 +133,7 @@ service
     &_imgbox {
         width: 120px;
         margin: auto;
-        margin-bottom: 50px;
+        // margin-bottom: 50px;
 
         @include tab {
             width: 80px;
@@ -144,14 +148,45 @@ service
 
     }
 
+    &_txtwrap {
+        padding: 30px;
+        margin-top: 50px;
+        width: 100%;
+        height: 450px;
+        background-color: rgba($cBlue, 0.2);
+        // line-height: 30px;
+
+        @include pc_tab {
+            height: 300px;
+            padding: 15px;
+        }
+
+        @include tab {
+            width: 200px;
+            height: 300px;
+            padding: 10px;
+        }
+    }
+
     &_txt {
 
-        padding: 30px;
+        // padding: 30px;
+        @include rem(18);
         text-align: left;
-        background-color: rgba($cBlue, 0.2);
         color: $cBlack;
+        margin-top: 10px;
 
+        @include pc_tab {
+            // padding: 25px;
+            @include rem(13);
+        }
 
+        @include tab {
+            // padding: 15px;
+            margin: 10px;
+            @include rem(10);
+            line-height: 1.8;
+        }
 
     }
 }
@@ -173,6 +208,7 @@ portfolio
 
     &_content {
         padding: 0 25px;
+        margin-bottom: 80px;
         @include flex($justify:center);
 
         @include tab {
@@ -190,12 +226,6 @@ portfolio
         &:after {
             content: 'PORTFOLIO';
 
-            @include SP {
-                @include rem(25);
-                top: 20;
-            }
-
-
         }
 
 
@@ -206,6 +236,7 @@ portfolio
         height: 100%;
         margin-right: 50px;
         box-shadow: 0px 10px 10px 0px rgba($cBlack, 0.5);
+
 
         @include tab {
             margin-right: 0;
@@ -225,7 +256,6 @@ portfolio
             width: 100%;
         }
 
-        ;
 
     }
 
@@ -233,12 +263,42 @@ portfolio
         margin-bottom: 25px;
         @include rem(24);
 
+        @include pc_tab {
+            @include rem(14);
+        }
+
+
+    }
+
+    &_txtwrap {
+        margin-left: 25px;
+    }
+
+    &_inbox {
+
+        @include pc_tab {
+            margin: 20px 0 40px;
+        }
     }
 
     &_txt {
         text-align: left;
         line-height: 2;
         @include rem(20);
+
+        @include pc_tab {
+
+            @include rem(16);
+            line-height: 2.5;
+
+            &.__min {
+
+                @include rem(14);
+                line-height: 1.8;
+
+            }
+        }
+
 
         @include tab {
             line-height: 2.2;
@@ -247,6 +307,10 @@ portfolio
 
     &_spa {
         color: $cBlue;
+
+        @include pc_tab {
+            @include rem(14);
+        }
     }
 
 
@@ -301,6 +365,11 @@ skill
         margin: 0 3vw;
         display: flex;
         align-items: center;
+
+        @include pc_tab {
+            width: 80px;
+            margin: 0 5vw;
+        }
 
         @include tab {
             width: 70px;
