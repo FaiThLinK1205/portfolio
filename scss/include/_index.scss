@@ -133,7 +133,7 @@ service
     &_imgbox {
         width: 120px;
         margin: auto;
-        margin-bottom: 50px;
+        // margin-bottom: 50px;
 
         @include tab {
             width: 80px;
@@ -149,29 +149,40 @@ service
     }
 
     &_txtwrap {
-        // width: 200px;
+        padding: 30px;
+        margin-top: 50px;
+        width: 100%;
+        height: 450px;
+        background-color: rgba($cBlue, 0.2);
+        // line-height: 30px;
+
+        @include pc_tab {
+            height: 300px;
+            padding: 15px;
+        }
 
         @include tab {
             width: 200px;
-            height: 250px;
+            height: 300px;
+            padding: 10px;
         }
     }
 
     &_txt {
 
-        padding: 30px;
+        // padding: 30px;
         @include rem(18);
         text-align: left;
-        background-color: rgba($cBlue, 0.2);
         color: $cBlack;
+        margin-top: 10px;
 
         @include pc_tab {
-            padding: 25px;
-            @include rem(12);
+            // padding: 25px;
+            @include rem(13);
         }
 
         @include tab {
-            padding: 15px;
+            // padding: 15px;
             margin: 10px;
             @include rem(10);
             line-height: 1.8;
