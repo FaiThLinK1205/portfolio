@@ -106,6 +106,22 @@ body {
   margin: 0 auto;
 }
 
+.br_tabSP {
+  display: none;
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .br_tabSP {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .br_tabSP {
+    display: block;
+  }
+}
+
 /****************************************:
 
 header
@@ -713,11 +729,41 @@ service
   font-size: 1.5rem;
 }
 
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .service_txtwrap {
+    width: 200px;
+    height: 250px;
+  }
+}
+
 .service_txt {
   padding: 30px;
+  font-size: 18px;
+  /*IE9以前に対応する*/
+  font-size: 1.125rem;
   text-align: left;
   background-color: rgba(0, 160, 233, 0.2);
   color: #333333;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .service_txt {
+    padding: 25px;
+    font-size: 12px;
+    /*IE9以前に対応する*/
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .service_txt {
+    padding: 15px;
+    margin: 10px;
+    font-size: 10px;
+    /*IE9以前に対応する*/
+    font-size: 0.625rem;
+    line-height: 1.8;
+  }
 }
 
 /****************************************:
@@ -737,7 +783,7 @@ portfolio
 
 .portfolio_content {
   padding: 0 25px;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -805,12 +851,45 @@ portfolio
   font-size: 1.5rem;
 }
 
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .portfolio_ttl {
+    font-size: 14px;
+    /*IE9以前に対応する*/
+    font-size: 0.875rem;
+  }
+}
+
+.portfolio_txtwrap {
+  margin-left: 25px;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .portfolio_inbox {
+    margin: 20px 0 40px;
+  }
+}
+
 .portfolio_txt {
   text-align: left;
   line-height: 2;
   font-size: 20px;
   /*IE9以前に対応する*/
   font-size: 1.25rem;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .portfolio_txt {
+    font-size: 16px;
+    /*IE9以前に対応する*/
+    font-size: 1rem;
+    line-height: 2.5;
+  }
+  .portfolio_txt.__min {
+    font-size: 14px;
+    /*IE9以前に対応する*/
+    font-size: 0.875rem;
+    line-height: 1.8;
+  }
 }
 
 @media screen and (max-width: 769px) and (min-width: 480px) {
@@ -821,6 +900,14 @@ portfolio
 
 .portfolio_spa {
   color: #00a0e9;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .portfolio_spa {
+    font-size: 14px;
+    /*IE9以前に対応する*/
+    font-size: 0.875rem;
+  }
 }
 
 /****************************************:
@@ -896,6 +983,13 @@ skill
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .skill_imgbox {
+    width: 80px;
+    margin: 0 5vw;
+  }
 }
 
 @media screen and (max-width: 769px) and (min-width: 480px) {
