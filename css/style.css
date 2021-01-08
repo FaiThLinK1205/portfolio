@@ -571,6 +571,22 @@ nav
 button
 
 *****************************************:*/
+.btn {
+  width: 480px;
+  height: 118px;
+  margin: 0 auto;
+  background: -webkit-linear-gradient(315deg, #00a0e9 100%, #00f0f9);
+  background: linear-gradient(135deg, #00a0e9 100%, #00f0f9);
+  border-radius: 149px;
+  font-size: 30px;
+  /*IE9以前に対応する*/
+  font-size: 1.875rem;
+  color: #fafafa;
+  text-align: center;
+  line-height: 118px;
+  display: block;
+}
+
 /****************************************:
 
 各ページのスタイル読み込み
