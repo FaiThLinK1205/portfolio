@@ -293,6 +293,7 @@ skill
 
     @include SP {
         padding: 50px 0;
+        @include rem(13);
     }
 
     .section_ttl {
@@ -303,12 +304,12 @@ skill
     }
 
     &_txt {
-        margin-bottom: 80px;
-        text-align: center;
+        width: 70%;
+        margin: 0 auto 80px;
 
         @include SP {
-            margin-bottom: 20px;
-            padding: 0 10px;
+            width: 80%;
+            margin-bottom: 50px;
         }
     }
 
@@ -321,7 +322,7 @@ skill
         }
 
         @include SP {
-            margin-bottom: 30px;
+            margin-bottom: 50px;
             display: block;
         }
 
@@ -335,11 +336,11 @@ skill
 
         &_left {
             width: 30%;
-            padding: 20px;
             text-align: center;
 
             @include SP {
                 width: 100%;
+                margin-bottom: 20px;
             }
 
         }
@@ -360,6 +361,19 @@ skill
         width: 200px;
         height: 200px;
         border-radius: 50%;
+        border: 1px solid #000;
+        position: relative;
+        
+        &:after{
+            width: 200px;
+            height: 200px;
+            content: '';
+            background: #000;
+            // border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            right: 50%;
+        }
 
         @include tab {
             width: 180px;
@@ -370,6 +384,11 @@ skill
     &_dl {
         width: 100%;
         display: flex;
+        border-bottom: 5px solid $cWhite;
+
+        &:last-child{
+            border-bottom: 0px solid $cWhite;
+        }
 
         @include SP {
             width: 100%;
@@ -378,18 +397,21 @@ skill
 
     &_dt {
         width: 25%;
+        padding: 8px;
 
         @include tab {
-            width: 38%;
+            width: 40%;
         }
 
         @include SP {
-            width: 45%;
+            width: 38%;
         }
     }
 
     &_dd {
         width: 100%;
+        padding: 8px 8px 8px 15px;
+        border-left: 5px solid $cWhite;
 
         @include SP {
             width: 55%;

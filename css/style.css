@@ -927,6 +927,9 @@ skill
 @media screen and (max-width: 480px) {
   .about {
     padding: 50px 0;
+    font-size: 13px;
+    /*IE9以前に対応する*/
+    font-size: 0.8125rem;
   }
 }
 
@@ -935,14 +938,14 @@ skill
 }
 
 .about_txt {
-  margin-bottom: 80px;
-  text-align: center;
+  width: 70%;
+  margin: 0 auto 80px;
 }
 
 @media screen and (max-width: 480px) {
   .about_txt {
-    margin-bottom: 20px;
-    padding: 0 10px;
+    width: 80%;
+    margin-bottom: 50px;
   }
 }
 
@@ -962,7 +965,7 @@ skill
 
 @media screen and (max-width: 480px) {
   .about_box {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     display: block;
   }
 }
@@ -981,13 +984,13 @@ skill
 
 .about_box_left {
   width: 30%;
-  padding: 20px;
   text-align: center;
 }
 
 @media screen and (max-width: 480px) {
   .about_box_left {
     width: 100%;
+    margin-bottom: 20px;
   }
 }
 
@@ -1008,6 +1011,18 @@ skill
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  border: 1px solid #000;
+  position: relative;
+}
+
+.about_icon:after {
+  width: 200px;
+  height: 200px;
+  content: '';
+  background: #000;
+  position: absolute;
+  top: 50%;
+  right: 50%;
 }
 
 @media screen and (max-width: 769px) and (min-width: 480px) {
@@ -1023,6 +1038,11 @@ skill
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  border-bottom: 5px solid #fafafa;
+}
+
+.about_dl:last-child {
+  border-bottom: 0px solid #fafafa;
 }
 
 @media screen and (max-width: 480px) {
@@ -1033,22 +1053,25 @@ skill
 
 .about_dt {
   width: 25%;
+  padding: 8px;
 }
 
 @media screen and (max-width: 769px) and (min-width: 480px) {
   .about_dt {
-    width: 38%;
+    width: 40%;
   }
 }
 
 @media screen and (max-width: 480px) {
   .about_dt {
-    width: 45%;
+    width: 38%;
   }
 }
 
 .about_dd {
   width: 100%;
+  padding: 8px 8px 8px 15px;
+  border-left: 5px solid #fafafa;
 }
 
 @media screen and (max-width: 480px) {
