@@ -8,7 +8,7 @@ header
   width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
-  background: rgba($color: $cWhite, $alpha: .5);
+  background: rgba($color: $cWhite, $alpha: .7);
   line-height: 55px;
   @include flex();
   align-items: center;
@@ -27,9 +27,6 @@ header
     @include rem(45);
     color: #000;
 
-    @include pc_tab {
-      @include rem(40);
-    }
 
     @include tab {
       @include rem(40);
@@ -45,6 +42,7 @@ header
     width: 53px;
     margin-left: 20px;
     margin-right: 10px;
+
 
     @include tab {
       width: 45px;
@@ -73,7 +71,7 @@ nav
   margin-right: 20px;
 
   @include pc_tab {
-    
+    margin: 0 auto;
   }
 
   @include tab {
@@ -87,6 +85,10 @@ nav
   &_list {
     display: flex;
     color: $cBlue;
+
+    @include pc_tab {
+      display: block;
+    }
 
     @include tab {
       display: block;
@@ -102,9 +104,17 @@ nav
     @include rem(18);
     text-align: center;
     font-weight: bold;
+    transition: color .3s;
+
 
     &:hover {
+      transition: color .6s ease;
       color: $cBlack;
+    }
+
+    @include pc_tab {
+      width: 100%;
+      @include rem(40);
     }
 
     @include tab {
@@ -124,6 +134,153 @@ nav
 ハンバーガーメニュー
 
 *****************************************:*/
+
+@include pc_tab {
+  #nav-toggle {
+    position: fixed;
+    top: 22px;
+    right: 50px;
+    height: 40px;
+    cursor: pointer;
+
+    >div {
+      position: relative;
+      width: 50px;
+    }
+
+    span {
+      width: 100%;
+      height: 3px;
+      left: 0;
+      display: block;
+      background: #333;
+      position: absolute;
+      transition: transform .6s ease-in-out, top .5s ease;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 14px;
+      }
+
+      &:nth-child(3) {
+        top: 28px;
+      }
+    }
+
+  }
+
+  .open {
+    #nav-toggle span {
+      background: $cWhite;
+
+      &:nth-child(1) {
+        top: 15px;
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        top: 15px;
+        width: 0;
+        left: 50%;
+      }
+
+      &:nth-child(3) {
+        top: 15px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  /* z-index */
+  #nav-toggle {
+    z-index: 1000;
+  }
+
+  #gloval-nav {
+    background: $cBlack;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 990;
+    text-align: center;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity .6s ease, visibility .6s ease;
+  }
+
+
+  #gloval-nav {
+    a {
+      padding: 30px 0;
+      display: block;
+      text-decoration: none;
+      transition: color .6s ease;
+
+      &:hover {
+        color: $cWhite;
+      }
+    }
+
+    ul {
+
+      li {
+        opacity: 0;
+        transform: translateX(200px);
+        transition: transform .6s ease, opacity .2s ease;
+
+        &:nth-child(2) {
+          transition-delay: .15s;
+        }
+
+        &:nth-child(3) {
+          transition-delay: .3s;
+        }
+
+        &:nth-child(4) {
+          transition-delay: .45s;
+        }
+
+        &:nth-child(5) {
+          transition-delay: .6s;
+        }
+
+        &:nth-child(6) {
+          transition-delay: .75s;
+        }
+
+        &:nth-child(7) {
+          transition-delay: .9s;
+        }
+      }
+    }
+  }
+
+  /* open */
+  .open {
+    overflow: hidden;
+
+    #gloval-nav {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    #gloval-nav li {
+      opacity: 1;
+      transform: translateX(0);
+      transition: transform 1s ease, opacity .9s ease;
+    }
+  }
+
+}
 
 @include tab {
   #nav-toggle {
