@@ -7,12 +7,20 @@
 button
 
 *****************************************:*/
+$cBtnMaxPer: 100%;
 
-
-
-
-
-
+.btn{
+  width: 480px;
+  height: 118px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, $cBlue $cBtnMaxPer, #00f0f9);
+  border-radius: 149px;
+  @include rem(30);
+  color: $cWhite;
+  text-align: center;
+  line-height: 118px;
+  display: block;
+}
 
 
 
