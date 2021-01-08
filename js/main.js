@@ -2,6 +2,7 @@
 
 $(() => {
 
+<<<<<<< HEAD
   let btn = $(".btn");
   let btnGradPer = 100;
   let gradTime = 8;
@@ -52,6 +53,13 @@ $(() => {
   // });
 
 
+=======
+  $(function () {
+    $('#nav-toggle').on('click', function () {
+      $('body').toggleClass('open');
+    });
+  });
+>>>>>>> 6949de0d72728b8022c7eff469b9a76c4dac8398
 
   let gradMinus = function() {
     if(btnGradPer <= -5){

@@ -27,9 +27,46 @@ body {
 
 //共通タイトル
 .section_ttl {
-    @include rem(50);
     display: block;
+    position: relative;
     text-align: center;
+    @include rem(50);
+    color: $cBlue;
+    margin-bottom: 50px;
+
+    @include tab {
+        @include rem(35);
+    }
+
+    @include SP {
+        @include rem(20);
+    }
+
+
+    &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: -35px;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: -1;
+        @include rem(60);
+        opacity: .1;
+        letter-spacing: .2em;
+        color: $cBlack;
+
+        @include tab {
+            @include rem(35);
+            top: -20px;
+        }
+
+        @include SP {
+            @include rem(20);
+            top: -12 px;
+        }
+    }
+
 }
 
 

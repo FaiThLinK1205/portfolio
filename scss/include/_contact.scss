@@ -5,13 +5,83 @@
 
 /****************************************:
 
-
+contact
 
 *****************************************:*/
 
+.contact {
+    padding: 130px 0 104px;
+    
+    &_ttl {
+        margin-bottom: 30px;
+        color: #000;
+        @include rem(40);
+    }
 
+    &_txt {
+        width: 700px;
+        margin-bottom: 30px;
+    }
 
+    &_form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    &_form_ttl {
+        margin: 13px 0 13px;
+        @include rem(16);
+    }
 
+    &_form_box {
+        width: 480px;
+        margin-bottom: 20px;
+        line-height: 30px;
+    }
 
+    &_form_Txtbox {
+        width: 600px;
+        margin-bottom: 50px;
+    }
 
+}
 
+.labelItem_name {
+    position: relative;
+}
+
+.labelItem_name:after {
+    position: absolute;
+    content: '必須';
+    top: 0;
+    left: 60px;
+    color: #fff;
+    background-color: red;
+}
+
+.labelItem_email {
+    position: relative;
+}
+
+.labelItem_email:after {
+    position: absolute;
+    content: '必須';
+    top: 0;
+    left: 120px;
+    color: #fff;
+    background-color: red;
+}
+
+.labelItem_contact {
+    position: relative;
+}
+
+.labelItem_contact:after {
+    position: absolute;
+    content: '必須';
+    top: 0;
+    left: 140px;
+    color: #fff;
+    background-color: red;
+}

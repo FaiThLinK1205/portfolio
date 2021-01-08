@@ -19,54 +19,94 @@
 
   <div class="container">
     <!-- ヘッダー -->
+    <!-- ヘッダー -->
     <header class="header">
       <h1 class="header_ttl">
-        <a href="index.html">
-          <img src="" alt="">
-        </a>
+        <a href="index.html"><img src="img/common/header-logo.png" alt="ロゴ画像" class="header_logo">FaiTh LinK</a>
       </h1><!-- /.header_ttl -->
 
       <!-- ハンバーガーメニュー部分 -->
-      <div class="nav_ham">
-
-      </div><!-- ハンバーガーメニューここまで -->
+      <div id="nav-toggle">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <!-- ハンバーガーメニューここまで -->
 
 
       <!-- ナビ -->
-      <nav class="nav" id="nav">
-        <ul class="nav_list">
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-        </ul>
-      </nav>
-      <!-- /.nav -->
+      <div id="gloval-nav">
+        <nav class="nav">
+          <ul class="nav_list">
+            <li class="nav_item">
+              <a href="#" data-nav-section="SERVICE" class="nav_link"><span class="nav_en"
+                  onmouseover="this.innerText='サービス'" onmouseout="this.innerText='SERVICE'">SERVICE</span></a>
+            </li>
+            <!-- /.nav_item -->
+            <li class="nav_item">
+              <a href="#" data-nav-section="PORTFOLIO" class="nav_link"><span class="nav_en"
+                  onmouseover="this.innerText='ポートフォリオ'" onmouseout="this.innerText='PORTFOLIO'">PORTFOLIO</span></a>
+            </li>
+            <!-- /.nav_item -->
+            <li class="nav_item">
+              <a href="#" data-nav-section="SKILL" class="nav_link"><span class="nav_en"
+                  onmouseover="this.innerText='スキル'" onmouseout="this.innerText='SKILL'">SKILL</span></a>
+            </li>
+            <!-- /.nav_item -->
+            <li class="nav_item">
+              <a href="#" data-nav-section="ABOUT US" class="nav_link"><span class="nav_en"
+                  onmouseover="this.innerText='自己紹介'" onmouseout="this.innerText='ABOUT US'">ABOUT US</span></a>
+            </li>
+            <!-- /.nav_item -->
+            <li class="nav_item">
+              <a href="#" data-nav-section="CONTACT" class="nav_link"><span class="nav_en"
+                  onmouseover="this.innerText='お問い合わせ'" onmouseout="this.innerText='CONTACT'">CONTACT</span></a>
+            </li>
+            <!-- /.nav_item -->
+          </ul>
+        </nav>
+        <!-- /.nav -->
+      </div>
     </header>
 
 
     <!-- メインコンテンツ -->
     <main>
       <!--ここからセクション （セクションの数だけコピーして使う）-->
-      <section class="section">
-        <h2 class="section_ttl"></h2>
-        <div class="section_inner">※ここにコンテンツ。</div>
+      <section class="contact">
+        
+        <div class="section_inner">
+          <h2 class="contact_ttl">お問い合わせ</h2>
+        <p class="contact_txt">文章が入ります。文章が入ります。文章が入ります。文章が入ります。
+          文章が入ります。文章が入ります。文章が入ります。文章が入ります。
+          文章が入ります。文章が入ります。文章が入ります。文章が入ります。
+          文章が入ります。文章が入ります。文章が入ります。文章が入ります。
+          文章が入ります。文章が入ります。文章が入ります。文章が入ります。
+        </p>
+
+          <form action="https://docs.google.com/forms/u/3/d/e/1FAIpQLSfsH5qvk0Oe66DNVX_W9asTbwvkPT2govlRaAyXm-3T4dyXjg/formResponse" class="contact_form">
+            <label for="name" class="contact_form_ttl">貴社名</label>
+            <input type="text" class="contact_form_box" name="entry.1159748479">
+            
+            <label for="name" class="contact_form_ttl labelItem_name">お名前</label>
+            <input type="text" class="contact_form_box" name="entry.838304013" required="required">
+            
+            <label for="email" class="contact_form_ttl labelItem_email">メールアドレス</label>
+            <input type="email" class="contact_form_box" name="entry.1709532612" required="required">
+            
+            <label for="tel" class="contact_form_ttl">電話番号</label>
+            <input type="tel" class="contact_form_box" name="entry.1178507402">
+            
+            <label for="message" class="contact_form_ttl labelItem_contact">お問い合わせ内容</label>
+            <textarea class="contact_form_Txtbox" name="entry.615310176" cols="40" rows="20" required="required"></textarea>
+            
+            <div class="contact_btn_box">
+              <p>内容を送信する</p>
+            </div>
+          </form>
+        </div>
       </section>
       <!--//ここまでセクション-->
 
@@ -74,7 +114,7 @@
 
     <!-- フッター -->
     <footer class="footer">
-      <small class="footer_txt"></small>
+      <small class="footer_txt">&copy;FaiTh LinK</small>
     </footer>
 
   </div><!-- /.container -->

@@ -18,8 +18,13 @@ $cBlue: #00a0e9;
 
 
 //font-family
-$fontMain: "Noto Sans JP" "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",
-            Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+$fontMain: "Noto Sans JP""ヒラギノ角ゴ Pro W3",
+"Hiragino Kaku Gothic Pro",
+"メイリオ",
+Meiryo,
+"ＭＳ Ｐゴシック",
+"MS PGothic",
+sans-serif;
 
 
 
@@ -32,8 +37,6 @@ $fontMain: "Noto Sans JP" "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro
 
 // ブレイクポイント
 $widthPc: 1024px;
-$widthTab: 769; // PCファースト用
+$widthPc_Tab: 1100px;
+$widthTab: 769px; // PCファースト用
 $widthSP: 480px;
-
-
-

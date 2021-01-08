@@ -9,25 +9,430 @@ fv
 
 *****************************************:*/
 
+.fv {
+    height: 100vh;
+    width: 100%;
+    background: url(../img/common/FV-2.png) center / cover;
+    position: relative;
+
+    &_txt {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        @include rem(50);
+    }
 
 
+
+    &_line {
+        border-bottom: 5px solid red;
+        padding-bottom: 1px;
+    }
+
+}
 
 
 
 
 /****************************************:
 
-section
+service
 
 *****************************************:*/
 
+.service {
+    padding: 100px 0;
+
+    @include SP {
+        padding: 50px 0;
+    }
 
 
 
 
+    &_content {
+        @include flex($justify:center);
+        padding: 0 25px;
+
+
+        @include SP {
+            flex-direction: column;
+        }
+    }
+
+    .section_ttl {
+
+        &:after {
+            content: 'SERVICE';
+        }
+
+
+    }
+
+    &_box {
+
+        @include flex;
+        width: 350px;
+        flex-direction: column;
+        text-align: center;
+        margin-right: 40px;
+
+        &:last-child {
+            margin-right: 0;
+
+            @include SP {
+                margin-right: initial;
+            }
+        }
+
+        @include tab {
+            margin-right: 30px;
+        }
+
+        @include SP {
+            margin-bottom: 50px;
+            margin-right: 0;
+            width: 100%;
+        }
+    }
+
+
+    &_imgbox {
+        width: 120px;
+        margin: auto;
+        margin-bottom: 50px;
+
+        @include tab {
+            width: 80px;
+        }
+    }
+
+    &_ttl {
+        margin-bottom: 25px;
+        @include rem(24);
+
+
+
+    }
+
+    &_txt {
+
+        padding: 30px;
+        text-align: left;
+        background-color: rgba($cBlue, 0.2);
+        color: $cBlack;
+
+
+
+    }
+}
+
+
+/****************************************:
+
+portfolio
+
+*****************************************:*/
+.portfolio {
+    padding: 100px 0;
+
+    @include SP {
+        padding: 50px 0;
+    }
+
+
+
+    &_content {
+        padding: 0 25px;
+        @include flex($justify:center);
+
+        @include tab {
+            display: block;
+        }
+
+        @include SP {
+            display: block;
+        }
+    }
+
+
+    .section_ttl {
+
+        &:after {
+            content: 'PORTFOLIO';
+
+            @include SP {
+                @include rem(25);
+                top: 20;
+            }
+
+
+        }
+
+
+    }
+
+
+    &_imgbox {
+        height: 100%;
+        margin-right: 50px;
+        box-shadow: 0px 10px 10px 0px rgba($cBlack, 0.5);
+
+        @include tab {
+            margin-right: 0;
+            margin-bottom: 50px;
+        }
+
+        @include SP {
+            margin-right: 0;
+            margin-bottom: 50px;
+        }
+    }
+
+    &_txtbox {
+        width: 80%;
+
+        @include SP {
+            width: 100%;
+        }
+
+        ;
+
+    }
+
+    &_ttl {
+        margin-bottom: 25px;
+        @include rem(24);
+
+    }
+
+    &_txt {
+        text-align: left;
+        line-height: 2;
+        @include rem(20);
+
+        @include tab {
+            line-height: 2.2;
+        }
+    }
+
+    &_spa {
+        color: $cBlue;
+    }
 
 
 
 
+}
+
+/****************************************:
+
+skill
+
+*****************************************:*/
+
+.skill {
+    padding: 100px 0;
+
+    @include SP {
+        padding: 50px 0;
+    }
 
 
+    .section_ttl {
+
+        &:after {
+            content: 'SKILL';
+        }
+    }
+
+    &_ttl {
+        text-align: center;
+    }
+
+    &_content {
+        @include flex($justify: center, $wrap:wrap);
+        margin: 0 auto;
+        padding: 0 25px;
+    }
+
+    &_box {
+        @include flex;
+        margin: 50px auto;
+
+        @include SP {
+            margin: 25px auto;
+        }
+    }
+
+    &_imgbox {
+        display: block;
+        width: 150px;
+        height: 100%;
+        margin: 0 3vw;
+        display: flex;
+        align-items: center;
+
+        @include tab {
+            width: 70px;
+            margin: 0 4vw;
+        }
+
+        @include SP {
+            width: 80px;
+        }
+    }
+}
+
+
+
+/**** ABOUT US ****/
+.about {
+    padding: 100px 0;
+
+    @include SP {
+        padding: 50px 0;
+    }
+
+    .section_ttl {
+
+        &:after {
+            content: "ABOUT US";
+        }
+    }
+
+    &_txt {
+        margin-bottom: 80px;
+        text-align: center;
+
+        @include SP {
+            margin-bottom: 20px;
+            padding: 0 10px;
+        }
+    }
+
+    &_box {
+        margin-bottom: 50px;
+        display: flex;
+
+        @include tab {
+            margin: 0 20px 50px 20px;
+        }
+
+        @include SP {
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &_left {
+            width: 30%;
+            padding: 20px;
+            text-align: center;
+
+            @include SP {
+                width: 100%;
+            }
+
+        }
+
+        &_right {
+            width: 70%;
+            padding: 20px;
+            background: #f3f3f3;
+
+            @include SP {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &_icon {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+
+        @include tab {
+            width: 180px;
+            height: 180px;
+        }
+    }
+
+    &_dl {
+        width: 100%;
+        display: flex;
+
+        @include SP {
+            width: 100%;
+        }
+    }
+
+    &_dt {
+        width: 25%;
+
+        @include tab {
+            width: 38%;
+        }
+
+        @include SP {
+            width: 45%;
+        }
+    }
+
+    &_dd {
+        width: 100%;
+
+        @include SP {
+            width: 55%;
+        }
+    }
+
+}
+
+
+
+/**** contact ****/
+.top_contact {
+
+    padding: 100px 0;
+
+    @include SP {
+        padding: 50px 0;
+    }
+
+    .section_ttl {
+        &:after {
+            content: "CONTACT";
+        }
+    }
+
+    & .section_inner {
+        width: 40%;
+        margin-bottom: 100px;
+
+        @include tab {
+            width: 70%;
+        }
+
+        @include SP {
+            width: 80%;
+        }
+    }
+
+    &_txt {
+        margin-bottom: 80px;
+    }
+
+    & .btn {
+        text-align: center;
+    }
+}
