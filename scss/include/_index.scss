@@ -20,10 +20,17 @@ fv
         top: 50%;
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
-        @include rem(50);
+        font-size: 4.0vw;
+
+        @include SP {
+            @include rem(30);
+
+        }
     }
 
 }
+
+
 
 
 
@@ -32,23 +39,33 @@ fv
     span {
         display: inline-block;
         opacity: 0;
-        animation-name: span_line;
+
+        &:first-of-type {
+            animation-name: line;
+            animation-fill-mode: both;
+
+        }
 
         &:nth-child(1) {
             font-weight: bold;
         }
+
         &:nth-child(2) {
             font-weight: bold;
         }
+
         &:nth-child(9) {
             font-weight: bold;
         }
+
         &:nth-child(10) {
             font-weight: bold;
         }
+
         &:nth-child(11) {
             font-weight: bold;
         }
+
         &:nth-child(12) {
             font-weight: bold;
         }
@@ -56,7 +73,7 @@ fv
 
         @for $i from 1 through 30 {
             &:nth-child(#{$i}) {
-                animation: text 1s cubic-bezier(0,1,1,1) #{$i * 0.1}s forwards;
+                animation: text 1s cubic-bezier(0, 1, 1, 1) #{$i * 0.15}s forwards;
             }
         }
     }
@@ -66,6 +83,7 @@ fv
     0% {
         opacity: 0;
         transform: translateX(400px) translateY(-350px) scale(1);
+
     }
 
     100% {
@@ -73,6 +91,68 @@ fv
         transform: none;
     }
 }
+
+.scroll {
+
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    transform: translate(0, -50%);
+    text-decoration: none;
+    padding-top: 60px;
+    font-weight: bold;
+    color: #000;
+
+    & span {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 30px;
+        height: 50px;
+        margin-left: -15px;
+        border: 2px solid $cWhite;
+        border-radius: 50px;
+        box-sizing: border-box;
+
+        &::before {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            content: '';
+            width: 6px;
+            height: 6px;
+            margin-left: -3px;
+            background-color: #fff;
+            border-radius: 100%;
+            -webkit-animation: sdb 2s infinite;
+            animation: sdb 2s infinite;
+            box-sizing: border-box;
+        }
+    }
+}
+
+@keyframes sdb {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    80% {
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 
 
 /****************************************:
