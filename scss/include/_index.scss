@@ -514,10 +514,11 @@ skill
 
 /**** ABOUT US ****/
 .about {
-    padding: 100px 0;
+    padding: 100px 20px;
 
     @include SP {
         padding: 50px 0;
+        @include rem(13);
     }
 
     .section_ttl {
@@ -528,8 +529,8 @@ skill
     }
 
     &_txt {
-        margin-bottom: 80px;
-        text-align: center;
+        width: 70%;
+        margin: 0 auto 80px;
 
         @include SP {
             margin-bottom: 20px;
@@ -547,7 +548,7 @@ skill
         }
 
         @include SP {
-            margin-bottom: 30px;
+            margin-bottom: 50px;
             display: block;
         }
 
@@ -561,11 +562,14 @@ skill
 
         &_left {
             width: 30%;
-            padding: 20px;
             text-align: center;
+            display: flex;
+            justify-content: center;
+            position: relative;
 
             @include SP {
                 width: 100%;
+                margin-bottom: 20px;
             }
 
         }
@@ -573,7 +577,7 @@ skill
         &_right {
             width: 70%;
             padding: 20px;
-            background: #f3f3f3;
+            background: $cWhite;
 
             @include SP {
                 width: 90%;
@@ -585,7 +589,9 @@ skill
     &_icon {
         width: 200px;
         height: 200px;
+        // padding-top: 10px;
         border-radius: 50%;
+        border: 1px solid #000;        
 
         @include tab {
             width: 180px;
@@ -593,9 +599,77 @@ skill
         }
     }
 
+    &_bg_bo{
+        width: 200px;
+        height: 200px;
+        background: $cWhite;
+        border-radius: 50%;
+        position: absolute;
+        top: 20px;
+        left: 45%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+
+    &_bg_so{
+        width: 50px;
+        height: 50px;
+        background: $cWhite;
+        border-radius: 50%;
+        position: absolute;
+        top: 48%;
+        left: 40px;
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+    &_bg_be{
+        width: 200px;
+        height: 200px;
+        background: $cWhite;
+        border-radius: 50%;
+        position: absolute;
+        top: 20px;
+        left: 55%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+
+    &_bg_se{
+        width: 50px;
+        height: 50px;
+        background: $cWhite;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+
+    &_first{
+        background: #24AB2B;
+    }
+    &_second{
+        background: #C46AFB;
+    }
+    &_third{
+        background: #215FEA;
+    }
+    &_fourth{
+        background: #E53816;
+    }
+    &_five{
+        background: #F6DC4C;
+    }
+
     &_dl {
         width: 100%;
         display: flex;
+        border-bottom: 5px solid #fff;
+
+        &:last-child{
+            border-bottom: 0px solid #fff;
+        }
 
         @include SP {
             width: 100%;
@@ -603,23 +677,22 @@ skill
     }
 
     &_dt {
-        width: 25%;
+        width: 28%;
+        padding: 8px;
 
         @include tab {
-            width: 38%;
+            width: 40%;
         }
 
         @include SP {
-            width: 45%;
+            width: 38%;
         }
     }
 
     &_dd {
-        width: 100%;
-
-        @include SP {
-            width: 55%;
-        }
+        width: 90%;
+        padding: 8px 8px 8px 15px;
+        border-left: 5px solid #fff;
     }
 
 }
@@ -629,7 +702,7 @@ skill
 /**** contact ****/
 .top_contact {
 
-    padding: 100px 0;
+    padding: 100px 20px;
 
     @include SP {
         padding: 50px 0;
@@ -642,20 +715,134 @@ skill
     }
 
     & .section_inner {
-        width: 40%;
         margin-bottom: 100px;
+
+        @include pc_tab{
+            width: 80%;
+        }
+
+        @include tab {
+            width: 90%;
+        }
+
+        @include SP {
+            width: 90%;
+        }
+    }
+
+    &_txt {
+        width: 70%;
+        margin: 0 auto 50px;
+
+        @include pc_tab{
+            width: 90%;
+        }
+
+        @include tab{
+            width: 90%;
+        }
+
+        @include SP{
+            width: 100%;
+            margin: 0 auto 30px;
+        }
+    }
+
+    &_table{
+        margin-bottom: 20px;
+        padding: 0 20px;
+
+        @include SP{
+            padding: 0px 0;
+        }
+    }
+
+    &_dl{
+        line-height: 2em;
+        display: flex;
+        border: 1px solid #bbb;
+
+        &:first-child{
+            border-bottom: 0px solid #000;
+        }
+
+        @include pc_tab{
+            line-height: 1.5em;
+        }
+
+        @include tab{
+            line-height: 1.5em;
+        }
+
+        @include SP{
+            line-height: 1.5em;
+            @include rem(15);
+            display: block;
+
+        }
+    }
+
+    &_dt{
+        padding: 10px;
+        font-weight: bold;
+        border-right: 1px solid #bbb;
+
+        @include pc_tab{
+            width: 30%;
+        }
+
+        @include tab{
+            width: 30%;
+        }
+
+        @include SP{
+            padding: 5px;
+            border-right: 0px solid #bbb;
+        }
+
+    }
+
+    &_dd{
+        padding: 10px;
+
+        @include pc_tab {
+            width: 70%;
+        }
 
         @include tab {
             width: 70%;
         }
 
-        @include SP {
-            width: 80%;
+        @include SP{
+            padding: 5px;
+        }
+
+    }
+
+    .db{
+        display: none;
+
+        @include pc_tab{
+            display: block;
+        }
+
+        @include tab{
+            display: block;
+        }
+
+        @include SP{
+            display: block;
         }
     }
 
-    &_txt {
+    &_utxt{
+        padding: 0 30px;
         margin-bottom: 80px;
+        @include rem(14);
+
+        @include SP{
+            padding: 0;
+        }
     }
 
     & .btn {
