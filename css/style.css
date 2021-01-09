@@ -937,7 +937,7 @@ skill
 
 /**** ABOUT US ****/
 .about {
-  padding: 100px 0;
+  padding: 100px 20px;
 }
 
 @media screen and (max-width: 480px) {
@@ -1001,6 +1001,15 @@ skill
 .about_box_left {
   width: 30%;
   text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
 }
 
 @media screen and (max-width: 480px) {
@@ -1013,7 +1022,7 @@ skill
 .about_box_right {
   width: 70%;
   padding: 20px;
-  background: #f3f3f3;
+  background: #fafafa;
 }
 
 @media screen and (max-width: 480px) {
@@ -1028,17 +1037,6 @@ skill
   height: 200px;
   border-radius: 50%;
   border: 1px solid #000;
-  position: relative;
-}
-
-.about_icon:after {
-  width: 200px;
-  height: 200px;
-  content: '';
-  background: #000;
-  position: absolute;
-  top: 50%;
-  right: 50%;
 }
 
 @media screen and (max-width: 769px) and (min-width: 480px) {
@@ -1048,17 +1046,89 @@ skill
   }
 }
 
+.about_bg_bo {
+  width: 200px;
+  height: 200px;
+  background: #fafafa;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 45%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -1;
+}
+
+.about_bg_so {
+  width: 50px;
+  height: 50px;
+  background: #fafafa;
+  border-radius: 50%;
+  position: absolute;
+  top: 48%;
+  left: 40px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: -1;
+}
+
+.about_bg_be {
+  width: 200px;
+  height: 200px;
+  background: #fafafa;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 55%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -1;
+}
+
+.about_bg_se {
+  width: 50px;
+  height: 50px;
+  background: #fafafa;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: -1;
+}
+
+.about_first {
+  background: #24AB2B;
+}
+
+.about_second {
+  background: #C46AFB;
+}
+
+.about_third {
+  background: #215FEA;
+}
+
+.about_fourth {
+  background: #E53816;
+}
+
+.about_five {
+  background: #F6DC4C;
+}
+
 .about_dl {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  border-bottom: 5px solid #fafafa;
+  border-bottom: 5px solid #fff;
 }
 
 .about_dl:last-child {
-  border-bottom: 0px solid #fafafa;
+  border-bottom: 0px solid #fff;
 }
 
 @media screen and (max-width: 480px) {
@@ -1068,7 +1138,7 @@ skill
 }
 
 .about_dt {
-  width: 25%;
+  width: 28%;
   padding: 8px;
 }
 
@@ -1085,20 +1155,14 @@ skill
 }
 
 .about_dd {
-  width: 100%;
+  width: 90%;
   padding: 8px 8px 8px 15px;
-  border-left: 5px solid #fafafa;
-}
-
-@media screen and (max-width: 480px) {
-  .about_dd {
-    width: 55%;
-  }
+  border-left: 5px solid #fff;
 }
 
 /**** contact ****/
 .top_contact {
-  padding: 100px 0;
+  padding: 100px 20px;
 }
 
 @media screen and (max-width: 480px) {
@@ -1112,24 +1176,178 @@ skill
 }
 
 .top_contact .section_inner {
-  width: 40%;
   margin-bottom: 100px;
 }
 
-@media screen and (max-width: 769px) and (min-width: 480px) {
-  .top_contact .section_inner {
-    width: 70%;
-  }
-}
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1100px) and (min-width: 769px) {
   .top_contact .section_inner {
     width: 80%;
   }
 }
 
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .top_contact .section_inner {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .top_contact .section_inner {
+    width: 90%;
+  }
+}
+
 .top_contact_txt {
+  width: 70%;
+  margin: 0 auto 50px;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .top_contact_txt {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .top_contact_txt {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .top_contact_txt {
+    width: 100%;
+    margin: 0 auto 30px;
+  }
+}
+
+.top_contact_table {
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .top_contact_table {
+    padding: 0px 0;
+  }
+}
+
+.top_contact_dl {
+  line-height: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #bbb;
+}
+
+.top_contact_dl:first-child {
+  border-bottom: 0px solid #000;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .top_contact_dl {
+    line-height: 1.5em;
+  }
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .top_contact_dl {
+    line-height: 1.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .top_contact_dl {
+    line-height: 1.5em;
+    font-size: 15px;
+    /*IE9以前に対応する*/
+    font-size: 0.9375rem;
+    display: block;
+  }
+}
+
+.top_contact_dt {
+  padding: 10px;
+  font-weight: bold;
+  border-right: 1px solid #bbb;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .top_contact_dt {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .top_contact_dt {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .top_contact_dt {
+    padding: 5px;
+    border-right: 0px solid #bbb;
+  }
+}
+
+.top_contact_dd {
+  padding: 10px;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .top_contact_dd {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .top_contact_dd {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .top_contact_dd {
+    padding: 5px;
+  }
+}
+
+.top_contact .db {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .top_contact .db {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .top_contact .db {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .top_contact .db {
+    display: block;
+  }
+}
+
+.top_contact_utxt {
+  padding: 0 30px;
   margin-bottom: 80px;
+  font-size: 14px;
+  /*IE9以前に対応する*/
+  font-size: 0.875rem;
+}
+
+@media screen and (max-width: 480px) {
+  .top_contact_utxt {
+    padding: 0;
+  }
 }
 
 .top_contact .btn {
