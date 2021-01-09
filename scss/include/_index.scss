@@ -533,14 +533,9 @@ skill
         margin: 0 auto 80px;
 
         @include SP {
-<<<<<<< HEAD
-            width: 80%;
-            margin-bottom: 50px;
-=======
             margin-bottom: 20px;
             padding: 0 10px;
             @include rem(10);
->>>>>>> 3310ebf8ae5647aa4423d20f994bc97f5678a280
         }
     }
 
