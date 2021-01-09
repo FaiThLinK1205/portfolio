@@ -175,9 +175,9 @@ service
         @include flex($justify:center);
         padding: 0 25px;
 
-        // @include tab {
-        //     @include flex($wrap:wrap);
-        // }
+        @include tab {
+            @include flex($wrap:wrap);
+        }
 
 
         @include SP {
@@ -197,13 +197,15 @@ service
     &_box {
 
         @include flex;
-        width: 350px;
+        // width: 350px;
+        width: 100%;
         flex-direction: column;
         text-align: center;
         margin-right: 40px;
 
         &:last-child {
             margin-right: 0;
+
 
             @include SP {
                 margin-right: initial;
@@ -212,6 +214,11 @@ service
 
         @include tab {
             margin-right: 30px;
+            margin: auto;
+
+            &:last-child {
+                margin-right: auto;
+            }
         }
 
         @include SP {
@@ -249,14 +256,22 @@ service
         // line-height: 30px;
 
         @include pc_tab {
-            height: 300px;
+            // height: 300px;
+            height: 100%;
             padding: 15px;
         }
 
         @include tab {
-            width: 200px;
-            height: 300px;
+            width: 100%;
+            height: 100%;
+            // height: 200px;
             padding: 10px;
+            margin: 50px auto;
+        }
+
+        @include SP {
+            height: 100%;
+            margin: 50px auto
         }
     }
 
@@ -276,8 +291,12 @@ service
         @include tab {
             // padding: 15px;
             margin: 10px;
-            @include rem(10);
+            @include rem(18);
             line-height: 1.8;
+        }
+
+        @include SP {
+            @include rem(12);
         }
 
     }
@@ -344,6 +363,10 @@ portfolio
     &_txtbox {
         width: 80%;
 
+        @include tab {
+            margin: auto;
+        }
+
         @include SP {
             width: 100%;
         }
@@ -368,8 +391,10 @@ portfolio
 
     &_inbox {
 
+        margin-bottom: 25px;
+
         @include pc_tab {
-            margin: 20px 0 40px;
+            margin: 10px 0 20px;
         }
     }
 
@@ -380,20 +405,27 @@ portfolio
 
         @include pc_tab {
 
-            @include rem(16);
-            line-height: 2.5;
+            @include rem(17);
+            line-height: 2;
 
             &.__min {
 
                 @include rem(14);
                 line-height: 1.8;
 
+
             }
         }
 
 
         @include tab {
+            padding: 10px;
             line-height: 2.2;
+        }
+
+        @include SP {
+            padding: 10px;
+            @include rem(10);
         }
     }
 
@@ -433,6 +465,10 @@ skill
 
     &_ttl {
         text-align: center;
+
+        @include SP {
+            @include rem(10);
+        }
     }
 
     &_content {
@@ -498,6 +534,7 @@ skill
         @include SP {
             margin-bottom: 20px;
             padding: 0 10px;
+            @include rem(10);
         }
     }
 
