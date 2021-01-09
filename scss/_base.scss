@@ -63,7 +63,7 @@ body {
 
         @include SP {
             @include rem(20);
-            top: -12 px;
+            top: -10px;
         }
     }
 
@@ -76,4 +76,18 @@ body {
     max-width: 1180px;
     margin: 0 auto;
 
+}
+
+
+
+.br_tabSP {
+    display: none;
+
+    @include tab {
+        display: block;
+    }
+
+    @include SP {
+        display: block;
+    }
 }
