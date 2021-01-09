@@ -1663,16 +1663,11 @@ skill
 
 @media screen and (max-width: 480px) {
   .about_txt {
-<<<<<<< HEAD
-    width: 80%;
-    margin-bottom: 50px;
-=======
     margin-bottom: 20px;
     padding: 0 10px;
     font-size: 10px;
     /*IE9以前に対応する*/
     font-size: 0.625rem;
->>>>>>> 3310ebf8ae5647aa4423d20f994bc97f5678a280
   }
 }
 
