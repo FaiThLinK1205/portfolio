@@ -24,35 +24,46 @@ header
 
   &_ttl {
 
-    @include rem(60);
+    @include rem(42);
     color: $cWhite;
+
+    @include pc_tab {
+      margin: 0 auto;
+    }
 
 
     @include tab {
       @include rem(40);
+      margin: 0 auto;
+
     }
 
     @include SP {
       @include rem(28);
+      margin: 0 auto;
+
     }
   }
 
 
   &_logo {
-    width: 68px;
+    width: 50px;
     margin-left: 20px;
     margin-right: 10px;
+    margin-bottom: 12px;
 
 
     @include tab {
       width: 45px;
-      margin-left: 10px;
+      margin-left: 0;
+      margin-bottom: 0;
     }
 
     @include SP {
       width: 28px;
-      margin-left: 5px;
-      margin-right: 8px;
+      margin-left: 0;
+      margin-right: 5px;
+      margin-bottom: 0;
     }
   }
 }
@@ -100,8 +111,8 @@ nav
   }
 
   &_item {
-    width: 180px;
-    @include rem(25);
+    width: 150px;
+    @include rem(21);
     text-align: center;
     transition: color .2s;
 
@@ -232,13 +243,13 @@ nav
 
   #gloval-nav {
     a {
-      padding: 30px 0;
+      margin: 40px 0;
       display: block;
       text-decoration: none;
-      transition: color .6s ease;
+      transition: color .3s ease;
 
       &:hover {
-        color: $cWhite;
+        color: $cBlue;
       }
     }
 
@@ -391,13 +402,13 @@ nav
 
   #gloval-nav {
     a {
-      padding: 30px 0;
+      margin: 50px 0;
       display: block;
       text-decoration: none;
-      transition: color .6s ease;
+      transition: color .3s ease;
 
       &:hover {
-        color: $cWhite;
+        color: $cBlue;
       }
     }
 
@@ -455,161 +466,161 @@ nav
 
 @include SP {
 
-    #nav-toggle {
-      position: fixed;
-      top: 90vh;
-      right: 20px;
-      width: 60px;
-      height: 60px;
-      cursor: pointer;
-      border-radius: 50%;
-      border: 1px solid $cBlack;
-      background: rgba($color:$cWhite, $alpha: 0.8);
+  #nav-toggle {
+    position: fixed;
+    top: 90vh;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid $cBlack;
+    background: rgba($color:$cWhite, $alpha: 0.8);
 
-      >div {
-        position: relative;
-        width: 35px;
+    >div {
+      position: relative;
+      width: 35px;
 
-        &::before {
-          position: absolute;
-          bottom: -26px;
-          left: 12px;
-          width: 100%;
-          content: "MENU";
-          @include rem(11);
-        }
-      }
-
-      span {
-        width: 100%;
-        height: 2px;
-        left: 11px;
-        bottom: 1px;
-        display: block;
-        background: #333;
+      &::before {
         position: absolute;
-        transition: transform .6s ease-in-out, top .5s ease;
+        bottom: -26px;
+        left: 12px;
+        width: 100%;
+        content: "MENU";
+        @include rem(11);
+      }
+    }
 
-        &:nth-child(1) {
-          top: 22px;
-        }
+    span {
+      width: 100%;
+      height: 2px;
+      left: 11px;
+      bottom: 1px;
+      display: block;
+      background: #333;
+      position: absolute;
+      transition: transform .6s ease-in-out, top .5s ease;
+
+      &:nth-child(1) {
+        top: 22px;
+      }
+
+      &:nth-child(2) {
+        top: 32px;
+      }
+
+      &:nth-child(3) {
+        top: 42px;
+      }
+    }
+
+  }
+
+  .open {
+    #nav-toggle span {
+      background: $cWhite;
+
+      &:nth-child(1) {
+        top: 32px;
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        top: 32px;
+        width: 0;
+      }
+
+      &:nth-child(3) {
+        top: 32px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  /* z-index */
+  #nav-toggle {
+    z-index: 1000;
+  }
+
+  #gloval-nav {
+    background: $cBlack;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 990;
+    text-align: center;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity .3s ease, visibility .6s ease;
+  }
+
+
+  #gloval-nav {
+    a {
+      margin: 50px 0;
+      display: block;
+      text-decoration: none;
+      transition: color .6s ease;
+
+      &:hover {
+        color: $cBlue;
+      }
+    }
+
+    ul {
+
+      li {
+        opacity: 0;
+        transform: translateX(200px);
+        transition: transform .6s ease, opacity .2s ease;
 
         &:nth-child(2) {
-          top: 32px;
+          transition-delay: .15s;
         }
 
         &:nth-child(3) {
-          top: 42px;
-        }
-      }
-
-    }
-
-    .open {
-      #nav-toggle span {
-        background: $cWhite;
-
-        &:nth-child(1) {
-          top: 32px;
-          transform: rotate(45deg);
+          transition-delay: .3s;
         }
 
-        &:nth-child(2) {
-          top: 32px;
-          width: 0;
+        &:nth-child(4) {
+          transition-delay: .45s;
         }
 
-        &:nth-child(3) {
-          top: 32px;
-          transform: rotate(-45deg);
+        &:nth-child(5) {
+          transition-delay: .6s;
+        }
+
+        &:nth-child(6) {
+          transition-delay: .75s;
+        }
+
+        &:nth-child(7) {
+          transition-delay: .9s;
         }
       }
     }
+  }
 
-    /* z-index */
-    #nav-toggle {
-      z-index: 1000;
-    }
+  /* open */
+  .open {
+    overflow: hidden;
 
     #gloval-nav {
-      background: $cBlack;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 990;
-      text-align: center;
-      display: flex;
-      visibility: hidden;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      transition: opacity .6s ease, visibility .6s ease;
+      visibility: visible;
+      opacity: 1;
     }
 
-
-    #gloval-nav {
-      a {
-        padding: 30px 0;
-        display: block;
-        text-decoration: none;
-        transition: color .6s ease;
-
-        &:hover {
-          color: $cWhite;
-        }
-      }
-
-      ul {
-
-        li {
-          opacity: 0;
-          transform: translateX(200px);
-          transition: transform .6s ease, opacity .2s ease;
-
-          &:nth-child(2) {
-            transition-delay: .15s;
-          }
-
-          &:nth-child(3) {
-            transition-delay: .3s;
-          }
-
-          &:nth-child(4) {
-            transition-delay: .45s;
-          }
-
-          &:nth-child(5) {
-            transition-delay: .6s;
-          }
-
-          &:nth-child(6) {
-            transition-delay: .75s;
-          }
-
-          &:nth-child(7) {
-            transition-delay: .9s;
-          }
-        }
-      }
+    #gloval-nav li {
+      opacity: 1;
+      transform: translateX(0);
+      transition: transform 1s ease, opacity .9s ease;
     }
-
-    /* open */
-    .open {
-      overflow: hidden;
-
-      #gloval-nav {
-        visibility: visible;
-        opacity: 1;
-      }
-
-      #gloval-nav li {
-        opacity: 1;
-        transform: translateX(0);
-        transition: transform 1s ease, opacity .9s ease;
-      }
-    }
+  }
 
 }

@@ -2,46 +2,59 @@
 
 $(() => {
 
-    // ローディング
-    let div = $('div');
-    let body = $('body');
-    let loadBgc = $('.load_bgc');
-    let circle = $('.circle');
-    $(function(){
-      if(div.hasClass('load_bgc')){
-        body.addClass('hidden');
-        setTimeout(function(){
-          loadBgc.addClass('fadeOut');
-          circle.addClass('fadeOut');
-        }, 4000);
-        setTimeout(function(){
-          loadBgc.addClass('vanish');
-          circle.addClass('vanish');
-          body.removeClass('hidden');
-        }, 5000);
-      }
-    });
-  
-  
-  $(function () {
-    $('#nav-toggle').on('click', function () {
-      $('body').toggleClass('open');
-    });
+  //ページ内リンクスムーススクロール
+  $('a[href^="#"]').on('click', function () {
+    var href = $(this).attr("href");
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top;
+    $("html, body").animate({
+      scrollTop: position
+    }, 550, "swing");
+    return false;
   });
-  
 
-  
-  
+  // ローディング
+  let div = $('div');
+  let body = $('body');
+  let loadBgc = $('.load_bgc');
+  let circle = $('.circle');
+  $(function () {
+    if (div.hasClass('load_bgc')) {
+      body.addClass('hidden');
+      setTimeout(function () {
+        loadBgc.addClass('fadeOut');
+        circle.addClass('fadeOut');
+      }, 4000);
+      setTimeout(function () {
+        loadBgc.addClass('vanish');
+        circle.addClass('vanish');
+        body.removeClass('hidden');
+      }, 5000);
+    }
+  });
+
+
+  // ハンバーガーメニュー
+  $('#nav-toggle').on('click', function () {
+    body.toggleClass('open');
+  });
+
+  $('#gloval-nav a').click(function () {
+    body.removeClass('open');
+  });
+
+
+
   // ボタン操作
   let btn = $(".btn");
   btn.hover(() => {
     btn.addClass('active');
-  }, function(){
+  }, function () {
     btn.removeClass('active');
   });
 
-
 });
+
 
 class SpanWrap {
   constructor() {
@@ -107,14 +120,12 @@ spanWrap.init({
 });
 
 
-    // AOSアニメーション
-  AOS.init({
-      offset: 200,
-      delay: 100,
-      duration: 1500,
-      easing: 'liner',
-      once: true,
+// AOSアニメーション
+AOS.init({
+  offset: 200,
+  delay: 100,
+  duration: 1500,
+  easing: 'liner',
+  once: true,
 
-  });
-
-
+});
