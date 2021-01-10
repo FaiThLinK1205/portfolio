@@ -806,7 +806,7 @@ button
 
 .btn_txt {
   position: relative;
-  z-index: 10;
+  z-index: 15;
 }
 
 .btn::after {
@@ -847,6 +847,104 @@ button
 }
 
 .btn.active::after {
+  right: -5%;
+}
+
+input[type="submit"] {
+  width: 480px;
+  height: 118px;
+  margin: 0 auto;
+  border-radius: 149px;
+  font-size: 30px;
+  /*IE9以前に対応する*/
+  font-size: 1.875rem;
+  color: #fafafa;
+  text-align: center;
+  line-height: 118px;
+  background: transparent;
+  position: relative;
+  z-index: 10;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  input[type="submit"] {
+    width: 300px;
+    height: 75px;
+    font-size: 22px;
+    /*IE9以前に対応する*/
+    font-size: 1.375rem;
+    line-height: 75px;
+  }
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  input[type="submit"] {
+    width: 230px;
+    height: 65px;
+    font-size: 18px;
+    /*IE9以前に対応する*/
+    font-size: 1.125rem;
+    line-height: 65px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  input[type="submit"] {
+    width: 180px;
+    height: 50px;
+    font-size: 16px;
+    /*IE9以前に対応する*/
+    font-size: 1rem;
+    line-height: 50px;
+  }
+}
+
+input[type="submit"]_txt {
+  position: relative;
+  z-index: 15;
+}
+
+input[type="submit"]::after {
+  width: 560px;
+  height: 118px;
+  background: -webkit-linear-gradient(315deg, #00a0e9 17%, #00f0f9);
+  background: linear-gradient(135deg, #00a0e9 17%, #00f0f9);
+  position: absolute;
+  top: 0;
+  right: -125%;
+  z-index: 5;
+  -webkit-transform: skewX(-30deg);
+          transform: skewX(-30deg);
+  -webkit-transition: .4s;
+  transition: .4s;
+  content: "";
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  input[type="submit"]::after {
+    width: 350px;
+    height: 75px;
+  }
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  input[type="submit"]::after {
+    width: 300px;
+    height: 65px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  input[type="submit"]::after {
+    width: 220px;
+    height: 50px;
+  }
+}
+
+input[type="submit"].active::after {
   right: -5%;
 }
 
