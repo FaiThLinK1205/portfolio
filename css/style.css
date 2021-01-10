@@ -1747,6 +1747,13 @@ skill
   border: 1px solid #000;
 }
 
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .about_icon {
+    width: 180px;
+    height: 180px;
+  }
+}
+
 @media screen and (max-width: 769px) and (min-width: 480px) {
   .about_icon {
     width: 180px;
@@ -1772,6 +1779,13 @@ skill
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: -1;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .about_bg_bo {
+    top: 0px;
+    left: 50%;
+  }
 }
 
 @media screen and (max-width: 769px) and (min-width: 480px) {
@@ -1803,6 +1817,15 @@ skill
   z-index: -1;
 }
 
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .about_bg_so {
+    width: 30px;
+    height: 30px;
+    top: 40%;
+    left: 30px;
+  }
+}
+
 @media screen and (max-width: 769px) and (min-width: 480px) {
   .about_bg_so {
     width: 30px;
@@ -1829,6 +1852,13 @@ skill
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: -1;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .about_bg_be {
+    top: 0px;
+    left: 50%;
+  }
 }
 
 @media screen and (max-width: 769px) and (min-width: 480px) {
@@ -1860,6 +1890,15 @@ skill
   z-index: -1;
 }
 
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .about_bg_se {
+    width: 30px;
+    height: 30px;
+    top: 38%;
+    right: 30px;
+  }
+}
+
 @media screen and (max-width: 769px) and (min-width: 480px) {
   .about_bg_se {
     width: 30px;
@@ -1877,22 +1916,27 @@ skill
 
 .about_first {
   background: #24AB2B;
+  opacity: 0.8;
 }
 
 .about_second {
   background: #C46AFB;
+  opacity: 0.8;
 }
 
 .about_third {
   background: #215FEA;
+  opacity: 0.8;
 }
 
 .about_fourth {
   background: #E53816;
+  opacity: 0.8;
 }
 
 .about_five {
   background: #F6DC4C;
+  opacity: 0.8;
 }
 
 .about_dl {
@@ -2187,6 +2231,14 @@ contact
   margin-bottom: 50px;
 }
 
+.contact_btn_box .btn {
+  margin: 0 auto 0 0;
+}
+
+.contact_btn_box .btn:hover {
+  cursor: pointer;
+}
+
 .labelItem_name {
   position: relative;
 }
@@ -2239,6 +2291,18 @@ footer
   background: #00a0e9;
 }
 
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .footer {
+    line-height: 60px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    line-height: 50px;
+  }
+}
+
 .footer_txt {
   font-size: 14px;
   /*IE9以前に対応する*/
@@ -2250,7 +2314,6 @@ footer
     font-size: 10px;
     /*IE9以前に対応する*/
     font-size: 0.625rem;
-    line-height: 50px;
   }
 }
 
@@ -2259,6 +2322,5 @@ footer
     font-size: 10px;
     /*IE9以前に対応する*/
     font-size: 0.625rem;
-    line-height: 30px;
   }
 }

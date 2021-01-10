@@ -594,6 +594,11 @@ skill
         border-radius: 50%;
         border: 1px solid #000;        
 
+        @include pc_tab {
+            width: 180px;
+            height: 180px;
+        }
+
         @include tab {
             width: 180px;
             height: 180px;
@@ -616,10 +621,16 @@ skill
         transform: translateX(-50%);
         z-index: -1;
 
+        @include pc_tab{
+            top: 0px;
+            left: 50%;
+        }
+
         @include tab{
             top: 0px;
             left: 50%;
         }
+
         @include SP{
             width: 170px;
             height: 170px;
@@ -639,6 +650,13 @@ skill
         transform: translateY(-50%);
         z-index: -1;
 
+        @include pc_tab {
+            width: 30px;
+            height: 30px;
+            top: 40%;
+            left: 30px;
+        }
+
         @include tab {
             width: 30px;
             height: 30px;
@@ -650,6 +668,7 @@ skill
             display: none;
         }
     }
+
     &_bg_be{
         width: 200px;
         height: 200px;
@@ -660,6 +679,11 @@ skill
         left: 55%;
         transform: translateX(-50%);
         z-index: -1;
+
+        @include pc_tab {
+            top: 0px;
+            left: 50%;
+        }
 
         @include tab {
             top: 0px;
@@ -685,6 +709,13 @@ skill
         transform: translateY(-50%);
         z-index: -1;
 
+        @include pc_tab {
+            width: 30px;
+            height: 30px;
+            top: 38%;
+            right: 30px;
+        }
+
         @include tab {
             width: 30px;
             height: 30px;
@@ -699,18 +730,23 @@ skill
 
     &_first{
         background: #24AB2B;
+        opacity: 0.8;
     }
     &_second{
         background: #C46AFB;
+        opacity: 0.8;
     }
     &_third{
         background: #215FEA;
+        opacity: 0.8;
     }
     &_fourth{
         background: #E53816;
+        opacity: 0.8;
     }
     &_five{
         background: #F6DC4C;
+        opacity: 0.8;
     }
 
     &_dl {
