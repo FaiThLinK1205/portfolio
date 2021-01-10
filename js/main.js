@@ -2,6 +2,9 @@
 
 $(() => {
 
+<<<<<<< HEAD
+
+=======
     // ローディング
     let div = $('div');
     let body = $('body');
@@ -22,6 +25,7 @@ $(() => {
       }
     });
   
+>>>>>>> f5dd50d69dedf75110b05158813620646043bf2f
   
   $(function () {
     $('#nav-toggle').on('click', function () {
@@ -105,3 +109,16 @@ const spanWrap = new SpanWrap();
 spanWrap.init({
   target: ".fv_txt"
 });
+
+
+    // AOSアニメーション
+  AOS.init({
+      offset: 200,
+      delay: 100,
+      duration: 1500,
+      easing: 'liner',
+      once: true,
+
+  });
+
+
