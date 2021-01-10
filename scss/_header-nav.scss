@@ -8,8 +8,8 @@ header
   width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
-  background: rgba($color: $cWhite, $alpha: .7);
-  line-height: 55px;
+  background: $cBlack;
+  line-height: 70px;
   @include flex();
   align-items: center;
 
@@ -24,8 +24,8 @@ header
 
   &_ttl {
 
-    @include rem(45);
-    color: #000;
+    @include rem(60);
+    color: $cWhite;
 
 
     @include tab {
@@ -39,7 +39,7 @@ header
 
 
   &_logo {
-    width: 53px;
+    width: 68px;
     margin-left: 20px;
     margin-right: 10px;
 
@@ -84,7 +84,7 @@ nav
 
   &_list {
     display: flex;
-    color: $cBlue;
+    color: $cWhite;
 
     @include pc_tab {
       display: block;
@@ -100,16 +100,15 @@ nav
   }
 
   &_item {
-    width: 130px;
-    @include rem(18);
+    width: 180px;
+    @include rem(25);
     text-align: center;
-    font-weight: bold;
-    transition: color .3s;
+    transition: color .2s;
 
 
     &:hover {
-      transition: color .6s ease;
-      color: $cBlack;
+      transition: color .2s ease;
+      color: $cBlue;
     }
 
     @include pc_tab {
@@ -138,35 +137,49 @@ nav
 @include pc_tab {
   #nav-toggle {
     position: fixed;
-    top: 22px;
-    right: 50px;
-    height: 40px;
+    top: 85vh;
+    right: 30px;
+    width: 100px;
+    height: 100px;
     cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid $cBlack;
+    background: rgba($color:$cWhite, $alpha: 0.8);
 
     >div {
       position: relative;
-      width: 50px;
+      width: 60px;
+
+      &::before {
+        position: absolute;
+        bottom: -50px;
+        left: 25px;
+        width: 100%;
+        font-weight: bold;
+        content: "MENU";
+      }
     }
 
     span {
       width: 100%;
       height: 3px;
-      left: 0;
+      left: 20px;
+      bottom: 1px;
       display: block;
       background: #333;
       position: absolute;
       transition: transform .6s ease-in-out, top .5s ease;
 
       &:nth-child(1) {
-        top: 0;
+        top: 30px;
       }
 
       &:nth-child(2) {
-        top: 14px;
+        top: 50px;
       }
 
       &:nth-child(3) {
-        top: 28px;
+        top: 70px;
       }
     }
 
@@ -177,18 +190,17 @@ nav
       background: $cWhite;
 
       &:nth-child(1) {
-        top: 15px;
+        top: 50px;
         transform: rotate(45deg);
       }
 
       &:nth-child(2) {
-        top: 15px;
+        top: 50px;
         width: 0;
-        left: 50%;
       }
 
       &:nth-child(3) {
-        top: 15px;
+        top: 50px;
         transform: rotate(-45deg);
       }
     }
@@ -285,35 +297,48 @@ nav
 @include tab {
   #nav-toggle {
     position: fixed;
-    top: 22px;
-    right: 50px;
-    height: 40px;
+    top: 85vh;
+    right: 30px;
+    width: 80px;
+    height: 80px;
     cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid $cBlack;
+    background: rgba($color:$cWhite, $alpha: 0.8);
 
     >div {
       position: relative;
       width: 50px;
+
+      &::before {
+        position: absolute;
+        bottom: -35px;
+        left: 15px;
+        width: 100%;
+        content: "MENU";
+      }
     }
 
     span {
       width: 100%;
-      height: 3px;
-      left: 0;
+      height: 2px;
+      left: 15px;
+      bottom: 1px;
       display: block;
       background: #333;
       position: absolute;
       transition: transform .6s ease-in-out, top .5s ease;
 
       &:nth-child(1) {
-        top: 0;
+        top: 28px;
       }
 
       &:nth-child(2) {
-        top: 14px;
+        top: 43px;
       }
 
       &:nth-child(3) {
-        top: 28px;
+        top: 58px;
       }
     }
 
@@ -324,18 +349,17 @@ nav
       background: $cWhite;
 
       &:nth-child(1) {
-        top: 15px;
+        top: 42px;
         transform: rotate(45deg);
       }
 
       &:nth-child(2) {
-        top: 15px;
+        top: 42px;
         width: 0;
-        left: 50%;
       }
 
       &:nth-child(3) {
-        top: 15px;
+        top: 42px;
         transform: rotate(-45deg);
       }
     }
@@ -426,150 +450,166 @@ nav
       transition: transform 1s ease, opacity .9s ease;
     }
   }
+
 }
 
 @include SP {
-  #nav-toggle {
-    position: fixed;
-    top: 17px;
-    right: 20px;
-    height: 25px;
-    cursor: pointer;
 
-    >div {
-      position: relative;
-      width: 30px;
-    }
+    #nav-toggle {
+      position: fixed;
+      top: 90vh;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      border-radius: 50%;
+      border: 1px solid $cBlack;
+      background: rgba($color:$cWhite, $alpha: 0.8);
 
-    span {
-      width: 100%;
-      height: 1px;
-      left: 0;
-      display: block;
-      background: #333;
-      position: absolute;
-      transition: transform .6s ease-in-out, top .5s ease;
+      >div {
+        position: relative;
+        width: 35px;
 
-      &:nth-child(1) {
-        top: 0;
+        &::before {
+          position: absolute;
+          bottom: -26px;
+          left: 12px;
+          width: 100%;
+          content: "MENU";
+          @include rem(11);
+        }
       }
 
-      &:nth-child(2) {
-        top: 10px;
-      }
+      span {
+        width: 100%;
+        height: 2px;
+        left: 11px;
+        bottom: 1px;
+        display: block;
+        background: #333;
+        position: absolute;
+        transition: transform .6s ease-in-out, top .5s ease;
 
-      &:nth-child(3) {
-        top: 20px;
-      }
-    }
-
-  }
-
-  .open {
-    #nav-toggle span {
-      background: $cWhite;
-
-      &:nth-child(1) {
-        top: 15px;
-        transform: rotate(45deg);
-      }
-
-      &:nth-child(2) {
-        top: 15px;
-        width: 0;
-        left: 50%;
-      }
-
-      &:nth-child(3) {
-        top: 15px;
-        transform: rotate(-45deg);
-      }
-    }
-  }
-
-  /* z-index */
-  #nav-toggle {
-    z-index: 1000;
-  }
-
-  #gloval-nav {
-    background: $cBlack;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 990;
-    text-align: center;
-    display: flex;
-    visibility: hidden;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity .6s ease, visibility .6s ease;
-  }
-
-
-  #gloval-nav {
-    a {
-      padding: 20px 0;
-      display: block;
-      text-decoration: none;
-      transition: color .6s ease;
-
-      &:hover {
-        color: $cWhite;
-      }
-    }
-
-    ul {
-
-      li {
-        opacity: 0;
-        transform: translateX(200px);
-        transition: transform .6s ease, opacity .2s ease;
+        &:nth-child(1) {
+          top: 22px;
+        }
 
         &:nth-child(2) {
-          transition-delay: .15s;
+          top: 32px;
         }
 
         &:nth-child(3) {
-          transition-delay: .3s;
+          top: 42px;
+        }
+      }
+
+    }
+
+    .open {
+      #nav-toggle span {
+        background: $cWhite;
+
+        &:nth-child(1) {
+          top: 32px;
+          transform: rotate(45deg);
         }
 
-        &:nth-child(4) {
-          transition-delay: .45s;
+        &:nth-child(2) {
+          top: 32px;
+          width: 0;
         }
 
-        &:nth-child(5) {
-          transition-delay: .6s;
-        }
-
-        &:nth-child(6) {
-          transition-delay: .75s;
-        }
-
-        &:nth-child(7) {
-          transition-delay: .9s;
+        &:nth-child(3) {
+          top: 32px;
+          transform: rotate(-45deg);
         }
       }
     }
-  }
 
-  /* open */
-  .open {
-    overflow: hidden;
+    /* z-index */
+    #nav-toggle {
+      z-index: 1000;
+    }
 
     #gloval-nav {
-      visibility: visible;
-      opacity: 1;
+      background: $cBlack;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 990;
+      text-align: center;
+      display: flex;
+      visibility: hidden;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity .6s ease, visibility .6s ease;
     }
 
-    #gloval-nav li {
-      opacity: 1;
-      transform: translateX(0);
-      transition: transform 1s ease, opacity .9s ease;
+
+    #gloval-nav {
+      a {
+        padding: 30px 0;
+        display: block;
+        text-decoration: none;
+        transition: color .6s ease;
+
+        &:hover {
+          color: $cWhite;
+        }
+      }
+
+      ul {
+
+        li {
+          opacity: 0;
+          transform: translateX(200px);
+          transition: transform .6s ease, opacity .2s ease;
+
+          &:nth-child(2) {
+            transition-delay: .15s;
+          }
+
+          &:nth-child(3) {
+            transition-delay: .3s;
+          }
+
+          &:nth-child(4) {
+            transition-delay: .45s;
+          }
+
+          &:nth-child(5) {
+            transition-delay: .6s;
+          }
+
+          &:nth-child(6) {
+            transition-delay: .75s;
+          }
+
+          &:nth-child(7) {
+            transition-delay: .9s;
+          }
+        }
+      }
     }
-  }
+
+    /* open */
+    .open {
+      overflow: hidden;
+
+      #gloval-nav {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      #gloval-nav li {
+        opacity: 1;
+        transform: translateX(0);
+        transition: transform 1s ease, opacity .9s ease;
+      }
+    }
+
 }

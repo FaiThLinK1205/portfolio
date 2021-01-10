@@ -131,8 +131,8 @@ header
   width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
-  background: rgba(250, 250, 250, 0.7);
-  line-height: 55px;
+  background: #333333;
+  line-height: 70px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -163,10 +163,10 @@ header
 }
 
 .header_ttl {
-  font-size: 45px;
+  font-size: 60px;
   /*IE9以前に対応する*/
-  font-size: 2.8125rem;
-  color: #000;
+  font-size: 3.75rem;
+  color: #fafafa;
 }
 
 @media screen and (max-width: 769px) and (min-width: 480px) {
@@ -186,7 +186,7 @@ header
 }
 
 .header_logo {
-  width: 53px;
+  width: 68px;
   margin-left: 20px;
   margin-right: 10px;
 }
@@ -238,7 +238,7 @@ nav
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  color: #00a0e9;
+  color: #fafafa;
 }
 
 @media screen and (max-width: 1100px) and (min-width: 769px) {
@@ -260,20 +260,19 @@ nav
 }
 
 .nav_item {
-  width: 130px;
-  font-size: 18px;
+  width: 180px;
+  font-size: 25px;
   /*IE9以前に対応する*/
-  font-size: 1.125rem;
+  font-size: 1.5625rem;
   text-align: center;
-  font-weight: bold;
-  -webkit-transition: color .3s;
-  transition: color .3s;
+  -webkit-transition: color .2s;
+  transition: color .2s;
 }
 
 .nav_item:hover {
-  -webkit-transition: color .6s ease;
-  transition: color .6s ease;
-  color: #333333;
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+  color: #00a0e9;
 }
 
 @media screen and (max-width: 1100px) and (min-width: 769px) {
@@ -306,19 +305,32 @@ nav
 @media screen and (max-width: 1100px) and (min-width: 769px) {
   #nav-toggle {
     position: fixed;
-    top: 22px;
-    right: 50px;
-    height: 40px;
+    top: 85vh;
+    right: 30px;
+    width: 100px;
+    height: 100px;
     cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #333333;
+    background: rgba(250, 250, 250, 0.8);
   }
   #nav-toggle > div {
     position: relative;
-    width: 50px;
+    width: 60px;
+  }
+  #nav-toggle > div::before {
+    position: absolute;
+    bottom: -50px;
+    left: 25px;
+    width: 100%;
+    font-weight: bold;
+    content: "MENU";
   }
   #nav-toggle span {
     width: 100%;
     height: 3px;
-    left: 0;
+    left: 20px;
+    bottom: 1px;
     display: block;
     background: #333;
     position: absolute;
@@ -328,29 +340,28 @@ nav
     transition: transform .6s ease-in-out, top .5s ease, -webkit-transform .6s ease-in-out;
   }
   #nav-toggle span:nth-child(1) {
-    top: 0;
+    top: 30px;
   }
   #nav-toggle span:nth-child(2) {
-    top: 14px;
+    top: 50px;
   }
   #nav-toggle span:nth-child(3) {
-    top: 28px;
+    top: 70px;
   }
   .open #nav-toggle span {
     background: #fafafa;
   }
   .open #nav-toggle span:nth-child(1) {
-    top: 15px;
+    top: 50px;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
   }
   .open #nav-toggle span:nth-child(2) {
-    top: 15px;
+    top: 50px;
     width: 0;
-    left: 50%;
   }
   .open #nav-toggle span:nth-child(3) {
-    top: 15px;
+    top: 50px;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
   }
@@ -454,19 +465,31 @@ nav
 @media screen and (max-width: 769px) and (min-width: 480px) {
   #nav-toggle {
     position: fixed;
-    top: 22px;
-    right: 50px;
-    height: 40px;
+    top: 85vh;
+    right: 30px;
+    width: 80px;
+    height: 80px;
     cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #333333;
+    background: rgba(250, 250, 250, 0.8);
   }
   #nav-toggle > div {
     position: relative;
     width: 50px;
   }
+  #nav-toggle > div::before {
+    position: absolute;
+    bottom: -35px;
+    left: 15px;
+    width: 100%;
+    content: "MENU";
+  }
   #nav-toggle span {
     width: 100%;
-    height: 3px;
-    left: 0;
+    height: 2px;
+    left: 15px;
+    bottom: 1px;
     display: block;
     background: #333;
     position: absolute;
@@ -476,29 +499,28 @@ nav
     transition: transform .6s ease-in-out, top .5s ease, -webkit-transform .6s ease-in-out;
   }
   #nav-toggle span:nth-child(1) {
-    top: 0;
+    top: 28px;
   }
   #nav-toggle span:nth-child(2) {
-    top: 14px;
+    top: 43px;
   }
   #nav-toggle span:nth-child(3) {
-    top: 28px;
+    top: 58px;
   }
   .open #nav-toggle span {
     background: #fafafa;
   }
   .open #nav-toggle span:nth-child(1) {
-    top: 15px;
+    top: 42px;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
   }
   .open #nav-toggle span:nth-child(2) {
-    top: 15px;
+    top: 42px;
     width: 0;
-    left: 50%;
   }
   .open #nav-toggle span:nth-child(3) {
-    top: 15px;
+    top: 42px;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
   }
@@ -602,19 +624,34 @@ nav
 @media screen and (max-width: 480px) {
   #nav-toggle {
     position: fixed;
-    top: 17px;
+    top: 90vh;
     right: 20px;
-    height: 25px;
+    width: 60px;
+    height: 60px;
     cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #333333;
+    background: rgba(250, 250, 250, 0.8);
   }
   #nav-toggle > div {
     position: relative;
-    width: 30px;
+    width: 35px;
+  }
+  #nav-toggle > div::before {
+    position: absolute;
+    bottom: -26px;
+    left: 12px;
+    width: 100%;
+    content: "MENU";
+    font-size: 11px;
+    /*IE9以前に対応する*/
+    font-size: 0.6875rem;
   }
   #nav-toggle span {
     width: 100%;
-    height: 1px;
-    left: 0;
+    height: 2px;
+    left: 11px;
+    bottom: 1px;
     display: block;
     background: #333;
     position: absolute;
@@ -624,29 +661,28 @@ nav
     transition: transform .6s ease-in-out, top .5s ease, -webkit-transform .6s ease-in-out;
   }
   #nav-toggle span:nth-child(1) {
-    top: 0;
+    top: 22px;
   }
   #nav-toggle span:nth-child(2) {
-    top: 10px;
+    top: 32px;
   }
   #nav-toggle span:nth-child(3) {
-    top: 20px;
+    top: 42px;
   }
   .open #nav-toggle span {
     background: #fafafa;
   }
   .open #nav-toggle span:nth-child(1) {
-    top: 15px;
+    top: 32px;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
   }
   .open #nav-toggle span:nth-child(2) {
-    top: 15px;
+    top: 32px;
     width: 0;
-    left: 50%;
   }
   .open #nav-toggle span:nth-child(3) {
-    top: 15px;
+    top: 32px;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
   }
@@ -686,7 +722,7 @@ nav
     transition: opacity .6s ease, visibility .6s ease;
   }
   #gloval-nav a {
-    padding: 20px 0;
+    padding: 30px 0;
     display: block;
     text-decoration: none;
     -webkit-transition: color .6s ease;
@@ -1196,21 +1232,25 @@ fv
 .fv {
   height: 100vh;
   width: 100%;
-  background: url(../img/common/FV-2.png) center/cover;
+  background: url(../img/common/FV2.png) center/cover;
   position: relative;
 }
 
-.fv_txt {
+.fv_wrap {
+  background: rgba(250, 250, 250, 0.5);
+  width: 100%;
+  line-height: 300px;
   position: absolute;
   top: 50%;
   left: 50%;
+  text-align: center;
   -webkit-transform: translateY(-50%) translateX(-50%);
           transform: translateY(-50%) translateX(-50%);
-  font-size: 4.0vw;
+  font-size: 3.5vw;
 }
 
 @media screen and (max-width: 480px) {
-  .fv_txt {
+  .fv_wrap {
     font-size: 30px;
     /*IE9以前に対応する*/
     font-size: 1.875rem;
@@ -1430,83 +1470,150 @@ fv
 }
 
 .scroll {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  z-index: 2;
   display: inline-block;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  position: absolute;
+  left: 40px;
+  bottom: 0;
+  z-index: 2;
+  padding: 10px 10px 110px;
+  overflow: hidden;
+  font-size: 16px;
+  /*IE9以前に対応する*/
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: .2em;
+  text-transform: uppercase;
   text-decoration: none;
-  padding-top: 60px;
-  font-weight: bold;
-  color: #000;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
 }
 
-.scroll span {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 30px;
-  height: 50px;
-  margin-left: -15px;
-  border: 2px solid #fafafa;
-  border-radius: 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .scroll {
+    font-size: 14px;
+    /*IE9以前に対応する*/
+    font-size: 0.875rem;
+  }
 }
 
-.scroll span::before {
-  position: absolute;
-  top: 10px;
-  left: 50%;
+.scroll::after {
   content: '';
-  width: 6px;
-  height: 6px;
-  margin-left: -3px;
-  background-color: #fff;
-  border-radius: 100%;
-  -webkit-animation: sdb 2s infinite;
-  animation: sdb 2s infinite;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  height: 100px;
+  background: #333333;
+  -webkit-animation: sdl 2s cubic-bezier(1, 0, 0, 1) infinite;
+          animation: sdl 2s cubic-bezier(1, 0, 0, 1) infinite;
 }
 
-@-webkit-keyframes sdb {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  80% {
-    -webkit-transform: translate(0, 20px);
-            transform: translate(0, 20px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
+@media screen and (max-width: 480px) {
+  .scroll {
+    display: none;
   }
 }
 
-@keyframes sdb {
+.scroll2 {
+  display: inline-block;
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+  z-index: 2;
+  padding: 10px 10px 110px;
+  overflow: hidden;
+  font-size: 16px;
+  /*IE9以前に対応する*/
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .scroll2 {
+    font-size: 14px;
+    /*IE9以前に対応する*/
+    font-size: 0.875rem;
+  }
+}
+
+.scroll2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  height: 100px;
+  background: #333333;
+  -webkit-animation: sdl 2s cubic-bezier(1, 0, 0, 1) infinite;
+          animation: sdl 2s cubic-bezier(1, 0, 0, 1) infinite;
+}
+
+@media screen and (max-width: 480px) {
+  .scroll2 {
+    display: none;
+  }
+}
+
+@-webkit-keyframes sdl {
   0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-    opacity: 0;
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
   }
-  40% {
-    opacity: 1;
+  35% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
   }
-  80% {
-    -webkit-transform: translate(0, 20px);
-            transform: translate(0, 20px);
-    opacity: 0;
+  35.1% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
   }
+  70%,
   100% {
-    opacity: 0;
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+  }
+}
+
+@keyframes sdl {
+  0% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  35% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  35.1% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+  }
+  70%,
+  100% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
   }
 }
 
