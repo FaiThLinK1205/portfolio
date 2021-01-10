@@ -1663,7 +1663,7 @@ skill
 
 @media screen and (max-width: 480px) {
   .about_txt {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     padding: 0 10px;
     font-size: 10px;
     /*IE9以前に対応する*/
@@ -1729,6 +1729,8 @@ skill
   width: 70%;
   padding: 20px;
   background: #fafafa;
+  position: relative;
+  z-index: -2;
 }
 
 @media screen and (max-width: 480px) {
@@ -1752,6 +1754,13 @@ skill
   }
 }
 
+@media screen and (max-width: 480px) {
+  .about_icon {
+    width: 150px;
+    height: 150px;
+  }
+}
+
 .about_bg_bo {
   width: 200px;
   height: 200px;
@@ -1765,17 +1774,48 @@ skill
   z-index: -1;
 }
 
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .about_bg_bo {
+    top: 0px;
+    left: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about_bg_bo {
+    width: 170px;
+    height: 170px;
+    top: -10px;
+    left: 50%;
+  }
+}
+
 .about_bg_so {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background: #fafafa;
   border-radius: 50%;
   position: absolute;
-  top: 48%;
-  left: 40px;
+  top: 42%;
+  left: 35px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: -1;
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .about_bg_so {
+    width: 30px;
+    height: 30px;
+    top: 40%;
+    left: 0px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about_bg_so {
+    display: none;
+  }
 }
 
 .about_bg_be {
@@ -1791,17 +1831,48 @@ skill
   z-index: -1;
 }
 
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .about_bg_be {
+    top: 0px;
+    left: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about_bg_be {
+    width: 170px;
+    height: 170px;
+    top: -10px;
+    left: 50%;
+  }
+}
+
 .about_bg_se {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background: #fafafa;
   border-radius: 50%;
   position: absolute;
-  top: 50%;
+  top: 43%;
   right: 40px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: -1;
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .about_bg_se {
+    width: 30px;
+    height: 30px;
+    top: 38%;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about_bg_se {
+    display: none;
+  }
 }
 
 .about_first {
@@ -2169,9 +2240,9 @@ footer
 }
 
 .footer_txt {
-  font-size: 20px;
+  font-size: 14px;
   /*IE9以前に対応する*/
-  font-size: 1.25rem;
+  font-size: 0.875rem;
 }
 
 @media screen and (max-width: 769px) and (min-width: 480px) {
@@ -2179,6 +2250,7 @@ footer
     font-size: 10px;
     /*IE9以前に対応する*/
     font-size: 0.625rem;
+    line-height: 50px;
   }
 }
 
@@ -2187,5 +2259,6 @@ footer
     font-size: 10px;
     /*IE9以前に対応する*/
     font-size: 0.625rem;
+    line-height: 30px;
   }
 }

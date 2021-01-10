@@ -12,14 +12,16 @@ footer
   background: $cBlue;
 
   &_txt{
-    @include rem(20);
+    @include rem(14);
 
     @include tab{
       @include rem(10);
+      line-height: 50px;
     }
     
     @include SP{
       @include rem(10);
+      line-height: 30px;
     }
   }
   
