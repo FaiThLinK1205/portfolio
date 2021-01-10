@@ -120,8 +120,6 @@ spanWrap.init({
 });
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 // ======= contact ======= //
 $(document).ready(function () {
 
@@ -147,20 +145,7 @@ $(document).ready(function () {
       });
 
     });
-=======
-    // AOSアニメーション
-  AOS.init({
-      offset: 200,
-      delay: 100,
-      duration: 1500,
-      easing: 'liner',
-      once: true,
 
-  });
-
-
->>>>>>> c04182603383ab415193fdd1e3379040485dded3
-=======
 // AOSアニメーション
 AOS.init({
   offset: 200,
@@ -170,4 +155,4 @@ AOS.init({
   once: true,
 
 });
->>>>>>> 4f146a5d7be4f98c0570ac5201751522dba035ff
+
