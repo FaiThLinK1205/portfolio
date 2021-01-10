@@ -2,9 +2,6 @@
 
 $(() => {
 
-<<<<<<< HEAD
-
-=======
     // ローディング
     let div = $('div');
     let body = $('body');
@@ -25,7 +22,6 @@ $(() => {
       }
     });
   
->>>>>>> f5dd50d69dedf75110b05158813620646043bf2f
   
   $(function () {
     $('#nav-toggle').on('click', function () {
