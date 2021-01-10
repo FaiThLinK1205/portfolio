@@ -2292,6 +2292,7 @@ skill
   width: 70%;
   padding: 20px;
   background: #fafafa;
+  border-radius: 30px;
   position: relative;
   z-index: -2;
 }
@@ -2734,8 +2735,12 @@ skill
   }
 }
 
-.top_contact .btn {
-  text-align: center;
+@media screen and (max-width: 480px) {
+  .top_contact .btn_txt {
+    font-size: 14px;
+    /*IE9以前に対応する*/
+    font-size: 0.875rem;
+  }
 }
 
 /****************************************:

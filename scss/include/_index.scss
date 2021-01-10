@@ -673,6 +673,7 @@ skill
             width: 70%;
             padding: 20px;
             background: $cWhite;
+            border-radius: 30px;
             position: relative;
             z-index: -2;
 
@@ -1031,7 +1032,9 @@ skill
         }
     }
 
-    & .btn {
-        text-align: center;
+    & .btn_txt {
+        @include SP{
+            @include rem(14);
+        }
     }
 }
