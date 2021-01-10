@@ -2239,6 +2239,11 @@ contact
   cursor: pointer;
 }
 
+.contact .end-message,
+.contact .false-message {
+  display: none;
+}
+
 .labelItem_name {
   position: relative;
 }
