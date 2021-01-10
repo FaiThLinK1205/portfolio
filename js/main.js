@@ -107,6 +107,7 @@ spanWrap.init({
 });
 
 
+<<<<<<< HEAD
 // ======= contact ======= //
 $(document).ready(function () {
 
@@ -132,3 +133,16 @@ $(document).ready(function () {
       });
 
     });
+=======
+    // AOSアニメーション
+  AOS.init({
+      offset: 200,
+      delay: 100,
+      duration: 1500,
+      easing: 'liner',
+      once: true,
+
+  });
+
+
+>>>>>>> c04182603383ab415193fdd1e3379040485dded3
