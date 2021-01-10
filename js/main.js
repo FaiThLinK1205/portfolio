@@ -123,29 +123,28 @@ spanWrap.init({
 // ======= contact ======= //
 $(document).ready(function () {
 
-      $('#form').submit(function (event) {
-        var formData = $('#form').serialize();
-        $.ajax({
-          url: "https://docs.google.com/forms/u/3/d/e/1FAIpQLSfsH5qvk0Oe66DNVX_W9asTbwvkPT2govlRaAyXm-3T4dyXjg/formResponse",
-          data: formData,
-          type: "POST",
-          dataType: "xml",
-          statusCode: {
-            0: function () {
-              $(".end-message").slideDown();
-              $(".submit-btn").fadeOut();
-              //window.location.href = "thanks.html";
-            },
-            200: function () {
-              $(".false-message").slideDown();
-            }
-          }
-        });
-        event.preventDefault();
-      });
-
+  $('#form').submit(function (event) {
+    var formData = $('#form').serialize();
+    $.ajax({
+      url: "https://docs.google.com/forms/u/3/d/e/1FAIpQLSfsH5qvk0Oe66DNVX_W9asTbwvkPT2govlRaAyXm-3T4dyXjg/formResponse",
+      data: formData,
+      type: "POST",
+      dataType: "xml",
+      statusCode: {
+        0: function () {
+          $(".end-message").slideDown();
+          $(".submit-btn").fadeOut();
+          //window.location.href = "thanks.html";
+        },
+        200: function () {
+          $(".false-message").slideDown();
+        }
+      }
     });
+    event.preventDefault();
+  });
 
+});
 // AOSアニメーション
 AOS.init({
   offset: 200,
@@ -155,4 +154,3 @@ AOS.init({
   once: true,
 
 });
-
