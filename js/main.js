@@ -2,7 +2,30 @@
 
 $(() => {
 
+<<<<<<< HEAD
 
+=======
+    // ローディング
+    let div = $('div');
+    let body = $('body');
+    let loadBgc = $('.load_bgc');
+    let circle = $('.circle');
+    $(function(){
+      if(div.hasClass('load_bgc')){
+        body.addClass('hidden');
+        setTimeout(function(){
+          loadBgc.addClass('fadeOut');
+          circle.addClass('fadeOut');
+        }, 4000);
+        setTimeout(function(){
+          loadBgc.addClass('vanish');
+          circle.addClass('vanish');
+          body.removeClass('hidden');
+        }, 5000);
+      }
+    });
+  
+>>>>>>> f5dd50d69dedf75110b05158813620646043bf2f
   
   $(function () {
     $('#nav-toggle').on('click', function () {
