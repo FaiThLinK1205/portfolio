@@ -88,14 +88,14 @@ spanWrap.init({
 });
 
 
-      // AOSアニメーション
-    AOS.init({
-        offset: 200,
-        delay: 100,
-        duration: 1500,
-        easing: 'liner',
-        once: true,
+    // AOSアニメーション
+  AOS.init({
+      offset: 200,
+      delay: 100,
+      duration: 1500,
+      easing: 'liner',
+      once: true,
 
-    });
+  });
 
 
