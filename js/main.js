@@ -2,15 +2,6 @@
 
 $(() => {
 
-      // AOSアニメーション
-    AOS.init({
-        offset: 200,
-        delay: 100,
-        duration: 1500,
-        easing: 'liner',
-        once: true,
-
-    });
 
   
   $(function () {
@@ -95,3 +86,16 @@ const spanWrap = new SpanWrap();
 spanWrap.init({
   target: ".fv_txt"
 });
+
+
+      // AOSアニメーション
+    AOS.init({
+        offset: 200,
+        delay: 100,
+        duration: 1500,
+        easing: 'liner',
+        once: true,
+
+    });
+
+
