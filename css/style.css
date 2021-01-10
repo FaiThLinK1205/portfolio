@@ -855,6 +855,10 @@ button
 ローディング
 
 *****************************************:*/
+body.hidden {
+  overflow: hidden;
+}
+
 .load_bgc {
   width: 100%;
   height: 100vh;

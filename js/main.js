@@ -3,9 +3,11 @@
 $(() => {
 
     // ローディング
+    let body = $('body');
     let loadBgc = $('.load_bgc');
     let circle = $('.circle');
     $(function(){
+      body.addClass('hidden');
       setTimeout(function(){
         loadBgc.addClass('fadeOut');
         circle.addClass('fadeOut');
@@ -13,6 +15,7 @@ $(() => {
       setTimeout(function(){
         loadBgc.addClass('vanish');
         circle.addClass('vanish');
+        body.removeClass('hidden');
       }, 5000);
     });
   
