@@ -806,9 +806,9 @@ button
   background: -webkit-linear-gradient(315deg, #00a0e9 100%, #00f0f9);
   background: linear-gradient(135deg, #00a0e9 100%, #00f0f9);
   border-radius: 149px;
-  font-size: 24px;
+  font-size: 21px;
   /*IE9以前に対応する*/
-  font-size: 1.5rem;
+  font-size: 1.3125rem;
   color: #fafafa;
   text-align: center;
   line-height: 80px;
@@ -2292,6 +2292,7 @@ skill
   width: 70%;
   padding: 20px;
   background: #fafafa;
+  border-radius: 30px;
   position: relative;
   z-index: -2;
 }
@@ -2734,8 +2735,12 @@ skill
   }
 }
 
-.top_contact .btn {
-  text-align: center;
+@media screen and (max-width: 480px) {
+  .top_contact .btn_txt {
+    font-size: 14px;
+    /*IE9以前に対応する*/
+    font-size: 0.875rem;
+  }
 }
 
 /****************************************:
