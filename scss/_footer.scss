@@ -11,8 +11,16 @@ footer
   text-align: center;
   background: $cBlue;
 
+  @include tab{
+    line-height: 60px;
+  }
+
+  @include SP{
+    line-height: 50px;
+  }
+
   &_txt{
-    @include rem(20);
+    @include rem(14);
 
     @include tab{
       @include rem(10);

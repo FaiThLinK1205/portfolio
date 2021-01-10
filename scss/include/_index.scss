@@ -627,7 +627,7 @@ skill
         margin: 0 auto 80px;
 
         @include SP {
-            margin-bottom: 20px;
+            margin-bottom: 50px;
             padding: 0 10px;
             @include rem(10);
         }
@@ -672,6 +672,8 @@ skill
             width: 70%;
             padding: 20px;
             background: $cWhite;
+            position: relative;
+            z-index: -2;
 
             @include SP {
                 width: 90%;
@@ -683,13 +685,22 @@ skill
     &_icon {
         width: 200px;
         height: 200px;
-        // padding-top: 10px;
         border-radius: 50%;
         border: 1px solid #000;
+
+        @include pc_tab {
+            width: 180px;
+            height: 180px;
+        }
 
         @include tab {
             width: 180px;
             height: 180px;
+        }
+
+        @include SP {
+            width: 150px;
+            height: 150px;
         }
     }
 
@@ -703,21 +714,56 @@ skill
         left: 45%;
         transform: translateX(-50%);
         z-index: -1;
+
+        @include pc_tab{
+            top: 0px;
+            left: 50%;
+        }
+
+        @include tab{
+            top: 0px;
+            left: 50%;
+        }
+
+        @include SP{
+            width: 170px;
+            height: 170px;
+            top: -10px;
+            left: 50%;
+        }
     }
 
-    &_bg_so {
-        width: 50px;
-        height: 50px;
+    &_bg_so{
+        width: 40px;
+        height: 40px;
         background: $cWhite;
         border-radius: 50%;
         position: absolute;
-        top: 48%;
-        left: 40px;
+        top: 42%;
+        left: 35px;
         transform: translateY(-50%);
         z-index: -1;
+
+        @include pc_tab {
+            width: 30px;
+            height: 30px;
+            top: 40%;
+            left: 30px;
+        }
+
+        @include tab {
+            width: 30px;
+            height: 30px;
+            top: 40%;
+            left: 0px;
+        }
+
+        @include SP{
+            display: none;
+        }
     }
 
-    &_bg_be {
+    &_bg_be{
         width: 200px;
         height: 200px;
         background: $cWhite;
@@ -727,38 +773,78 @@ skill
         left: 55%;
         transform: translateX(-50%);
         z-index: -1;
+
+        @include pc_tab {
+            top: 0px;
+            left: 50%;
+        }
+
+        @include tab {
+            top: 0px;
+            left: 50%;
+        }
+
+        @include SP {
+            width: 170px;
+            height: 170px;
+            top: -10px;
+            left: 50%;
+        }
     }
 
-    &_bg_se {
-        width: 50px;
-        height: 50px;
+    &_bg_se{
+        width: 40px;
+        height: 40px;
         background: $cWhite;
         border-radius: 50%;
         position: absolute;
-        top: 50%;
+        top: 43%;
         right: 40px;
         transform: translateY(-50%);
         z-index: -1;
+
+        @include pc_tab {
+            width: 30px;
+            height: 30px;
+            top: 38%;
+            right: 30px;
+        }
+
+        @include tab {
+            width: 30px;
+            height: 30px;
+            top: 38%;
+            right: 0;
+        }
+
+        @include SP {
+            display: none;
+        }
     }
 
     &_first {
         background: #24AB2B;
+        opacity: 0.8;
     }
 
     &_second {
         background: #C46AFB;
+        opacity: 0.8;
     }
 
     &_third {
         background: #215FEA;
+        opacity: 0.8;
     }
 
     &_fourth {
         background: #E53816;
+        opacity: 0.8;
     }
 
     &_five {
         background: #F6DC4C;
+        opacity: 0.8;
     }
 
     &_dl {

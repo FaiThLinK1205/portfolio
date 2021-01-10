@@ -11,16 +11,141 @@ contact
 
 .contact {
     padding: 130px 0 104px;
-    
-    &_ttl {
-        margin-bottom: 30px;
-        color: #000;
-        @include rem(40);
+
+    @include tab{
+        padding: 80px 0;
     }
 
-    &_txt {
-        width: 700px;
+    @include SP{
+        padding: 50px 0;
+    }
+
+    & .section_inner{
+        width: 90%;
+    }
+    
+    & .section_ttl {
         margin-bottom: 30px;
+        @include rem(40);
+
+            &:after {
+                content: "CONTACT";
+            }
+        }
+
+    &_txt {
+        margin: 0 auto 50px;
+
+        @include tab {
+            width: 100%;
+        }
+
+        @include SP {
+            width: 100%;
+            margin: 0 auto 30px;
+        }
+    }
+
+    &_table {
+        width: 70%;
+        margin-bottom: 20px;
+
+        @include pc_tab {
+            width: 100%;
+        }
+        @include tab {
+            width: 100%;
+        }
+        @include SP {
+            width: 100%;
+        }
+    }
+
+    &_dl {
+        line-height: 2em;
+        display: flex;
+        border: 1px solid #bbb;
+
+        &:first-child {
+            border-bottom: 0px solid #000;
+        }
+
+        @include pc_tab {
+            line-height: 1.5em;
+        }
+
+        @include tab {
+            line-height: 1.5em;
+        }
+
+        @include SP {
+            line-height: 1.5em;
+            @include rem(15);
+            display: block;
+
+        }
+    }
+
+    &_dt {
+        padding: 10px;
+        font-weight: bold;
+        border-right: 1px solid #bbb;
+
+        @include pc_tab {
+            width: 30%;
+        }
+
+        @include tab {
+            width: 30%;
+        }
+
+        @include SP {
+            padding: 5px;
+            border-right: 0px solid #bbb;
+        }
+
+    }
+
+    &_dd {
+        padding: 10px;
+
+        @include pc_tab {
+            width: 70%;
+        }
+
+        @include tab {
+            width: 70%;
+        }
+
+        @include SP {
+            padding: 5px;
+        }
+
+    }
+
+    .db {
+        display: none;
+
+        @include pc_tab {
+            display: block;
+        }
+
+        @include tab {
+            display: block;
+        }
+
+        @include SP {
+            display: block;
+        }
+    }
+
+    &_utxt {
+        margin-bottom: 80px;
+        @include rem(14);
+
+        @include SP {
+            margin-bottom: 30px;
+        }
     }
 
     &_form {
@@ -38,50 +163,41 @@ contact
         width: 480px;
         margin-bottom: 20px;
         line-height: 30px;
+
+        @include SP {
+            width: 300px;
+        }
     }
 
     &_form_Txtbox {
         width: 600px;
         margin-bottom: 50px;
+
+        @include tab {
+            width: 600px;
+            height: 200px;
+        }
+
+        @include SP {
+            width: 300px;
+            height: 200px;
+        }
+    }
+
+    &_btn_box .btn{
+        margin: 0 auto 0 0;
+    }
+
+    .end-message,
+    .false-message{
+        display: none;
     }
 
 }
 
-.labelItem_name {
-    position: relative;
-}
-
-.labelItem_name:after {
-    position: absolute;
-    content: '必須';
-    top: 0;
-    left: 60px;
-    color: #fff;
-    background-color: red;
-}
-
-.labelItem_email {
-    position: relative;
-}
-
-.labelItem_email:after {
-    position: absolute;
-    content: '必須';
-    top: 0;
-    left: 120px;
-    color: #fff;
-    background-color: red;
-}
-
-.labelItem_contact {
-    position: relative;
-}
-
-.labelItem_contact:after {
-    position: absolute;
-    content: '必須';
-    top: 0;
-    left: 140px;
-    color: #fff;
-    background-color: red;
+.req{
+    background: #dc143c;
+    color: $cWhite;
+    padding: 5px;
+    margin-left: 10px;
 }

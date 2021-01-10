@@ -120,6 +120,47 @@ spanWrap.init({
 });
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+// ======= contact ======= //
+$(document).ready(function () {
+
+      $('#form').submit(function (event) {
+        var formData = $('#form').serialize();
+        $.ajax({
+          url: "https://docs.google.com/forms/u/3/d/e/1FAIpQLSfsH5qvk0Oe66DNVX_W9asTbwvkPT2govlRaAyXm-3T4dyXjg/formResponse",
+          data: formData,
+          type: "POST",
+          dataType: "xml",
+          statusCode: {
+            0: function () {
+              $(".end-message").slideDown();
+              $(".submit-btn").fadeOut();
+              //window.location.href = "thanks.html";
+            },
+            200: function () {
+              $(".false-message").slideDown();
+            }
+          }
+        });
+        event.preventDefault();
+      });
+
+    });
+=======
+    // AOSアニメーション
+  AOS.init({
+      offset: 200,
+      delay: 100,
+      duration: 1500,
+      easing: 'liner',
+      once: true,
+
+  });
+
+
+>>>>>>> c04182603383ab415193fdd1e3379040485dded3
+=======
 // AOSアニメーション
 AOS.init({
   offset: 200,
@@ -129,3 +170,4 @@ AOS.init({
   once: true,
 
 });
+>>>>>>> 4f146a5d7be4f98c0570ac5201751522dba035ff
