@@ -160,13 +160,6 @@ input[type="submit"]{
   }
 }
 
-// input[type="submit"]{
-//   background: transparent;
-//   cursor: pointer;
-//   position: relative;
-//   z-index: 10;
-// }
-
 
 
 /****************************************:
@@ -186,7 +179,7 @@ body.hidden{
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 1500;
   transition: .8s;
 
   &.fadeOut{
@@ -199,30 +192,48 @@ body.hidden{
 }
 
 #circle_container {
+  width: 60%;
   position: absolute;
   top: 50%;
   left: 50%;
+  display: flex;
+  justify-content: space-between;
   transform: translateX(-50%);
 }
+
 .circle {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   cursor: pointer;
   float: left;
   transition: .8s;
 
+  @include pc_tab{
+    width: 50px;
+    height: 50px;
+  }
+
+  @include tab{
+    width: 40px;
+    height: 40px;
+  }
+
+  @include SP{
+    width: 30px;
+    height: 30px;
+  }
+
   &.fadeOut{
     opacity: 0;
   }
 }
-.circle:nth-child(n+2) {
-  margin-left: 150px;
-}
+
 .circle:nth-child(1) {
   background: #FF0000;
   animation: pulse_1 2s 0s ease-out 2;
 }
+
 @keyframes pulse_1 {
   0% {
       box-shadow: 0 0 8px 6px rgba(255, 255, 255, 0),
@@ -240,10 +251,12 @@ body.hidden{
           0 0 0px 40px rgba(255, 25, 25, 0);
   }
 }
+
 .circle:nth-child(2) {
   background: #FFFF22;
   animation: pulse_2 2s 0.25s ease-out 2;
 }
+
 @keyframes pulse_2 {
   0% {
       box-shadow: 0 0 8px 6px rgba(250, 250, 100, 1),
@@ -261,10 +274,12 @@ body.hidden{
           0 0 0px 40px rgba(250, 250, 100, 0);
   }
 }
+
 .circle:nth-child(3) {
   background: #00CC00;
   animation: pulse_3 2s 0.5s ease-out 2;
 }
+
 @keyframes pulse_3 {
   0% {
       box-shadow: 0 0 8px 6px rgba(0, 195, 0, 0),
@@ -282,10 +297,12 @@ body.hidden{
           0 0 0px 40px rgba(0, 195, 0, 0);
   }
 }
+
 .circle:nth-child(4) {
   background: #136FFF;
   animation: pulse_4 2s 0.75s ease-out 2;
 }
+
 @keyframes pulse_4 {
   0% {
       box-shadow: 0 0 8px 6px rgba(19, 111, 225, 0),
@@ -303,10 +320,12 @@ body.hidden{
           0 0 0px 40px rgba(19, 111, 225, 0);
   }
 }
+
 .circle:nth-child(5) {
   background:	#FF69A3;
   animation: pulse_5 2s 1s ease-out 2;
 }
+
 @keyframes pulse_5 {
   0% {
       box-shadow: 0 0 8px 6px rgba(238, 105, 163, 0),
