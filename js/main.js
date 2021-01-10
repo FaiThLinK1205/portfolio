@@ -13,34 +13,34 @@ $(() => {
     return false;
   });
 
-    // ローディング
-    let div = $('div');
-    let body = $('body');
-    let loadBgc = $('.load_bgc');
-    let circle = $('.circle');
-    $(function(){
-      if(div.hasClass('load_bgc')){
-        body.addClass('hidden');
-        setTimeout(function(){
-          loadBgc.addClass('fadeOut');
-          circle.addClass('fadeOut');
-        }, 4000);
-        setTimeout(function(){
-          loadBgc.addClass('vanish');
-          circle.addClass('vanish');
-          body.removeClass('hidden');
-        }, 5000);
-      }
-    });
+  // ローディング
+  let div = $('div');
+  let body = $('body');
+  let loadBgc = $('.load_bgc');
+  let circle = $('.circle');
+  $(function () {
+    if (div.hasClass('load_bgc')) {
+      body.addClass('hidden');
+      setTimeout(function () {
+        loadBgc.addClass('fadeOut');
+        circle.addClass('fadeOut');
+      }, 4000);
+      setTimeout(function () {
+        loadBgc.addClass('vanish');
+        circle.addClass('vanish');
+        body.removeClass('hidden');
+      }, 5000);
+    }
+  });
 
 
   // ハンバーガーメニュー
   $('#nav-toggle').on('click', function () {
-    $('body').toggleClass('open');
+    body.toggleClass('open');
   });
 
   $('#gloval-nav a').click(function () {
-    $('body').removeClass('open');
+    body.removeClass('open');
   });
 
 
@@ -120,14 +120,12 @@ spanWrap.init({
 });
 
 
-    // AOSアニメーション
-  AOS.init({
-      offset: 200,
-      delay: 100,
-      duration: 1500,
-      easing: 'liner',
-      once: true,
+// AOSアニメーション
+AOS.init({
+  offset: 200,
+  delay: 100,
+  duration: 1500,
+  easing: 'liner',
+  once: true,
 
-  });
-
-
+});
