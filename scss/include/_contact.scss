@@ -34,12 +34,7 @@ contact
         }
 
     &_txt {
-        width: 80%;
         margin: 0 auto 50px;
-
-        @include pc_tab {
-            width: 90%;
-        }
 
         @include tab {
             width: 100%;
@@ -52,10 +47,17 @@ contact
     }
 
     &_table {
+        width: 70%;
         margin-bottom: 20px;
 
+        @include pc_tab {
+            width: 100%;
+        }
+        @include tab {
+            width: 100%;
+        }
         @include SP {
-            padding: 0px 0;
+            width: 100%;
         }
     }
 
