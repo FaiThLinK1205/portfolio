@@ -2709,17 +2709,182 @@ contact
   padding: 130px 0 104px;
 }
 
-.contact_ttl {
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .contact {
+    padding: 80px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact {
+    padding: 50px 0;
+  }
+}
+
+.contact .section_inner {
+  width: 90%;
+}
+
+.contact .section_ttl {
   margin-bottom: 30px;
-  color: #000;
   font-size: 40px;
   /*IE9以前に対応する*/
   font-size: 2.5rem;
 }
 
+.contact .section_ttl:after {
+  content: "CONTACT";
+}
+
 .contact_txt {
-  width: 700px;
-  margin-bottom: 30px;
+  width: 80%;
+  margin: 0 auto 50px;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .contact_txt {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .contact_txt {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact_txt {
+    width: 100%;
+    margin: 0 auto 30px;
+  }
+}
+
+.contact_table {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .contact_table {
+    padding: 0px 0;
+  }
+}
+
+.contact_dl {
+  line-height: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #bbb;
+}
+
+.contact_dl:first-child {
+  border-bottom: 0px solid #000;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .contact_dl {
+    line-height: 1.5em;
+  }
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .contact_dl {
+    line-height: 1.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact_dl {
+    line-height: 1.5em;
+    font-size: 15px;
+    /*IE9以前に対応する*/
+    font-size: 0.9375rem;
+    display: block;
+  }
+}
+
+.contact_dt {
+  padding: 10px;
+  font-weight: bold;
+  border-right: 1px solid #bbb;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .contact_dt {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .contact_dt {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact_dt {
+    padding: 5px;
+    border-right: 0px solid #bbb;
+  }
+}
+
+.contact_dd {
+  padding: 10px;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .contact_dd {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .contact_dd {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact_dd {
+    padding: 5px;
+  }
+}
+
+.contact .db {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .contact .db {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .contact .db {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact .db {
+    display: block;
+  }
+}
+
+.contact_utxt {
+  margin-bottom: 80px;
+  font-size: 14px;
+  /*IE9以前に対応する*/
+  font-size: 0.875rem;
+}
+
+@media screen and (max-width: 480px) {
+  .contact_utxt {
+    margin-bottom: 30px;
+  }
 }
 
 .contact_form {
@@ -2751,17 +2916,33 @@ contact
   line-height: 30px;
 }
 
+@media screen and (max-width: 480px) {
+  .contact_form_box {
+    width: 300px;
+  }
+}
+
 .contact_form_Txtbox {
   width: 600px;
   margin-bottom: 50px;
 }
 
-.contact_btn_box .btn {
-  margin: 0 auto 0 0;
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .contact_form_Txtbox {
+    width: 600px;
+    height: 200px;
+  }
 }
 
-.contact_btn_box .btn:hover {
-  cursor: pointer;
+@media screen and (max-width: 480px) {
+  .contact_form_Txtbox {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+.contact_btn_box .btn {
+  margin: 0 auto 0 0;
 }
 
 .contact .end-message,
@@ -2769,43 +2950,11 @@ contact
   display: none;
 }
 
-.labelItem_name {
-  position: relative;
-}
-
-.labelItem_name:after {
-  position: absolute;
-  content: '必須';
-  top: 0;
-  left: 60px;
-  color: #fff;
-  background-color: red;
-}
-
-.labelItem_email {
-  position: relative;
-}
-
-.labelItem_email:after {
-  position: absolute;
-  content: '必須';
-  top: 0;
-  left: 120px;
-  color: #fff;
-  background-color: red;
-}
-
-.labelItem_contact {
-  position: relative;
-}
-
-.labelItem_contact:after {
-  position: absolute;
-  content: '必須';
-  top: 0;
-  left: 140px;
-  color: #fff;
-  background-color: red;
+.req {
+  background: #dc143c;
+  color: #fafafa;
+  padding: 5px;
+  margin-left: 10px;
 }
 
 /****************************************:
