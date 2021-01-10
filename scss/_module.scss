@@ -48,7 +48,7 @@ button
 
   &_txt{
     position: relative;
-    z-index: 10;
+    z-index: 15;
   }
 
   &::after{
@@ -83,6 +83,89 @@ button
     right: -5%;
   }
 }
+
+input[type="submit"]{
+  width: 480px;
+  height: 118px;
+  margin: 0 auto;
+  border-radius: 149px;
+  @include rem(30);
+  color: $cWhite;
+  text-align: center;
+  line-height: 118px;
+  background: transparent;
+  position: relative;
+  z-index: 10;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  
+
+  @include pc_tab{
+    width: 300px;
+    height: 75px;
+    @include rem(22);
+    line-height: 75px;
+  }
+
+  @include tab{
+    width: 230px;
+    height: 65px;
+    @include rem(18);
+    line-height: 65px;
+  }
+
+  @include SP{
+    width: 180px;
+    height: 50px;
+    @include rem(16);
+    line-height: 50px;
+  }
+
+  &_txt{
+    position: relative;
+    z-index: 15;
+  }
+
+  &::after{
+    width: 560px;
+    height: 118px;
+    background: linear-gradient(135deg, $cBlue 17%, #00f0f9);
+    position: absolute;
+    top: 0;
+    right: -125%;
+    z-index: 5;
+    transform: skewX(-30deg);
+    transition: .4s;
+    content: "";
+
+    @include pc_tab{
+      width: 350px;
+      height: 75px;
+    }
+
+    @include tab{
+      width: 300px;
+      height: 65px;
+    }
+
+    @include SP{
+      width: 220px;
+      height: 50px;
+    }
+  }
+
+  &.active::after{
+    right: -5%;
+  }
+}
+
+// input[type="submit"]{
+//   background: transparent;
+//   cursor: pointer;
+//   position: relative;
+//   z-index: 10;
+// }
 
 
 
