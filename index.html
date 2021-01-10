@@ -20,74 +20,67 @@
   <div class="container">
     <!-- ヘッダー -->
     <div class="fv">
-      <p class="fv_txt">
-        信頼を、Webでつなげる。
-      </p>
-      <a href="#" class="scroll"><span></span>Scroll</a>
-      <header class="header">
-        <h1 class="header_ttl">
-          <a href="index.html"><img src="img/common/header-logo.png" alt="ロゴ画像" class="header_logo">FaiTh LinK</a>
-        </h1><!-- /.header_ttl -->
-
-        <!-- ハンバーガーメニュー部分 -->
-        <div id="nav-toggle">
-          <div>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <!-- ハンバーガーメニューここまで -->
-
-
-        <!-- ナビ -->
-        <div id="gloval-nav">
-          <nav class="nav">
-            <ul class="nav_list">
-              <li class="nav_item">
-                <a href="#" data-nav-section="SERVICE" class="nav_link"><span class="nav_en"
-                    onmouseover="this.innerText='サービス'" onmouseout="this.innerText='SERVICE'">SERVICE</span></a>
-              </li>
-              <!-- /.nav_item -->
-              <li class="nav_item">
-                <a href="#" data-nav-section="PORTFOLIO" class="nav_link"><span class="nav_en"
-                    onmouseover="this.innerText='ポートフォリオ'" onmouseout="this.innerText='PORTFOLIO'">PORTFOLIO</span></a>
-              </li>
-              <!-- /.nav_item -->
-              <li class="nav_item">
-                <a href="#" data-nav-section="SKILL" class="nav_link"><span class="nav_en"
-                    onmouseover="this.innerText='スキル'" onmouseout="this.innerText='SKILL'">SKILL</span></a>
-              </li>
-              <!-- /.nav_item -->
-              <li class="nav_item">
-                <a href="#" data-nav-section="ABOUT US" class="nav_link"><span class="nav_en"
-                    onmouseover="this.innerText='自己紹介'" onmouseout="this.innerText='ABOUT US'">ABOUT US</span></a>
-              </li>
-              <!-- /.nav_item -->
-              <li class="nav_item">
-                <a href="#" data-nav-section="CONTACT" class="nav_link"><span class="nav_en"
-                    onmouseover="this.innerText='お問い合わせ'" onmouseout="this.innerText='CONTACT'">CONTACT</span></a>
-              </li>
-              <!-- /.nav_item -->
-            </ul>
-          </nav>
-          <!-- /.nav -->
-        </div>
-      </header>
+      <div class="fv_wrap">
+        <a href="#" class="scroll">Scroll</a>
+        <p class="fv_txt">
+          信頼を、Webでつなげる。
+        </p>
+        <a href="#" class="scroll2">Scroll</a>
+      </div>
     </div>
+
+    <header class="header">
+      <h1 class="header_ttl">
+        <a href="index.html"><img src="img/common/header-logo-w.png" alt="ロゴ画像" class="header_logo">FaiTh LinK</a>
+      </h1><!-- /.header_ttl -->
+
+      <!-- ハンバーガーメニュー部分 -->
+      <div id="nav-toggle">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <!-- ハンバーガーメニューここまで -->
+
+      <!-- ナビ -->
+      <div id="gloval-nav">
+        <nav class="nav">
+          <ul class="nav_list">
+            <li class="nav_item">
+              <a href="#" data-nav-section="SERVICE" class="nav_link"><span class="nav_en"
+                  onmouseover="this.innerText='サービス'" onmouseout="this.innerText='SERVICE'">SERVICE</span></a>
+            </li>
+            <!-- /.nav_item -->
+            <li class="nav_item">
+              <a href="#" data-nav-section="PORTFOLIO" class="nav_link"><span class="nav_en"
+                  onmouseover="this.innerText='ポートフォリオ'" onmouseout="this.innerText='PORTFOLIO'">PORTFOLIO</span></a>
+            </li>
+            <!-- /.nav_item -->
+            <li class="nav_item">
+              <a href="#" data-nav-section="SKILL" class="nav_link"><span class="nav_en"
+                  onmouseover="this.innerText='スキル'" onmouseout="this.innerText='SKILL'">SKILL</span></a>
+            </li>
+            <!-- /.nav_item -->
+            <li class="nav_item">
+              <a href="#" data-nav-section="ABOUT US" class="nav_link"><span class="nav_en"
+                  onmouseover="this.innerText='自己紹介'" onmouseout="this.innerText='ABOUT US'">ABOUT US</span></a>
+            </li>
+            <!-- /.nav_item -->
+            <li class="nav_item">
+              <a href="#" data-nav-section="CONTACT" class="nav_link"><span class="nav_en"
+                  onmouseover="this.innerText='お問い合わせ'" onmouseout="this.innerText='CONTACT'">CONTACT</span></a>
+            </li>
+            <!-- /.nav_item -->
+          </ul>
+        </nav>
+        <!-- /.nav -->
+      </div>
+    </header>
 
     <!-- メインコンテンツ -->
     <main>
-      <!--ここからセクション （セクションの数だけコピーして使う）-->
-      <section class="section">
-        <h2 class="section_ttl"></h2>
-        <div class="section_inner"></div>
-      </section>
-
-      <section class="section">
-        <h2 class="section_ttl"></h2>
-        <div class="section_inner">
-          <a href="contact.html" class="btn">お問い合わせはコチラ</a>
 
       <!--serviceセクションここから-->
       <section class="service" id="service">
@@ -161,7 +154,8 @@
             <div class="portfolio_txtbox">
               <h3 class="portfolio_ttl">石井花壇（模写サイト)</h3><!-- /.portfolio_ttl -->
               <p class="portfolio_txt">制作時間:24時間</p><!-- /.portfolio_txt -->
-              <p class="portfolio_txt">※<span class="portfolio_spa">架空サイトのため、BASIC認証をかけております。下記の項目をご入力ください。</span></p>
+              <p class="portfolio_txt">※<span class="portfolio_spa">架空サイトのため、BASIC認証をかけております。下記の項目をご入力ください。</span>
+              </p>
               <!-- /.portfolio_txt -->
               <div class="portfolio_inbox">
                 <p class="portfolio_txt __min">ユーザー名：<span class="portfolio_spa">FaiThLinK</span></p>
@@ -500,7 +494,7 @@
               <div class="top_contact_dl">
                 <div class="top_contact_dt">[ 対応可能時間帯 ]</div>
                 <div class="top_contact_dd">AM8：00～PM10：00<br class="db">
-                （土日祝日も対応が可能です。）</div>
+                  （土日祝日も対応が可能です。）</div>
               </div>
               <div class="top_contact_dl">
                 <div class="top_contact_dt">[ 連絡体系 ]　　　</div>
@@ -509,7 +503,7 @@
             </div><!-- table -->
           </div><!-- box -->
 
-            <p class="top_contact_utxt">※対応時間内であれば1~2時間、対応時間外なら12時間以内にご返信致します。</p>
+          <p class="top_contact_utxt">※対応時間内であれば1~2時間、対応時間外なら12時間以内にご返信致します。</p>
 
           <a href="" class="btn"><span class="btn_txt">ボタンに置き換え</span></a>
 
