@@ -85,14 +85,14 @@ button
 }
 
 input[type="submit"]{
-  width: 480px;
-  height: 118px;
+  width: 300px;
+  height: 80px;
   margin: 0 auto;
   border-radius: 149px;
-  @include rem(30);
+  @include rem(21);
   color: $cWhite;
   text-align: center;
-  line-height: 118px;
+  line-height: 80px;
   background: transparent;
   position: relative;
   z-index: 10;
@@ -102,23 +102,23 @@ input[type="submit"]{
   
 
   @include pc_tab{
-    width: 300px;
-    height: 75px;
-    @include rem(22);
-    line-height: 75px;
+    width: 230px;
+    height: 65px;
+    @include rem(17);
+    line-height: 65px;
   }
 
   @include tab{
-    width: 230px;
-    height: 65px;
-    @include rem(18);
-    line-height: 65px;
+    width: 210px;
+    height: 58px;
+    @include rem(16);
+    line-height: 58px;
   }
 
   @include SP{
     width: 180px;
     height: 50px;
-    @include rem(16);
+    @include rem(14);
     line-height: 50px;
   }
 
