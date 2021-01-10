@@ -13,25 +13,25 @@ $(() => {
     return false;
   });
 
-  // ローディング
-  let div = $('div');
-  let body = $('body');
-  let loadBgc = $('.load_bgc');
-  let circle = $('.circle');
-  $(function () {
-    if (div.hasClass('load_bgc')) {
-      body.addClass('hidden');
-      setTimeout(function () {
-        loadBgc.addClass('fadeOut');
-        circle.addClass('fadeOut');
-      }, 4000);
-      setTimeout(function () {
-        loadBgc.addClass('vanish');
-        circle.addClass('vanish');
-        body.removeClass('hidden');
-      }, 5000);
-    }
-  });
+    // ローディング
+    let div = $('div');
+    let body = $('body');
+    let loadBgc = $('.load_bgc');
+    let circle = $('.circle');
+    $(function(){
+      if(div.hasClass('load_bgc')){
+        body.addClass('hidden');
+        setTimeout(function(){
+          loadBgc.addClass('fadeOut');
+          circle.addClass('fadeOut');
+        }, 4000);
+        setTimeout(function(){
+          loadBgc.addClass('vanish');
+          circle.addClass('vanish');
+          body.removeClass('hidden');
+        }, 5000);
+      }
+    });
 
 
   // ハンバーガーメニュー
@@ -118,3 +118,16 @@ const spanWrap = new SpanWrap();
 spanWrap.init({
   target: ".fv_txt"
 });
+
+
+    // AOSアニメーション
+  AOS.init({
+      offset: 200,
+      delay: 100,
+      duration: 1500,
+      easing: 'liner',
+      once: true,
+
+  });
+
+
