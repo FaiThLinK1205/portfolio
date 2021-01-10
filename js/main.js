@@ -2,6 +2,25 @@
 
 $(() => {
 
+    // ローディング
+    let div = $('div');
+    let body = $('body');
+    let loadBgc = $('.load_bgc');
+    let circle = $('.circle');
+    $(function(){
+      if(div.hasClass('load_bgc')){
+        body.addClass('hidden');
+        setTimeout(function(){
+          loadBgc.addClass('fadeOut');
+          circle.addClass('fadeOut');
+        }, 4000);
+        setTimeout(function(){
+          loadBgc.addClass('vanish');
+          circle.addClass('vanish');
+          body.removeClass('hidden');
+        }, 5000);
+      }
+    });
   
   
   $(function () {
