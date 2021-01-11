@@ -901,6 +901,8 @@ input[type="submit"] {
   width: 300px;
   height: 80px;
   margin: 0 auto;
+  background: -webkit-linear-gradient(315deg, #00a0e9 100%, #00f0f9);
+  background: linear-gradient(135deg, #00a0e9 100%, #00f0f9);
   border-radius: 149px;
   font-size: 21px;
   /*IE9以前に対応する*/
@@ -908,8 +910,11 @@ input[type="submit"] {
   color: #fafafa;
   text-align: center;
   line-height: 80px;
-  background: transparent;
   position: relative;
+  z-index: 1;
+  display: block;
+  overflow: hidden;
+  background: transparent;
   z-index: 10;
   display: block;
   overflow: hidden;
