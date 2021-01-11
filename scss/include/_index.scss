@@ -279,22 +279,22 @@ service
             content: 'SERVICE';
         }
 
-
     }
 
     &_box {
 
         @include flex;
-        // width: 350px;
         width: 100%;
         flex-direction: column;
         text-align: center;
         margin-right: 40px;
 
+
         &:nth-child(2) {
             margin-top: 37px;
             margin-bottom: -37px;
         }
+
 
         &:nth-child(3) {
             margin-top: 74px;
@@ -332,7 +332,6 @@ service
     &_imgbox {
         width: 120px;
         margin: auto;
-        // margin-bottom: 50px;
 
         @include tab {
             width: 80px;
@@ -356,21 +355,16 @@ service
         padding: 30px;
         margin-top: 50px;
         width: 100%;
-        // height: 450px;
         height: 100%;
         background-color: rgba($cBlue, 0.2);
-        // line-height: 30px;
 
         @include pc_tab {
-            // height: 300px;
             height: 100%;
             padding: 15px;
         }
 
         @include tab {
             width: 80%;
-            // height: 80%;
-            // height: 200px;
             padding: 10px;
             margin: 25px auto
         }
@@ -384,7 +378,6 @@ service
 
     &_txt {
 
-        // padding: 30px;
         @include rem(18);
         text-align: left;
         color: $cBlack;
@@ -392,12 +385,10 @@ service
 
 
         @include pc_tab {
-            // padding: 25px;
             @include rem(13);
         }
 
         @include tab {
-            // padding: 15px;
             margin: 10px;
             @include rem(15);
             line-height: 1.4;
@@ -467,7 +458,6 @@ portfolio
         }
 
         @include SP {
-            // margin: 0 10px;
             margin-right: 0;
             margin-bottom: 15px;
         }
@@ -479,7 +469,6 @@ portfolio
 
         @include tab {
             width: 50%;
-            // margin: auto;
         }
 
         @include SP {
@@ -560,7 +549,6 @@ portfolio
         }
 
         @include SP {
-            // padding: 0 10px;
             @include rem(10);
             line-height: 1.8;
         }
