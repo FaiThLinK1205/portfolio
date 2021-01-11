@@ -125,22 +125,25 @@ spanWrap.init({
 
 
 // ふわふわ
-let fuwa = $('.about_bg_bo');
-let fuwaMax = 57;
-let fuwaMin = 30;
-let fuwaTime = 20;
+let fuwaBO = $('.about_bg_bo');
+let fuwaSO = $('.about_bg_so');
+let fuwaBE = $('.about_bg_be');
+let fuwaSE = $('.about_bg_se');
+let fuwaMax = 60;
+let fuwaMin = 40;
+let fuwaTime = 15;
 // t→top、b→bottom、L→left、R→right
 // 1は一つ目の値、2は二つ目(スラッシュ後)の値
-let tL1 = 30;
-let tL2 = 40;
-let tR1 = 30;
-let tR2 = 30;
-let bR1 = 40;
-let bR2 = 40;
-let bL1 = 30;
-let bL2 = 40;
+let tL1 = 45;
+let tL2 = 50;
+let tR1 = 45;
+let tR2 = 50;
+let bR1 = 45;
+let bR2 = 50;
+let bL1 = 45;
+let bL2 = 50;
 
-function fuwaUp(val1, val2, count1, count2, part){
+function fuwaUp(val1, val2, count1, count2, part, fuwaPart){
   let x = val1;
   let y;
   let z = val2;
@@ -206,236 +209,49 @@ function fuwaUp(val1, val2, count1, count2, part){
     // top or bottom・left or rightでswitch
     switch (part){
       case 'TL':
-        fuwa.css({
+        fuwaPart.css({
           'border-top-left-radius' : val1 + '% ' + val2 + '%'
         });
         break;
       case 'TR':
-        fuwa.css({
+        fuwaPart.css({
           'border-top-right-radius' : val1 + '% ' + val2 + '%'
         });
         break;
       case 'BR':
-        fuwa.css({
+        fuwaPart.css({
           'border-bottom-right-radius' : val1 + '% ' + val2 + '%'
         });
         break;
       case 'BL':
-        fuwa.css({
+        fuwaPart.css({
           'border-bottom-left-radius' : val1 + '% ' + val2 + '%'
         });
         break;
     }
   }, fuwaTime);
 }
-fuwaUp(tL1, tL2, .2, .1, 'TL');
-fuwaUp(tR1, tR2, .2, .1, 'TR');
-fuwaUp(bR1, bR2, .1, .2, 'BR');
-fuwaUp(bL1, bL2, .2, .1, 'BL');
+fuwaUp(tL1, tL2, .15, .0, 'TL', fuwaBO);
+fuwaUp(tR1, tR2, .1, .0, 'TR', fuwaBO);
+fuwaUp(bR1, bR2, .15, .0, 'BR', fuwaBO);
+fuwaUp(bL1, bL2, .1, .0, 'BL', fuwaBO);
+
+fuwaUp(tL1, tL2, .4, .0, 'TL', fuwaSO);
+fuwaUp(tR1, tR2, .3, .0, 'TR', fuwaSO);
+fuwaUp(bR1, bR2, .4, .0, 'BR', fuwaSO);
+fuwaUp(bL1, bL2, .3, .0, 'BL', fuwaSO);
+
+fuwaUp(tL1, tL2, .15, .0, 'TL', fuwaBE);
+fuwaUp(tR1, tR2, .1, .0, 'TR', fuwaBE);
+fuwaUp(bR1, bR2, .15, .0, 'BR', fuwaBE);
+fuwaUp(bL1, bL2, .1, .0, 'BL', fuwaBE);
+
+fuwaUp(tL1, tL2, .4, .0, 'TL', fuwaSE);
+fuwaUp(tR1, tR2, .3, .0, 'TR', fuwaSE);
+fuwaUp(bR1, bR2, .4, .0, 'BR', fuwaSE);
+fuwaUp(bL1, bL2, .3, .0, 'BL', fuwaSE);
 
 
-function fuwaUptL(){
-  let x = tL1;
-  let y;
-  let z = tL2;
-  let w;
-  setInterval(function(){
-    y = x;
-    x = tL1;
-    if(tL1 >= fuwaMin && tL1 <= fuwaMax){
-      if(y > tL1){
-        tL1 -= .3;
-      }
-      else if(y <= tL1){
-        tL1 += .3;
-      }
-    }
-    else{
-      if(y > tL1){
-        tL1 += .3;
-      }
-      else if(y <= tL1){
-        tL1 -= .3;
-      }
-    }
-
-    w = z;
-    z = tL2;
-    if(tL2 >= fuwaMin && tL2 <= fuwaMax){
-      if(w > tL2){
-        tL2 -= .4;
-      }
-      else if(w <= tL2){
-        tL2 += .4;
-      }
-    }
-    else{
-      if(w > tL2){
-        tL2 += .4;
-      }
-      else if(w <= tL2){
-        tL2 -= .4;
-      }
-    }
-    fuwa.css({
-      "border-top-left-radius": tL1 + "% " + tL2 + "%"
-    });
-  }, fuwaTime);
-}
-// fuwaUptL();
-
-
-function fuwaUptR(){
-  let x = tR1;
-  let y;
-  let z = tR2;
-  let w;
-  setInterval(function(){
-    y = x;
-    x = tR1;
-    if(tR1 >= fuwaMin && tR1 <= fuwaMax){
-      if(y > tR1){
-        tR1 -= .4;
-      }
-      else if(y <= tR1){
-        tR1 += .4;
-      }
-    }
-    else{
-      if(y > tR1){
-        tR1 += .4;
-      }
-      else if(y <= tR1){
-        tR1 -= .4;
-      }
-    }
-
-    w = z;
-    z = tR2;
-    if(tR2 >= fuwaMin && tR2 <= fuwaMax){
-      if(w > tR2){
-        tR2 -= .3;
-      }
-      else if(w <= tR2){
-        tR2 += .3;
-      }
-    }
-    else{
-      if(w > tR2){
-        tR2 += .3;
-      }
-      else if(w <= tR2){
-        tR2 -= .3;
-      }
-    }
-    fuwa.css({
-      "border-top-right-radius": tR1 + "% " + tR2 + "%"
-    });
-  }, fuwaTime);
-}
-// fuwaUptR();
-
-
-function fuwaUpbR(){
-  let x = bR1;
-  let y;
-  let z = bR2;
-  let w;
-  setInterval(function(){
-    y = x;
-    x = bR1;
-    if(bR1 >= fuwaMin && bR1 <= fuwaMax){
-      if(y > bR1){
-        bR1 -= .3;
-      }
-      else if(y <= bR1){
-        bR1 += .3;
-      }
-    }
-    else{
-      if(y > bR1){
-        bR1 += .3;
-      }
-      else if(y <= bR1){
-        bR1 -= .3;
-      }
-    }
-
-    w = z;
-    z = bR2;
-    if(bR2 >= fuwaMin && bR2 <= fuwaMax){
-      if(w > bR2){
-        bR2 -= .4;
-      }
-      else if(w <= bR2){
-        bR2 += .4;
-      }
-    }
-    else{
-      if(w > bR2){
-        bR2 += .4;
-      }
-      else if(w <= bR2){
-        bR2 -= .4;
-      }
-    }
-    fuwa.css({
-      "border-bottom-right-radius": bR1 + "% " + bR2 + "%"
-    });
-  }, fuwaTime);
-}
-// fuwaUpbR();
-
-
-function fuwaUpbL(){
-  let x = bL1;
-  let y;
-  let z = bL2;
-  let w;
-  setInterval(function(){
-    y = x;
-    x = bL1;
-    if(bL1 >= fuwaMin && bL1 <= fuwaMax){
-      if(y > bL1){
-        bL1 -= .3;
-      }
-      else if(y <= bL1){
-        bL1 += .3;
-      }
-    }
-    else{
-      if(y > bL1){
-        bL1 += .3;
-      }
-      else if(y <= bL1){
-        bL1 -= .3;
-      }
-    }
-
-    w = z;
-    z = bL2;
-    if(bL2 >= fuwaMin && bL2 <= fuwaMax){
-      if(w > bL2){
-        bL2 -= .2;
-      }
-      else if(w <= bL2){
-        bL2 += .2;
-      }
-    }
-    else{
-      if(w > bL2){
-        bL2 += .2;
-      }
-      else if(w <= bL2){
-        bL2 -= .2;
-      }
-    }
-    fuwa.css({
-      "border-bottom-left-radius": bL1 + "% " + bL2 + "%"
-    });
-  }, fuwaTime);
-}
-// fuwaUpbL();
 
 
 
