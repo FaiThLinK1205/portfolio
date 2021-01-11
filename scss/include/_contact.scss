@@ -170,11 +170,17 @@ contact
     }
 
     &_form_Txtbox {
-        width: 600px;
+        width: 480px;
+        height: 300px;
         margin-bottom: 50px;
 
+        @include pc_tab {
+            width: 480px;
+            height: 300px;
+        }
+
         @include tab {
-            width: 600px;
+            width: 480px;
             height: 200px;
         }
 
