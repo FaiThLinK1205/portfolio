@@ -2562,6 +2562,9 @@ skill
 }
 
 .about_dd_sns {
+  width: 90%;
+  padding: 8px 8px 8px 15px;
+  border-left: 5px solid #fff;
   cursor: pointer;
   text-decoration: underline;
 }
