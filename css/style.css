@@ -2098,6 +2098,10 @@ portfolio
   }
 }
 
+.portfolio_spa_b {
+  color: #333333;
+}
+
 /****************************************:
 
 skill
@@ -2302,8 +2306,6 @@ skill
   padding: 20px;
   background: #fafafa;
   border-radius: 30px;
-  position: relative;
-  z-index: -2;
 }
 
 @media screen and (max-width: 480px) {
