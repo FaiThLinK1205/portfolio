@@ -9,15 +9,15 @@ button
 *****************************************:*/
 
 @mixin common_btn{
-  width: 300px;
-  height: 80px;
+  width: 280px;
+  height: 60px;
   margin: 0 auto;
   background: linear-gradient(135deg, $cBlue 100%, #00f0f9);
   border-radius: 149px;
-  @include rem(21);
+  @include rem(18);
   color: $cWhite;
   text-align: center;
-  line-height: 80px;
+  line-height: 60px;
   position: relative;
   z-index: 1;
   display: block;
@@ -26,9 +26,9 @@ button
 
   @include pc_tab{
     width: 230px;
-    height: 65px;
+    height: 60px;
     @include rem(17);
-    line-height: 65px;
+    line-height: 60px;
   }
 
   @include tab{
@@ -89,6 +89,7 @@ button
 
 input[type="submit"]{
   @include common_btn();
+  border: solid 0;
   background: transparent;
   z-index: 10;
   display: block;
