@@ -35,65 +35,71 @@ fv
 
 }
 
-// .fv_txt {
 
-//     span {
-//         display: inline-block;
-//         opacity: 0;
+.fv_txt {
+    span {
+        display: inline-block;
+        transform: scale(0);
 
-//         &:first-of-type {
-//             animation-name: line;
-//             animation-fill-mode: both;
+        &:nth-child(1) {
+            font-weight: bold;
+            animation: color 1s ease;
+            animation-delay: 13s;
+            animation-fill-mode: forwards;
 
-//         }
+        }
 
-//         &:nth-child(1) {
-//             font-weight: bold;
-//         }
+        &:nth-child(2) {
+            font-weight: bold;
+            animation: color 1s ease;
+            animation-delay: 13s;
+            animation-fill-mode: forwards;
 
-//         &:nth-child(2) {
-//             font-weight: bold;
-//         }
+        }
 
-//         &:nth-child(9) {
-//             font-weight: bold;
-//         }
+        &:nth-child(8) {
+            font-weight: bold;
+            animation: color 1s ease;
+            animation-delay: 13s;
+            animation-fill-mode: forwards;
 
-//         &:nth-child(10) {
-//             font-weight: bold;
-//         }
+        }
 
-//         &:nth-child(11) {
-//             font-weight: bold;
-//         }
+        &:nth-child(9) {
+            font-weight: bold;
+            animation: color 1.5s ease;
+            animation-delay: 13s;
+            animation-fill-mode: forwards;
 
-//         &:nth-child(12) {
-//             font-weight: bold;
-//         }
+        }
 
+        &:nth-child(10) {
+            font-weight: bold;
+            animation: color 1s ease;
+            animation-delay: 13s;
+            animation-fill-mode: forwards;
 
-//         @for $i from 1 through 30 {
-//             &:nth-child(#{$i}) {
-//                 animation: text 1s cubic-bezier(0, 1, 1, 1) #{$i * 0.15}s forwards;
-//             }
-//         }
-//     }
-// }
+        }
 
-// @keyframes text {
-//     0% {
-//         opacity: 0;
-//         transform: translateX(400px) translateY(-350px) scale(1);
+        &:nth-child(11) {
+            font-weight: bold;
+            animation: color 1s ease;
+            animation-delay: 13s;
+            animation-fill-mode: forwards;
 
-//     }
+        }
 
-//     100% {
-//         opacity: 1;
-//         transform: none;
-//     }
-// }
+    }
 
+}
 
+@keyframes color {
+    0% {}
+
+    100% {
+        color: #E53816;
+    }
+}
 
 .scroll {
     display: inline-block;
@@ -224,7 +230,7 @@ fv
                 width: 6px;
                 height: 6px;
                 margin-left: -3px;
-                background-color:$cBlack;
+                background-color: $cBlack;
                 border-radius: 100%;
                 -webkit-animation: sdb 2s infinite;
                 animation: sdb 2s infinite;
@@ -728,17 +734,17 @@ skill
         transform: translateX(-50%);
         z-index: -1;
 
-        @include pc_tab{
+        @include pc_tab {
             top: 0px;
             left: 50%;
         }
 
-        @include tab{
+        @include tab {
             top: 0px;
             left: 50%;
         }
 
-        @include SP{
+        @include SP {
             width: 170px;
             height: 170px;
             top: -10px;
@@ -746,7 +752,7 @@ skill
         }
     }
 
-    &_bg_so{
+    &_bg_so {
         width: 40px;
         height: 40px;
         background: $cWhite;
@@ -771,12 +777,12 @@ skill
             left: 0px;
         }
 
-        @include SP{
+        @include SP {
             display: none;
         }
     }
 
-    &_bg_be{
+    &_bg_be {
         width: 200px;
         height: 200px;
         background: $cWhite;
@@ -805,7 +811,7 @@ skill
         }
     }
 
-    &_bg_se{
+    &_bg_se {
         width: 40px;
         height: 40px;
         background: $cWhite;
@@ -891,6 +897,7 @@ skill
         width: 90%;
         padding: 8px 8px 8px 15px;
         border-left: 5px solid #fff;
+
         &_sns {
             width: 90%;
             padding: 8px 8px 8px 15px;
@@ -1048,7 +1055,7 @@ skill
         padding: 0 30px;
         margin-bottom: 80px;
         @include rem(14);
-        
+
         @include SP {
             padding: 0;
             margin-bottom: 50px;
@@ -1057,7 +1064,7 @@ skill
     }
 
     & .btn_txt {
-        @include SP{
+        @include SP {
             @include rem(12);
         }
     }
