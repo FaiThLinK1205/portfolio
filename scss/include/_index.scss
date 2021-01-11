@@ -530,6 +530,10 @@ portfolio
         @include pc_tab {
             @include rem(14);
         }
+
+        &_b {
+            color: $cBlack;
+        }
     }
 
 
@@ -679,8 +683,6 @@ skill
             padding: 20px;
             background: $cWhite;
             border-radius: 30px;
-            position: relative;
-            z-index: -2;
 
             @include SP {
                 width: 90%;
@@ -885,6 +887,10 @@ skill
         width: 90%;
         padding: 8px 8px 8px 15px;
         border-left: 5px solid #fff;
+        &_sns {
+            cursor: pointer;
+            text-decoration: underline;
+        }
     }
 
 }
