@@ -800,18 +800,18 @@ button
 
 *****************************************:*/
 .btn {
-  width: 300px;
-  height: 80px;
+  width: 280px;
+  height: 60px;
   margin: 0 auto;
   background: -webkit-linear-gradient(315deg, #00a0e9 100%, #00f0f9);
   background: linear-gradient(135deg, #00a0e9 100%, #00f0f9);
   border-radius: 149px;
-  font-size: 21px;
+  font-size: 18px;
   /*IE9以前に対応する*/
-  font-size: 1.3125rem;
+  font-size: 1.125rem;
   color: #fafafa;
   text-align: center;
-  line-height: 80px;
+  line-height: 60px;
   position: relative;
   z-index: 1;
   display: block;
@@ -821,11 +821,11 @@ button
 @media screen and (max-width: 1100px) and (min-width: 769px) {
   .btn {
     width: 230px;
-    height: 65px;
+    height: 60px;
     font-size: 17px;
     /*IE9以前に対応する*/
     font-size: 1.0625rem;
-    line-height: 65px;
+    line-height: 60px;
   }
 }
 
@@ -898,22 +898,23 @@ button
 }
 
 input[type="submit"] {
-  width: 300px;
-  height: 80px;
+  width: 280px;
+  height: 60px;
   margin: 0 auto;
   background: -webkit-linear-gradient(315deg, #00a0e9 100%, #00f0f9);
   background: linear-gradient(135deg, #00a0e9 100%, #00f0f9);
   border-radius: 149px;
-  font-size: 21px;
+  font-size: 18px;
   /*IE9以前に対応する*/
-  font-size: 1.3125rem;
+  font-size: 1.125rem;
   color: #fafafa;
   text-align: center;
-  line-height: 80px;
+  line-height: 60px;
   position: relative;
   z-index: 1;
   display: block;
   overflow: hidden;
+  border: solid 0;
   background: transparent;
   z-index: 10;
   display: block;
@@ -924,11 +925,11 @@ input[type="submit"] {
 @media screen and (max-width: 1100px) and (min-width: 769px) {
   input[type="submit"] {
     width: 230px;
-    height: 65px;
+    height: 60px;
     font-size: 17px;
     /*IE9以前に対応する*/
     font-size: 1.0625rem;
-    line-height: 65px;
+    line-height: 60px;
   }
 }
 
@@ -2562,6 +2563,9 @@ skill
 }
 
 .about_dd_sns {
+  width: 90%;
+  padding: 8px 8px 8px 15px;
+  border-left: 5px solid #fff;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -2630,6 +2634,9 @@ skill
   .top_contact_txt {
     width: 100%;
     margin: 0 auto 30px;
+    font-size: 14px;
+    /*IE9以前に対応する*/
+    font-size: 0.875rem;
   }
 }
 
@@ -2760,14 +2767,17 @@ skill
   .top_contact_utxt {
     padding: 0;
     margin-bottom: 50px;
+    font-size: 12px;
+    /*IE9以前に対応する*/
+    font-size: 0.75rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   .top_contact .btn_txt {
-    font-size: 14px;
+    font-size: 12px;
     /*IE9以前に対応する*/
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -3000,13 +3010,21 @@ contact
 }
 
 .contact_form_Txtbox {
-  width: 600px;
+  width: 480px;
+  height: 300px;
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .contact_form_Txtbox {
+    width: 480px;
+    height: 300px;
+  }
 }
 
 @media screen and (max-width: 769px) and (min-width: 480px) {
   .contact_form_Txtbox {
-    width: 600px;
+    width: 480px;
     height: 200px;
   }
 }
