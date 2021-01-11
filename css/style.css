@@ -1751,13 +1751,7 @@ service
 
 *****************************************:*/
 .service {
-  padding: 100px 0;
-}
-
-@media screen and (max-width: 480px) {
-  .service {
-    padding: 50px 0;
-  }
+  padding: 50px 0 123px;
 }
 
 .service_content {
@@ -1827,6 +1821,16 @@ service
   margin-right: 40px;
 }
 
+.service_box:nth-child(2) {
+  margin-top: 37px;
+  margin-bottom: -37px;
+}
+
+.service_box:nth-child(3) {
+  margin-top: 74px;
+  margin-bottom: -74px;
+}
+
 .service_box:last-child {
   margin-right: 0;
 }
@@ -1866,6 +1870,12 @@ service
   }
 }
 
+@media screen and (max-width: 480px) {
+  .service_imgbox {
+    width: 80px;
+  }
+}
+
 .service_ttl {
   margin-bottom: 25px;
   font-size: 24px;
@@ -1877,7 +1887,7 @@ service
   padding: 30px;
   margin-top: 50px;
   width: 100%;
-  height: 450px;
+  height: 100%;
   background-color: rgba(0, 160, 233, 0.2);
 }
 
@@ -1890,17 +1900,17 @@ service
 
 @media screen and (max-width: 769px) and (min-width: 480px) {
   .service_txtwrap {
-    width: 100%;
-    height: 100%;
+    width: 80%;
     padding: 10px;
-    margin: 50px auto;
+    margin: 25px auto;
   }
 }
 
 @media screen and (max-width: 480px) {
   .service_txtwrap {
-    height: 100%;
-    margin: 50px auto;
+    width: 80%;
+    margin: 25px auto;
+    padding: 15px;
   }
 }
 
@@ -1924,10 +1934,10 @@ service
 @media screen and (max-width: 769px) and (min-width: 480px) {
   .service_txt {
     margin: 10px;
-    font-size: 18px;
+    font-size: 15px;
     /*IE9以前に対応する*/
-    font-size: 1.125rem;
-    line-height: 1.8;
+    font-size: 0.9375rem;
+    line-height: 1.4;
   }
 }
 
@@ -1945,18 +1955,12 @@ portfolio
 
 *****************************************:*/
 .portfolio {
-  padding: 100px 0;
-}
-
-@media screen and (max-width: 480px) {
-  .portfolio {
-    padding: 50px 0;
-  }
+  padding: 50px 0;
 }
 
 .portfolio_content {
   padding: 0 25px;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1970,9 +1974,15 @@ portfolio
           flex-wrap: nowrap;
 }
 
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .portfolio_content {
+    margin-bottom: 15px;
+  }
+}
+
 @media screen and (max-width: 769px) and (min-width: 480px) {
   .portfolio_content {
-    display: block;
+    margin-bottom: 15px;
   }
 }
 
@@ -1993,45 +2003,72 @@ portfolio
           box-shadow: 0px 10px 10px 0px rgba(51, 51, 51, 0.5);
 }
 
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .portfolio_imgbox {
+    margin-right: 25px;
+  }
+}
+
 @media screen and (max-width: 769px) and (min-width: 480px) {
   .portfolio_imgbox {
-    margin-right: 0;
-    margin-bottom: 50px;
+    margin-right: 25px;
+    margin-bottom: 10px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .portfolio_imgbox {
     margin-right: 0;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
   }
 }
 
 .portfolio_txtbox {
+  padding: 0 10px;
   width: 80%;
 }
 
 @media screen and (max-width: 769px) and (min-width: 480px) {
   .portfolio_txtbox {
-    margin: auto;
+    width: 50%;
   }
 }
 
 @media screen and (max-width: 480px) {
   .portfolio_txtbox {
     width: 100%;
+    padding: 0;
   }
 }
 
 .portfolio_ttl {
   margin-bottom: 25px;
-  font-size: 24px;
+  font-size: 28px;
   /*IE9以前に対応する*/
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 @media screen and (max-width: 1100px) and (min-width: 769px) {
   .portfolio_ttl {
+    margin-bottom: 10px;
+    font-size: 18px;
+    /*IE9以前に対応する*/
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .portfolio_ttl {
+    margin-bottom: 10px;
+    font-size: 14px;
+    /*IE9以前に対応する*/
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio_ttl {
+    margin-bottom: 10px;
     font-size: 14px;
     /*IE9以前に対応する*/
     font-size: 0.875rem;
@@ -2040,6 +2077,19 @@ portfolio
 
 .portfolio_txtwrap {
   margin-left: 25px;
+  width: 62%;
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .portfolio_txtwrap {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio_txtwrap {
+    width: 87%;
+  }
 }
 
 .portfolio_inbox {
@@ -2062,9 +2112,9 @@ portfolio
 
 @media screen and (max-width: 1100px) and (min-width: 769px) {
   .portfolio_txt {
-    font-size: 17px;
+    font-size: 14px;
     /*IE9以前に対応する*/
-    font-size: 1.0625rem;
+    font-size: 0.875rem;
     line-height: 2;
   }
   .portfolio_txt.__min {
@@ -2077,17 +2127,35 @@ portfolio
 
 @media screen and (max-width: 769px) and (min-width: 480px) {
   .portfolio_txt {
-    padding: 10px;
-    line-height: 2.2;
+    font-size: 10px;
+    /*IE9以前に対応する*/
+    font-size: 0.625rem;
+    line-height: 2;
   }
 }
 
 @media screen and (max-width: 480px) {
   .portfolio_txt {
-    padding: 10px;
     font-size: 10px;
     /*IE9以前に対応する*/
     font-size: 0.625rem;
+    line-height: 1.8;
+  }
+}
+
+.portfolio_txt.__outtxt {
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .portfolio_txt.__outtxt {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio_txt.__outtxt {
+    display: none;
   }
 }
 
@@ -2127,7 +2195,8 @@ skill
 }
 
 .skill_ttl {
-  text-align: center;
+  width: 70%;
+  margin: 0 auto 80px;
 }
 
 @media screen and (max-width: 480px) {

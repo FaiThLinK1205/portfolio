@@ -220,7 +220,7 @@ fv
                 width: 6px;
                 height: 6px;
                 margin-left: -3px;
-                background-color:$cBlack;
+                background-color: $cBlack;
                 border-radius: 100%;
                 -webkit-animation: sdb 2s infinite;
                 animation: sdb 2s infinite;
@@ -257,14 +257,7 @@ service
 *****************************************:*/
 
 .service {
-    padding: 100px 0;
-
-    @include SP {
-        padding: 50px 0;
-    }
-
-
-
+    padding: 50px 0 123px;
 
     &_content {
         @include flex($justify:center);
@@ -297,6 +290,18 @@ service
         flex-direction: column;
         text-align: center;
         margin-right: 40px;
+
+        &:nth-child(2) {
+            margin-top: 37px;
+            margin-bottom: -37px;
+        }
+
+        &:nth-child(3) {
+            margin-top: 74px;
+            margin-bottom: -74px;
+        }
+
+
 
         &:last-child {
             margin-right: 0;
@@ -332,6 +337,10 @@ service
         @include tab {
             width: 80px;
         }
+
+        @include SP {
+            width: 80px;
+        }
     }
 
     &_ttl {
@@ -343,10 +352,12 @@ service
     }
 
     &_txtwrap {
+
         padding: 30px;
         margin-top: 50px;
         width: 100%;
-        height: 450px;
+        // height: 450px;
+        height: 100%;
         background-color: rgba($cBlue, 0.2);
         // line-height: 30px;
 
@@ -357,16 +368,17 @@ service
         }
 
         @include tab {
-            width: 100%;
-            height: 100%;
+            width: 80%;
+            // height: 80%;
             // height: 200px;
             padding: 10px;
-            margin: 50px auto;
+            margin: 25px auto
         }
 
         @include SP {
-            height: 100%;
-            margin: 50px auto
+            width: 80%;
+            margin: 25px auto;
+            padding: 15px;
         }
     }
 
@@ -378,6 +390,7 @@ service
         color: $cBlack;
         margin-top: 10px;
 
+
         @include pc_tab {
             // padding: 25px;
             @include rem(13);
@@ -386,8 +399,8 @@ service
         @include tab {
             // padding: 15px;
             margin: 10px;
-            @include rem(18);
-            line-height: 1.8;
+            @include rem(15);
+            line-height: 1.4;
         }
 
         @include SP {
@@ -404,21 +417,21 @@ portfolio
 
 *****************************************:*/
 .portfolio {
-    padding: 100px 0;
-
-    @include SP {
-        padding: 50px 0;
-    }
-
+    padding: 50px 0;
 
 
     &_content {
         padding: 0 25px;
-        margin-bottom: 80px;
+        margin-bottom: 20px;
         @include flex($justify:center);
 
+
+        @include pc_tab {
+            margin-bottom: 15px;
+        }
+
         @include tab {
-            display: block;
+            margin-bottom: 15px;
         }
 
         @include SP {
@@ -443,27 +456,35 @@ portfolio
         margin-right: 50px;
         box-shadow: 0px 10px 10px 0px rgba($cBlack, 0.5);
 
+        @include pc_tab {
+            margin-right: 25px;
+        }
+
 
         @include tab {
-            margin-right: 0;
-            margin-bottom: 50px;
+            margin-right: 25px;
+            margin-bottom: 10px;
         }
 
         @include SP {
+            // margin: 0 10px;
             margin-right: 0;
-            margin-bottom: 50px;
+            margin-bottom: 15px;
         }
     }
 
     &_txtbox {
+        padding: 0 10px;
         width: 80%;
 
         @include tab {
-            margin: auto;
+            width: 50%;
+            // margin: auto;
         }
 
         @include SP {
             width: 100%;
+            padding: 0;
         }
 
 
@@ -471,9 +492,20 @@ portfolio
 
     &_ttl {
         margin-bottom: 25px;
-        @include rem(24);
+        @include rem(28);
 
         @include pc_tab {
+            margin-bottom: 10px;
+            @include rem(18);
+        }
+
+        @include tab {
+            margin-bottom: 10px;
+            @include rem(14);
+        }
+
+        @include SP {
+            margin-bottom: 10px;
             @include rem(14);
         }
 
@@ -482,6 +514,15 @@ portfolio
 
     &_txtwrap {
         margin-left: 25px;
+        width: 62%;
+
+        @include tab {
+            width: 50%;
+        }
+
+        @include SP {
+            width: 87%;
+        }
     }
 
     &_inbox {
@@ -500,7 +541,7 @@ portfolio
 
         @include pc_tab {
 
-            @include rem(17);
+            @include rem(14);
             line-height: 2;
 
             &.__min {
@@ -514,14 +555,29 @@ portfolio
 
 
         @include tab {
-            padding: 10px;
-            line-height: 2.2;
+            @include rem(10);
+            line-height: 2;
         }
 
         @include SP {
-            padding: 10px;
+            // padding: 0 10px;
             @include rem(10);
+            line-height: 1.8;
         }
+
+        &.__outtxt {
+            padding: 0 10px;
+
+            @include tab {
+                display: none;
+            }
+
+            @include SP {
+                display: none;
+            }
+        }
+
+
     }
 
     &_spa {
@@ -563,7 +619,9 @@ skill
     }
 
     &_ttl {
-        text-align: center;
+        width: 70%;
+        margin: 0 auto 80px;
+
 
         @include SP {
             @include rem(10);
@@ -724,17 +782,17 @@ skill
         transform: translateX(-50%);
         z-index: -1;
 
-        @include pc_tab{
+        @include pc_tab {
             top: 0px;
             left: 50%;
         }
 
-        @include tab{
+        @include tab {
             top: 0px;
             left: 50%;
         }
 
-        @include SP{
+        @include SP {
             width: 170px;
             height: 170px;
             top: -10px;
@@ -742,7 +800,7 @@ skill
         }
     }
 
-    &_bg_so{
+    &_bg_so {
         width: 40px;
         height: 40px;
         background: $cWhite;
@@ -767,12 +825,12 @@ skill
             left: 0px;
         }
 
-        @include SP{
+        @include SP {
             display: none;
         }
     }
 
-    &_bg_be{
+    &_bg_be {
         width: 200px;
         height: 200px;
         background: $cWhite;
@@ -801,7 +859,7 @@ skill
         }
     }
 
-    &_bg_se{
+    &_bg_se {
         width: 40px;
         height: 40px;
         background: $cWhite;
@@ -887,6 +945,7 @@ skill
         width: 90%;
         padding: 8px 8px 8px 15px;
         border-left: 5px solid #fff;
+
         &_sns {
             cursor: pointer;
             text-decoration: underline;
@@ -1048,7 +1107,7 @@ skill
     }
 
     & .btn_txt {
-        @include SP{
+        @include SP {
             @include rem(14);
         }
     }
