@@ -1108,7 +1108,7 @@ skill
 
     & .btn_txt {
         @include SP {
-            @include rem(14);
+            @include rem(12);
         }
     }
 }

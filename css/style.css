@@ -2834,9 +2834,9 @@ skill
 
 @media screen and (max-width: 480px) {
   .top_contact .btn_txt {
-    font-size: 14px;
+    font-size: 12px;
     /*IE9以前に対応する*/
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 }
 
