@@ -947,6 +947,9 @@ skill
         border-left: 5px solid #fff;
 
         &_sns {
+            width: 90%;
+            padding: 8px 8px 8px 15px;
+            border-left: 5px solid #fff;
             cursor: pointer;
             text-decoration: underline;
         }
@@ -1005,6 +1008,7 @@ skill
         @include SP {
             width: 100%;
             margin: 0 auto 30px;
+            @include rem(14);
         }
     }
 
@@ -1099,15 +1103,20 @@ skill
         padding: 0 30px;
         margin-bottom: 80px;
         @include rem(14);
-
+        
         @include SP {
             padding: 0;
             margin-bottom: 50px;
+            @include rem(12);
         }
     }
 
     & .btn_txt {
+<<<<<<< HEAD
         @include SP {
+=======
+        @include SP{
+>>>>>>> d5be681b97001c79d8490c484e7948c602de7315
             @include rem(12);
         }
     }
