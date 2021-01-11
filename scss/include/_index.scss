@@ -681,7 +681,8 @@ skill
         &_right {
             width: 70%;
             padding: 20px;
-            background: $cWhite;
+            // background: $cWhite;
+            border: 1px solid $cBlack;
             border-radius: 30px;
 
             @include SP {
@@ -695,7 +696,7 @@ skill
         width: 200px;
         height: 200px;
         border-radius: 50%;
-        border: 1px solid #000;
+        border: 1px solid $cBlack;
 
         @include pc_tab {
             width: 180px;
@@ -856,10 +857,13 @@ skill
         opacity: 0.8;
     }
 
+    
+
     &_dl {
         width: 100%;
         display: flex;
-        border-bottom: 5px solid #fff;
+        // border-bottom: 5px solid #fff;
+        border-bottom: 1px solid $cBlack;
 
         &:last-child {
             border-bottom: 0px solid #fff;
@@ -886,11 +890,13 @@ skill
     &_dd {
         width: 90%;
         padding: 8px 8px 8px 15px;
-        border-left: 5px solid #fff;
+        // border-left: 5px solid #fff;
+        border-left: 1px solid $cBlack;
         &_sns {
             width: 90%;
             padding: 8px 8px 8px 15px;
-            border-left: 5px solid #fff;
+            // border-left: 5px solid #fff;
+            border-left: 1px solid $cBlack;
             cursor: pointer;
             text-decoration: underline;
         }
