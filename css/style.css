@@ -2236,7 +2236,19 @@ skill
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
-  margin: 50px auto;
+  margin: 50px;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .skill_box {
+    margin: 45px 4vw;
+  }
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .skill_box {
+    margin: 35px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -2260,6 +2272,14 @@ skill
           align-items: center;
 }
 
+.skill_imgbox:nth-child(1) {
+  margin-left: 0;
+}
+
+.skill_imgbox:nth-child(2) {
+  margin-right: 0;
+}
+
 @media screen and (max-width: 1100px) and (min-width: 769px) {
   .skill_imgbox {
     width: 80px;
@@ -2276,7 +2296,7 @@ skill
 
 @media screen and (max-width: 480px) {
   .skill_imgbox {
-    width: 80px;
+    width: 75px;
   }
 }
 

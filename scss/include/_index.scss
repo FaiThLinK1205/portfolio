@@ -636,7 +636,18 @@ skill
 
     &_box {
         @include flex;
-        margin: 50px auto;
+        margin: 50px;
+
+
+        @include pc_tab {
+            margin: 45px 4vw;
+        }
+
+        @include tab {
+            margin: 35px;
+        }
+
+
 
         @include SP {
             margin: 25px auto;
@@ -651,6 +662,15 @@ skill
         display: flex;
         align-items: center;
 
+
+        &:nth-child(1) {
+            margin-left: 0;
+        }
+
+        &:nth-child(2) {
+            margin-right: 0;
+        }
+
         @include pc_tab {
             width: 80px;
             margin: 0 5vw;
@@ -662,7 +682,7 @@ skill
         }
 
         @include SP {
-            width: 80px;
+            width: 75px;
         }
     }
 }
@@ -1103,7 +1123,7 @@ skill
         padding: 0 30px;
         margin-bottom: 80px;
         @include rem(14);
-        
+
         @include SP {
             padding: 0;
             margin-bottom: 50px;
@@ -1112,11 +1132,7 @@ skill
     }
 
     & .btn_txt {
-<<<<<<< HEAD
         @include SP {
-=======
-        @include SP{
->>>>>>> d5be681b97001c79d8490c484e7948c602de7315
             @include rem(12);
         }
     }
