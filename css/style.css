@@ -2206,6 +2206,15 @@ skill
   padding: 100px 20px;
 }
 
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .about {
+    padding: 50px 0;
+    font-size: 13px;
+    /*IE9以前に対応する*/
+    font-size: 0.8125rem;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .about {
     padding: 50px 0;
@@ -2550,9 +2559,15 @@ skill
   padding: 100px 20px;
 }
 
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .top_contact {
+    padding: 50px 0 0 0;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .top_contact {
-    padding: 50px 0;
+    padding: 50px 0 0 0;
   }
 }
 
@@ -2732,6 +2747,7 @@ skill
 @media screen and (max-width: 480px) {
   .top_contact_utxt {
     padding: 0;
+    margin-bottom: 50px;
   }
 }
 
@@ -3016,7 +3032,7 @@ footer
   color: #fafafa;
   line-height: 100px;
   text-align: center;
-  background: #00a0e9;
+  background: #333333;
 }
 
 @media screen and (max-width: 769px) and (min-width: 480px) {
