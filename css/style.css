@@ -2554,6 +2554,11 @@ skill
   border-left: 5px solid #fff;
 }
 
+.about_dd_sns {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 /**** contact ****/
 .top_contact {
   padding: 100px 20px;
