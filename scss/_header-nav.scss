@@ -178,7 +178,7 @@ nav
       width: 60px;
 
       &::before {
-        @include rem(15);
+        @include rem(14);
         position: absolute;
         bottom: -50px;
         left: 50%;
@@ -346,7 +346,7 @@ nav
         transform: translateX(-8%);
         width: 100%;
         content: "MENU";
-        @include rem(13);
+        @include rem(12);
       }
     }
 
@@ -505,7 +505,7 @@ nav
         position: absolute;
         bottom: -26px;
         left: 50%;
-        transform: translateX(-8%);
+        transform: translateX(-13%);
         width: 100%;
         content: "MENU";
         @include rem(10);
