@@ -334,9 +334,9 @@ nav
     width: 60px;
   }
   #nav-toggle > div::before {
-    font-size: 15px;
+    font-size: 14px;
     /*IE9以前に対応する*/
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
     position: absolute;
     bottom: -50px;
     left: 50%;
@@ -506,9 +506,9 @@ nav
             transform: translateX(-8%);
     width: 100%;
     content: "MENU";
-    font-size: 13px;
+    font-size: 12px;
     /*IE9以前に対応する*/
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
   }
   #nav-toggle span {
     width: 100%;
@@ -666,8 +666,8 @@ nav
     position: absolute;
     bottom: -26px;
     left: 50%;
-    -webkit-transform: translateX(-8%);
-            transform: translateX(-8%);
+    -webkit-transform: translateX(-13%);
+            transform: translateX(-13%);
     width: 100%;
     content: "MENU";
     font-size: 10px;
