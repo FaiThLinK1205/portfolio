@@ -74,7 +74,7 @@ $(() => {
     easing: 'easeInOutExpo',
     // easing: 'easeInElastic(3,1)',
     delay: anime.stagger(200, {
-      start: 4500
+      start: 3250
     })
   });
 });

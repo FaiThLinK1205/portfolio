@@ -59,9 +59,9 @@ body {
 
 @media screen and (max-width: 480px) {
   .section_ttl {
-    font-size: 20px;
+    font-size: 30px;
     /*IE9以前に対応する*/
-    font-size: 1.25rem;
+    font-size: 1.875rem;
   }
 }
 
@@ -93,9 +93,9 @@ body {
 
 @media screen and (max-width: 480px) {
   .section_ttl:after {
-    font-size: 20px;
+    font-size: 30px;
     /*IE9以前に対応する*/
-    font-size: 1.25rem;
+    font-size: 1.875rem;
     top: -10px;
   }
 }
@@ -280,6 +280,10 @@ nav
   transition: color .2s;
 }
 
+.nav_item:nth-child(2) {
+  width: 165px;
+}
+
 .nav_item:hover {
   -webkit-transition: color .2s ease;
   transition: color .2s ease;
@@ -330,9 +334,12 @@ nav
     width: 60px;
   }
   #nav-toggle > div::before {
+    font-size: 15px;
+    /*IE9以前に対応する*/
+    font-size: 0.9375rem;
     position: absolute;
     bottom: -50px;
-    left: 25px;
+    left: 22px;
     width: 100%;
     font-weight: bold;
     content: "MENU";
@@ -492,9 +499,12 @@ nav
   #nav-toggle > div::before {
     position: absolute;
     bottom: -35px;
-    left: 15px;
+    left: 16px;
     width: 100%;
     content: "MENU";
+    font-size: 13px;
+    /*IE9以前に対応する*/
+    font-size: 0.8125rem;
   }
   #nav-toggle span {
     width: 100%;
@@ -651,12 +661,12 @@ nav
   #nav-toggle > div::before {
     position: absolute;
     bottom: -26px;
-    left: 12px;
+    left: 11px;
     width: 100%;
     content: "MENU";
-    font-size: 11px;
+    font-size: 10px;
     /*IE9以前に対応する*/
-    font-size: 0.6875rem;
+    font-size: 0.625rem;
   }
   #nav-toggle span {
     width: 100%;
@@ -1311,8 +1321,8 @@ fv
   font-weight: bold;
   -webkit-animation: color 1s ease;
           animation: color 1s ease;
-  -webkit-animation-delay: 13s;
-          animation-delay: 13s;
+  -webkit-animation-delay: 8.5s;
+          animation-delay: 8.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -1321,8 +1331,8 @@ fv
   font-weight: bold;
   -webkit-animation: color 1s ease;
           animation: color 1s ease;
-  -webkit-animation-delay: 13s;
-          animation-delay: 13s;
+  -webkit-animation-delay: 8.5s;
+          animation-delay: 8.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -1331,8 +1341,8 @@ fv
   font-weight: bold;
   -webkit-animation: color 1s ease;
           animation: color 1s ease;
-  -webkit-animation-delay: 13s;
-          animation-delay: 13s;
+  -webkit-animation-delay: 10.25s;
+          animation-delay: 10.25s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -1341,8 +1351,8 @@ fv
   font-weight: bold;
   -webkit-animation: color 1s ease;
           animation: color 1s ease;
-  -webkit-animation-delay: 13s;
-          animation-delay: 13s;
+  -webkit-animation-delay: 10.25s;
+          animation-delay: 10.25s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -1351,8 +1361,8 @@ fv
   font-weight: bold;
   -webkit-animation: color 1s ease;
           animation: color 1s ease;
-  -webkit-animation-delay: 13s;
-          animation-delay: 13s;
+  -webkit-animation-delay: 10.25s;
+          animation-delay: 10.25s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -1361,8 +1371,8 @@ fv
   font-weight: bold;
   -webkit-animation: color 1s ease;
           animation: color 1s ease;
-  -webkit-animation-delay: 13s;
-          animation-delay: 13s;
+  -webkit-animation-delay: 10.25s;
+          animation-delay: 10.25s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -1622,7 +1632,19 @@ service
 
 *****************************************:*/
 .service {
-  padding: 50px 0 123px;
+  padding: 150px 0 123px;
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .service {
+    padding: 100px 0 123px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .service {
+    padding: 50px 0 0;
+  }
 }
 
 .service_content {
@@ -1759,7 +1781,8 @@ service
   margin-top: 50px;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 160, 233, 0.2);
+  border: 5px dashed #00a0e9;
+  border-radius: 15px;
 }
 
 @media screen and (max-width: 1100px) and (min-width: 769px) {
@@ -1826,7 +1849,13 @@ portfolio
 
 *****************************************:*/
 .portfolio {
-  padding: 50px 0;
+  padding: 150px 0 0;
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .portfolio {
+    padding: 100px 0 0;
+  }
 }
 
 .portfolio_content {
@@ -1914,9 +1943,9 @@ portfolio
 
 .portfolio_ttl {
   margin-bottom: 25px;
-  font-size: 28px;
+  font-size: 27px;
   /*IE9以前に対応する*/
-  font-size: 1.75rem;
+  font-size: 1.6875rem;
 }
 
 @media screen and (max-width: 1100px) and (min-width: 769px) {
@@ -2052,7 +2081,13 @@ skill
 
 *****************************************:*/
 .skill {
-  padding: 100px 0;
+  padding: 150px 0 0;
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .skill {
+    padding: 100px 0 0;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -2072,6 +2107,7 @@ skill
 
 @media screen and (max-width: 480px) {
   .skill_ttl {
+    margin: 0 auto 40px;
     font-size: 10px;
     /*IE9以前に対応する*/
     font-size: 0.625rem;
@@ -2172,12 +2208,12 @@ skill
 
 /**** ABOUT US ****/
 .about {
-  padding: 100px 20px;
+  padding: 150px 20px 0;
 }
 
 @media screen and (max-width: 769px) and (min-width: 480px) {
   .about {
-    padding: 50px 0;
+    padding: 100px 0 0;
     font-size: 13px;
     /*IE9以前に対応する*/
     font-size: 0.8125rem;
@@ -2195,6 +2231,23 @@ skill
 
 .about .section_ttl:after {
   content: "ABOUT US";
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .about .section_ttl:after {
+    font-size: 50px;
+    /*IE9以前に対応する*/
+    font-size: 3.125rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about .section_ttl:after {
+    white-space: nowrap;
+    font-size: 30px;
+    /*IE9以前に対応する*/
+    font-size: 1.875rem;
+  }
 }
 
 .about_txt {
@@ -2534,18 +2587,18 @@ skill
 
 /**** contact ****/
 .top_contact {
-  padding: 100px 20px;
+  padding: 150px 20px 0;
 }
 
 @media screen and (max-width: 769px) and (min-width: 480px) {
   .top_contact {
-    padding: 50px 0 0 0;
+    padding: 100px 0 0;
   }
 }
 
 @media screen and (max-width: 480px) {
   .top_contact {
-    padding: 50px 0 0 0;
+    padding: 50px 0 0;
   }
 }
 
@@ -2769,14 +2822,38 @@ contact
 }
 
 .contact .section_ttl {
-  margin-bottom: 30px;
-  font-size: 40px;
+  margin-bottom: 50px;
+  font-size: 50px;
   /*IE9以前に対応する*/
-  font-size: 2.5rem;
+  font-size: 3.125rem;
+}
+
+@media screen and (max-width: 480px) {
+  .contact .section_ttl {
+    font-size: 30px;
+    /*IE9以前に対応する*/
+    font-size: 1.875rem;
+  }
 }
 
 .contact .section_ttl:after {
   content: "CONTACT";
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .contact .section_ttl:after {
+    font-size: 40px;
+    /*IE9以前に対応する*/
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact .section_ttl:after {
+    font-size: 30px;
+    /*IE9以前に対応する*/
+    font-size: 1.875rem;
+  }
 }
 
 .contact_txt {

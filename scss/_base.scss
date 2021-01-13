@@ -39,7 +39,7 @@ body {
     }
 
     @include SP {
-        @include rem(20);
+        @include rem(30);
     }
 
 
@@ -62,7 +62,7 @@ body {
         }
 
         @include SP {
-            @include rem(20);
+            @include rem(30);
             top: -10px;
         }
     }
