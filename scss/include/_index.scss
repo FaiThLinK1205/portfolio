@@ -44,7 +44,7 @@ fv
         &:nth-child(1) {
             font-weight: bold;
             animation: color 1s ease;
-            animation-delay: 13s;
+            animation-delay: 8.5s;
             animation-fill-mode: forwards;
 
         }
@@ -52,7 +52,7 @@ fv
         &:nth-child(2) {
             font-weight: bold;
             animation: color 1s ease;
-            animation-delay: 13s;
+            animation-delay: 8.5s;
             animation-fill-mode: forwards;
 
         }
@@ -60,7 +60,7 @@ fv
         &:nth-child(8) {
             font-weight: bold;
             animation: color 1s ease;
-            animation-delay: 13s;
+            animation-delay: 10.25s;
             animation-fill-mode: forwards;
 
         }
@@ -68,7 +68,7 @@ fv
         &:nth-child(9) {
             font-weight: bold;
             animation: color 1s ease;
-            animation-delay: 13s;
+            animation-delay: 10.25s;
             animation-fill-mode: forwards;
 
         }
@@ -76,7 +76,7 @@ fv
         &:nth-child(10) {
             font-weight: bold;
             animation: color 1s ease;
-            animation-delay: 13s;
+            animation-delay: 10.25s;
             animation-fill-mode: forwards;
 
         }
@@ -84,7 +84,7 @@ fv
         &:nth-child(11) {
             font-weight: bold;
             animation: color 1s ease;
-            animation-delay: 13s;
+            animation-delay: 10.25s;
             animation-fill-mode: forwards;
 
         }
@@ -267,7 +267,15 @@ service
 *****************************************:*/
 
 .service {
-    padding: 50px 0 123px;
+    padding: 150px 0 123px;
+
+    @include tab{
+        padding: 100px 0 123px;
+    }
+
+    @include SP{
+        padding: 50px 0 0;
+    }
 
     &_content {
         @include flex($justify:center);
@@ -366,7 +374,8 @@ service
         margin-top: 50px;
         width: 100%;
         height: 100%;
-        background-color: rgba($cBlue, 0.2);
+        border: 5px dashed $cBlue;
+        border-radius: 15px;
 
         @include pc_tab {
             height: 100%;
@@ -418,8 +427,11 @@ portfolio
 
 *****************************************:*/
 .portfolio {
-    padding: 50px 0;
+    padding: 150px 0 0;
 
+    @include tab{
+        padding: 100px 0 0;
+    }
 
     &_content {
         padding: 0 25px;
@@ -491,7 +503,7 @@ portfolio
 
     &_ttl {
         margin-bottom: 25px;
-        @include rem(28);
+        @include rem(27);
 
         @include pc_tab {
             margin-bottom: 10px;
@@ -602,7 +614,11 @@ skill
 *****************************************:*/
 
 .skill {
-    padding: 100px 0;
+    padding: 150px 0 0;
+
+    @include tab {
+        padding: 100px 0 0;
+    }
 
     @include SP {
         padding: 50px 0;
@@ -622,6 +638,7 @@ skill
 
 
         @include SP {
+            margin: 0 auto 40px;
             @include rem(10);
         }
     }
@@ -689,10 +706,10 @@ skill
 
 /**** ABOUT US ****/
 .about {
-    padding: 100px 20px;
+    padding: 150px 20px 0;
 
     @include tab {
-        padding: 50px 0;
+        padding: 100px 0 0;
         @include rem(13);
     }
 
@@ -705,6 +722,15 @@ skill
 
         &:after {
             content: "ABOUT US";
+
+            @include pc_tab{
+                @include rem(50);
+            }
+
+            @include SP{
+                white-space: nowrap;
+                @include rem(30);
+            }
         }
     }
 
@@ -757,7 +783,8 @@ skill
         &_right {
             width: 70%;
             padding: 20px;
-            background: $cWhite;
+            // background: $cWhite;
+            border: 1px solid $cBlack;
             border-radius: 30px;
 
             @include SP {
@@ -771,7 +798,7 @@ skill
         width: 200px;
         height: 200px;
         border-radius: 50%;
-        border: 1px solid #000;
+        border: 1px solid $cBlack;
 
         @include pc_tab {
             width: 180px;
@@ -936,10 +963,13 @@ skill
         opacity: 0.8;
     }
 
+    
+
     &_dl {
         width: 100%;
         display: flex;
-        border-bottom: 5px solid #fff;
+        // border-bottom: 5px solid #fff;
+        border-bottom: 1px solid $cBlack;
 
         &:last-child {
             border-bottom: 0px solid #fff;
@@ -966,12 +996,13 @@ skill
     &_dd {
         width: 90%;
         padding: 8px 8px 8px 15px;
-        border-left: 5px solid #fff;
-
+        // border-left: 5px solid #fff;
+        border-left: 1px solid $cBlack;
         &_sns {
             width: 90%;
             padding: 8px 8px 8px 15px;
-            border-left: 5px solid #fff;
+            // border-left: 5px solid #fff;
+            border-left: 1px solid $cBlack;
             cursor: pointer;
             text-decoration: underline;
         }
@@ -983,14 +1014,14 @@ skill
 
 /**** contact ****/
 .top_contact {
-    padding: 100px 20px;
+    padding: 150px 20px 0;
 
     @include tab {
-        padding: 50px 0 0 0;
+        padding: 100px 0 0;
     }
 
     @include SP {
-        padding: 50px 0 0 0;
+        padding: 50px 0 0;
     }
 
     .section_ttl {

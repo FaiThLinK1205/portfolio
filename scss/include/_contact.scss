@@ -25,11 +25,23 @@ contact
     }
     
     & .section_ttl {
-        margin-bottom: 30px;
-        @include rem(40);
+        margin-bottom: 50px;
+        @include rem(50);
+
+        @include SP{
+            @include rem(30);
+        }
 
             &:after {
                 content: "CONTACT";
+
+                @include pc_tab{
+                    @include rem(40);
+                }
+
+                @include SP{
+                    @include rem(30);
+                }
             }
         }
 
