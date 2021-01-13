@@ -169,7 +169,8 @@ nav
         @include rem(15);
         position: absolute;
         bottom: -50px;
-        left: 22px;
+        left: 50%;
+        transform: translateX(-8%);
         width: 100%;
         font-weight: bold;
         content: "MENU";
@@ -329,7 +330,8 @@ nav
       &::before {
         position: absolute;
         bottom: -35px;
-        left: 16px;
+        left: 50%;
+        transform: translateX(-8%);
         width: 100%;
         content: "MENU";
         @include rem(13);
@@ -490,7 +492,8 @@ nav
       &::before {
         position: absolute;
         bottom: -26px;
-        left: 11px;
+        left: 50%;
+        transform: translateX(-8%);
         width: 100%;
         content: "MENU";
         @include rem(10);
