@@ -116,8 +116,20 @@ nav
     text-align: center;
     transition: color .2s;
 
-    &:nth-child(2){
+    &:nth-child(2) {
       width: 165px;
+
+      @include pc_tab {
+        width: 100%;
+      }
+
+      @include tab {
+        width: 100%;
+      }
+
+      @include SP {
+        width: 100%;
+      }
     }
 
 
@@ -169,7 +181,7 @@ nav
         @include rem(15);
         position: absolute;
         bottom: -50px;
-        left: 22px;
+        left: 45%;
         width: 100%;
         font-weight: bold;
         content: "MENU";

@@ -284,6 +284,24 @@ nav
   width: 165px;
 }
 
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .nav_item:nth-child(2) {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .nav_item:nth-child(2) {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav_item:nth-child(2) {
+    width: 100%;
+  }
+}
+
 .nav_item:hover {
   -webkit-transition: color .2s ease;
   transition: color .2s ease;
@@ -339,7 +357,7 @@ nav
     font-size: 0.9375rem;
     position: absolute;
     bottom: -50px;
-    left: 22px;
+    left: 45%;
     width: 100%;
     font-weight: bold;
     content: "MENU";
