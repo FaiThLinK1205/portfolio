@@ -1339,8 +1339,8 @@ fv
 
 .fv_txt span:nth-child(9) {
   font-weight: bold;
-  -webkit-animation: color 1.5s ease;
-          animation: color 1.5s ease;
+  -webkit-animation: color 1s ease;
+          animation: color 1s ease;
   -webkit-animation-delay: 13s;
           animation-delay: 13s;
   -webkit-animation-fill-mode: forwards;

@@ -71,7 +71,7 @@ $(() => {
     rotate:[0,0,0,0,0,1080],
     scale: [0,1],
     duration: 6000,
-    // easing: 'easeInOutExpo',
+    easing: 'easeInOutExpo',
     // easing: 'easeInElastic(3,1)',
     delay: anime.stagger(200, {
       start: 4500
