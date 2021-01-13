@@ -357,7 +357,9 @@ nav
     font-size: 0.9375rem;
     position: absolute;
     bottom: -50px;
-    left: 45%;
+    left: 50%;
+    -webkit-transform: translateX(-8%);
+            transform: translateX(-8%);
     width: 100%;
     font-weight: bold;
     content: "MENU";
@@ -517,7 +519,9 @@ nav
   #nav-toggle > div::before {
     position: absolute;
     bottom: -35px;
-    left: 16px;
+    left: 50%;
+    -webkit-transform: translateX(-8%);
+            transform: translateX(-8%);
     width: 100%;
     content: "MENU";
     font-size: 13px;
@@ -679,7 +683,9 @@ nav
   #nav-toggle > div::before {
     position: absolute;
     bottom: -26px;
-    left: 11px;
+    left: 50%;
+    -webkit-transform: translateX(-8%);
+            transform: translateX(-8%);
     width: 100%;
     content: "MENU";
     font-size: 10px;
