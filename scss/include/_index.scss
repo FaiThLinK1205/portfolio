@@ -262,6 +262,66 @@ fv
 
 /****************************************:
 
+our
+
+*****************************************:*/
+
+.our {
+    padding-top: 150px;
+    min-height: 80vh;
+
+    .section_ttl {
+        color: $cBlack;
+        margin-top: 50px;
+        text-align: left;
+
+
+        &::before {
+            position: absolute;
+            content: "Link faith on the web";
+            top: -30px;
+            left: 1%;
+            @include rem(25);
+        }
+    }
+
+    &_flex {
+        display: flex;
+        text-align: left;
+    }
+
+    &_box {
+        margin: 150px auto;
+        line-height: 2.0;
+        @include rem(25);
+        font-family: source-han-sans-japanese,
+            sans-serif;
+        font-weight: 700;
+    }
+
+    &_txt {
+
+        span {
+            background: linear-gradient(-45deg,
+                    transparent 25%,
+                    #E8BE00 25%,
+                    #E8BE00 50%,
+                    transparent 50%,
+                    transparent 75%,
+                    #E8BE00 75%)left bottom/10px 10px repeat-x;
+            line-height: 4.0;
+        }
+    }
+
+    &_txt_right {
+        text-align-last: right;
+        letter-spacing: 0.05em;
+    }
+}
+
+
+/****************************************:
+
 service
 
 *****************************************:*/
@@ -269,11 +329,11 @@ service
 .service {
     padding: 150px 0 123px;
 
-    @include tab{
+    @include tab {
         padding: 100px 0 123px;
     }
 
-    @include SP{
+    @include SP {
         padding: 50px 0 0;
     }
 
@@ -429,7 +489,7 @@ portfolio
 .portfolio {
     padding: 150px 0 0;
 
-    @include tab{
+    @include tab {
         padding: 100px 0 0;
     }
 
@@ -723,11 +783,11 @@ skill
         &:after {
             content: "ABOUT US";
 
-            @include pc_tab{
+            @include pc_tab {
                 @include rem(50);
             }
 
-            @include SP{
+            @include SP {
                 white-space: nowrap;
                 @include rem(30);
             }
@@ -963,7 +1023,7 @@ skill
         opacity: 0.8;
     }
 
-    
+
 
     &_dl {
         width: 100%;
@@ -998,6 +1058,7 @@ skill
         padding: 8px 8px 8px 15px;
         // border-left: 5px solid #fff;
         border-left: 1px solid $cBlack;
+
         &_sns {
             width: 90%;
             padding: 8px 8px 8px 15px;
