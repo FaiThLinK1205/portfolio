@@ -1787,7 +1787,7 @@ service
   margin-top: 50px;
   width: 100%;
   height: 100%;
-  border: 5px dashed #00a0e9;
+  border: 3px dashed #00a0e9;
   border-radius: 15px;
 }
 
@@ -2328,7 +2328,7 @@ skill
 .about_box_right {
   width: 70%;
   padding: 20px;
-  border: 1px solid #333333;
+  border: 3px dashed #00a0e9;
   border-radius: 30px;
 }
 
@@ -2547,7 +2547,7 @@ skill
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  border-bottom: 1px solid #333333;
+  border-bottom: 3px dashed #00a0e9;
 }
 
 .about_dl:last-child {
@@ -2580,13 +2580,13 @@ skill
 .about_dd {
   width: 90%;
   padding: 8px 8px 8px 15px;
-  border-left: 1px solid #333333;
+  border-left: 3px dashed #00a0e9;
 }
 
 .about_dd_sns {
   width: 90%;
   padding: 8px 8px 8px 15px;
-  border-left: 1px solid #333333;
+  border-left: 3px dashed #00a0e9;
   cursor: pointer;
   text-decoration: underline;
 }
