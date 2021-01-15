@@ -28,13 +28,43 @@ Webサイト制作、デザイン、Webサイトの改修・修正のサービ�
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/aos.css">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+  <script>
+    (function (d) {
+      var config = {
+          kitId: 'hhq8dbz',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h = d.documentElement,
+        t = setTimeout(function () {
+          h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function () {
+        a = this.readyState;
+        if (f || a && a != "complete" && a != "loaded") return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config)
+        } catch (e) {}
+      };
+      s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
 
 </head>
 
 <body>
 
   <!-- ローディング -->
-  <div class="load_bgc">
+  <!-- <div class="load_bgc">
     <div id="circle_container">
       <a href="#" class="circle"></a>
       <a href="#" class="circle"></a>
@@ -42,7 +72,7 @@ Webサイト制作、デザイン、Webサイトの改修・修正のサービ�
       <a href="#" class="circle"></a>
       <a href="#" class="circle"></a>
     </div>
-  </div>
+  </div> -->
   <!-- ローディングここまで -->
 
   <div class="container">
@@ -50,9 +80,9 @@ Webサイト制作、デザイン、Webサイトの改修・修正のサービ�
     <div class="fv">
       <div class="fv_wrap">
         <a href="#service" class="scroll">Scroll</a>
-          <p class="fv_txt">
-            信頼をWebでつなげる
-          </p>
+        <p class="fv_txt">
+          信頼をWebでつなげる
+        </p>
         <a href="#service" class="scroll2">Scroll</a>
       </div>
       <a href="#service" class="scroll3"><span></span>Scroll</a>
@@ -110,13 +140,26 @@ Webサイト制作、デザイン、Webサイトの改修・修正のサービ�
 
     <!-- メインコンテンツ -->
     <main>
+      <section class="our" data-aos="fade-in" data-aos-anchor-placement="center-center">
+        <div class="section_inner">
+          <div class="our_flex">
+            <div class="our_box">
+              <h2 class="section_ttl">信頼をWebでつなげる</h2>
+              <p class="our_txt"><span>FaiTh（faith）とは、直訳で 信頼 </span><br>
+                私たちが、年齢や住んでいる場所が違ってもWebを通してつながれたように<br>
+                私たちが、お客様同士の信頼をつなげる架け橋になります。<br>
+                <p class="our_txt_right">FaiThLinK</p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!--serviceセクションここから-->
       <section class="service" id="service">
         <h2 class="section_ttl">SERVICE</h2>
         <div class="section_inner">
           <div class="service_content">
-
             <div class="service_box" data-aos="fade-up">
               <h3 class="service_ttl">デザイン</h3><!-- /.service_ttl -->
               <div class="service_imgbox">
@@ -194,7 +237,7 @@ Webサイト制作、デザイン、Webサイトの改修・修正のサービ�
                 <!-- /.portfolio_txt -->
               </div><!-- /.portfolio_inbox -->
 
-              <a href="" class="btn"><span class="btn_txt">詳細はこちらへ</span></a>
+              <a href="http://faith-link.weblike.jp/ishikadan/" class="btn"><span class="btn_txt">詳細はこちらへ</span></a>
             </div><!-- /.portfolio_txtbox -->
           </div><!-- /.portfolio_content -->
           <div class="portfolio_txtwrap" data-aos="fade-up">
@@ -305,7 +348,8 @@ Webサイト制作、デザイン、Webサイトの改修・修正のサービ�
                 </div>
                 <div class="about_dl">
                   <div class="about_dt">Twitter :</div>
-                  <div class="about_dd_sns"><a href="https://twitter.com/ppmp65" target="_blank" rel="noopener noreferrer">@ppmp65</a></div>
+                  <div class="about_dd_sns"><a href="https://twitter.com/ppmp65" target="_blank"
+                      rel="noopener noreferrer">@ppmp65</a></div>
                 </div>
 
 
@@ -357,7 +401,8 @@ Webサイト制作、デザイン、Webサイトの改修・修正のサービ�
                 </div>
                 <div class="about_dl">
                   <div class="about_dt">Twitter :</div>
-                  <div class="about_dd_sns"><a href="https://twitter.com/_tanaka_e" target="_blank" rel="noopener noreferrer">@_tanaka_e</a></div>
+                  <div class="about_dd_sns"><a href="https://twitter.com/_tanaka_e" target="_blank"
+                      rel="noopener noreferrer">@_tanaka_e</a></div>
                 </div>
               </div><!-- table -->
             </div><!-- right -->
@@ -406,7 +451,8 @@ Webサイト制作、デザイン、Webサイトの改修・修正のサービ�
                 </div>
                 <div class="about_dl">
                   <div class="about_dt">Twitter :</div>
-                  <div class="about_dd_sns"><a href="https://twitter.com/kazuki19870704" target="_blank" rel="noopener noreferrer">@kazuki19870704</a></div>
+                  <div class="about_dd_sns"><a href="https://twitter.com/kazuki19870704" target="_blank"
+                      rel="noopener noreferrer">@kazuki19870704</a></div>
                 </div>
               </div><!-- table -->
             </div><!-- right -->
@@ -455,7 +501,8 @@ Webサイト制作、デザイン、Webサイトの改修・修正のサービ�
                 </div>
                 <div class="about_dl">
                   <div class="about_dt">Twitter :</div>
-                  <div class="about_dd_sns"><a href="https://twitter.com/9dm0j4VxxltQhu6" target="_blank" rel="noopener noreferrer">@9dm0j4VxxltQhu6</a>
+                  <div class="about_dd_sns"><a href="https://twitter.com/9dm0j4VxxltQhu6" target="_blank"
+                      rel="noopener noreferrer">@9dm0j4VxxltQhu6</a>
                   </div>
                 </div>
               </div><!-- table -->
