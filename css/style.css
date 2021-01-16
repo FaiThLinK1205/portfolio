@@ -25,7 +25,7 @@ body {
   /*IE9以前に対応する*/
   font-size: 1rem;
   margin: 0 auto;
-  font-family: "handel-gothic", sans-serif;
+  font-family: "ebony", "heisei-kaku-gothic-std", sans-serif;
   color: #333333;
 }
 
@@ -78,7 +78,7 @@ body {
   /*IE9以前に対応する*/
   font-size: 3.75rem;
   opacity: .1;
-  letter-spacing: .2em;
+  letter-spacing: .1em;
   color: #333333;
 }
 
@@ -163,9 +163,9 @@ header
 }
 
 .header_ttl {
-  font-size: 42px;
+  font-size: 40px;
   /*IE9以前に対応する*/
-  font-size: 2.625rem;
+  font-size: 2.5rem;
   color: #fafafa;
 }
 
@@ -197,7 +197,7 @@ header
   width: 50px;
   margin-left: 20px;
   margin-right: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 769px) and (min-width: 480px) {
@@ -281,7 +281,7 @@ nav
 }
 
 .nav_item:nth-child(2) {
-  width: 165px;
+  width: 166px;
 }
 
 @media screen and (max-width: 1100px) and (min-width: 769px) {
@@ -1660,10 +1660,28 @@ our
   min-height: 80vh;
 }
 
+@media screen and (max-width: 480px) {
+  .our {
+    padding: 150px 25px 0;
+  }
+}
+
 .our .section_ttl {
   color: #333333;
   margin-top: 50px;
   text-align: left;
+}
+
+@media screen and (max-width: 480px) {
+  .our .section_ttl {
+    font-size: 28px;
+    /*IE9以前に対応する*/
+    font-size: 1.75rem;
+  }
+}
+
+.our .section_ttl .blue {
+  color: #00a0e9;
 }
 
 .our .section_ttl::before {
@@ -1674,6 +1692,15 @@ our
   font-size: 25px;
   /*IE9以前に対応する*/
   font-size: 1.5625rem;
+}
+
+@media screen and (max-width: 480px) {
+  .our .section_ttl::before {
+    font-size: 18px;
+    /*IE9以前に対応する*/
+    font-size: 1.125rem;
+    top: -22px;
+  }
 }
 
 .our_flex {
@@ -1690,7 +1717,22 @@ our
   font-size: 25px;
   /*IE9以前に対応する*/
   font-size: 1.5625rem;
-  font-weight: 700;
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .our_txt {
+    font-size: 15px;
+    /*IE9以前に対応する*/
+    font-size: 0.9375rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .our_txt {
+    font-size: 12px;
+    /*IE9以前に対応する*/
+    font-size: 0.75rem;
+  }
 }
 
 .our_txt span {
@@ -1702,6 +1744,22 @@ our
 .our_txt_right {
   text-align-last: right;
   letter-spacing: 0.05em;
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .our_txt_right {
+    font-size: 15px;
+    /*IE9以前に対応する*/
+    font-size: 0.9375rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .our_txt_right {
+    font-size: 12px;
+    /*IE9以前に対応する*/
+    font-size: 0.75rem;
+  }
 }
 
 /****************************************:
