@@ -6,9 +6,8 @@ body {
     @include rem(16);
 
     margin: 0 auto;
-    // font-family: $fontMain;
+    font-family: $fontMain;
     color: $cBlack;
-    font-family: "myFont";
 
 }
 
