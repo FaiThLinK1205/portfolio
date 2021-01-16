@@ -294,12 +294,11 @@ our
         margin: 150px auto;
         line-height: 2.0;
         @include rem(25);
-        font-family: source-han-sans-japanese,
-            sans-serif;
         font-weight: 700;
     }
 
     &_txt {
+
 
         span {
             background: linear-gradient(-45deg,
