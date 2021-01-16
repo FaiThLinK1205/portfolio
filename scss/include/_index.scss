@@ -270,10 +270,22 @@ our
     padding-top: 150px;
     min-height: 80vh;
 
+    @include SP{
+        padding: 150px 25px 0;
+    }
+
     .section_ttl {
         color: $cBlack;
         margin-top: 50px;
         text-align: left;
+
+        @include SP{
+            @include rem(28);
+        }
+
+        .blue{
+            color: $cBlue;
+        }
 
 
         &::before {
@@ -282,6 +294,11 @@ our
             top: -30px;
             left: 1%;
             @include rem(25);
+
+            @include SP{
+                @include rem(18);
+                top: -22px;
+            }
         }
     }
 
@@ -294,10 +311,18 @@ our
         margin: 150px auto;
         line-height: 2.0;
         @include rem(25);
-        font-weight: 700;
+        // font-weight: 500;
     }
 
     &_txt {
+
+        @include tab{
+            @include rem(15);
+        }
+
+        @include SP{
+            @include rem(12);
+        }
 
 
         span {
@@ -313,8 +338,17 @@ our
     }
 
     &_txt_right {
+
         text-align-last: right;
         letter-spacing: 0.05em;
+
+        @include tab {
+            @include rem(15);
+        }
+
+        @include SP {
+            @include rem(12);
+        }
     }
 }
 

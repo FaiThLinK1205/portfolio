@@ -24,7 +24,7 @@ header
 
   &_ttl {
 
-    @include rem(42);
+    @include rem(40);
     color: $cWhite;
 
     @include pc_tab {
@@ -50,7 +50,7 @@ header
     width: 50px;
     margin-left: 20px;
     margin-right: 10px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 
 
     @include tab {
@@ -117,7 +117,7 @@ nav
     transition: color .2s;
 
     &:nth-child(2) {
-      width: 165px;
+      width: 166px;
 
       @include pc_tab {
         width: 100%;
