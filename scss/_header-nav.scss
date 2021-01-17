@@ -496,7 +496,7 @@ nav
     border-radius: 50%;
     border: 1px solid $cBlack;
     background: rgba($color:$cWhite, $alpha: 0.8);
-    padding-bottom: env(safe-area-inset-bottom);
+    margin-bottom: calc(env(safe-area-inset-bottom) + 44px);
 
     >div {
       position: relative;
