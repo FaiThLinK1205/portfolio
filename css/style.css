@@ -25,7 +25,7 @@ body {
   /*IE9以前に対応する*/
   font-size: 1rem;
   margin: 0 auto;
-  font-family: "ebony", "heisei-kaku-gothic-std", sans-serif;
+  font-family: "source-han-sans-japanese", sans-serif;
   color: #333333;
 }
 
