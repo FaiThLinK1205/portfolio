@@ -675,6 +675,7 @@ nav
     border-radius: 50%;
     border: 1px solid #333333;
     background: rgba(250, 250, 250, 0.8);
+    padding-bottom: env(safe-area-inset-bottom);
   }
   #nav-toggle > div {
     position: relative;
