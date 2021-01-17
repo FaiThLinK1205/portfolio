@@ -25,7 +25,7 @@ body {
   /*IE9以前に対応する*/
   font-size: 1rem;
   margin: 0 auto;
-  font-family: "source-han-sans-japanese", sans-serif;
+  font-family: "ebony", "heisei-kaku-gothic-std", sans-serif;
   color: #333333;
 }
 
@@ -96,7 +96,7 @@ body {
     font-size: 30px;
     /*IE9以前に対応する*/
     font-size: 1.875rem;
-    top: -10px;
+    top: -15px;
   }
 }
 
@@ -667,7 +667,7 @@ nav
 @media screen and (max-width: 480px) {
   #nav-toggle {
     position: fixed;
-    top: 90vh;
+    top: 80vh;
     right: 20px;
     width: 60px;
     height: 60px;
@@ -1077,8 +1077,8 @@ body.hidden {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .circle {
@@ -1332,6 +1332,12 @@ fv
     font-size: 30px;
     /*IE9以前に対応する*/
     font-size: 1.875rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .fv_txt {
+    overflow: hidden;
   }
 }
 
@@ -1719,6 +1725,12 @@ our
   font-size: 1.5625rem;
 }
 
+@media screen and (max-width: 480px) {
+  .our_box {
+    margin: 0px auto 50px;
+  }
+}
+
 @media screen and (max-width: 769px) and (min-width: 480px) {
   .our_txt {
     font-size: 15px;
@@ -1742,7 +1754,7 @@ our
 }
 
 .our_txt_right {
-  text-align-last: right;
+  text-align: right;
   letter-spacing: 0.05em;
 }
 
@@ -1853,6 +1865,12 @@ service
 .service_box:nth-child(2) {
   margin-top: 37px;
   margin-bottom: -37px;
+}
+
+@media screen and (max-width: 480px) {
+  .service_box:nth-child(2) {
+    margin-top: 0;
+  }
 }
 
 .service_box:nth-child(3) {
@@ -2243,7 +2261,7 @@ skill
 
 @media screen and (max-width: 480px) {
   .skill_ttl {
-    margin: 0 auto 40px;
+    margin: 0 auto 20px;
     font-size: 10px;
     /*IE9以前に対応する*/
     font-size: 0.625rem;
@@ -2574,8 +2592,8 @@ skill
 }
 
 .about_bg_be {
-  width: 200px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
   background: #fafafa;
   border-radius: 50%;
   position: absolute;
