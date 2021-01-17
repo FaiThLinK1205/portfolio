@@ -37,6 +37,10 @@ fv
 
 
 .fv_txt {
+    @include SP{
+        overflow: hidden;
+    }
+
     span {
         display: inline-block;
         transform: scale(0);
@@ -312,6 +316,10 @@ our
         line-height: 2.0;
         @include rem(25);
         // font-weight: 500;
+
+        @include SP{
+            margin: 0px auto 50px;
+        }
     }
 
     &_txt {
@@ -339,7 +347,7 @@ our
 
     &_txt_right {
 
-        text-align-last: right;
+        text-align: right;
         letter-spacing: 0.05em;
 
         @include tab {
@@ -404,6 +412,10 @@ service
         &:nth-child(2) {
             margin-top: 37px;
             margin-bottom: -37px;
+
+            @include SP{
+                margin-top: 0;
+            }
         }
 
 
@@ -731,7 +743,7 @@ skill
 
 
         @include SP {
-            margin: 0 auto 40px;
+            margin: 0 auto 20px;
             @include rem(10);
         }
     }
