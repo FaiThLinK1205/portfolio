@@ -164,7 +164,7 @@ nav
 @include pc_tab {
   #nav-toggle {
     position: fixed;
-    top: 85vh;
+    bottom: 13%;
     right: 30px;
     width: 100px;
     height: 100px;
@@ -326,7 +326,7 @@ nav
 @include tab {
   #nav-toggle {
     position: fixed;
-    top: 85vh;
+    bottom: 13%;
     right: 30px;
     width: 80px;
     height: 80px;
@@ -488,7 +488,7 @@ nav
 
   #nav-toggle {
     position: fixed;
-    top: 80vh;
+    bottom: 13%;
     right: 20px;
     width: 60px;
     height: 60px;
