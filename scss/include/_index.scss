@@ -538,6 +538,14 @@ portfolio
         padding: 100px 0 0;
     }
 
+    &_wrap {
+        margin-bottom: 50px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
     &_content {
         padding: 0 25px;
         margin-bottom: 20px;
