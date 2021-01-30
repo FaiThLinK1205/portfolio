@@ -37,7 +37,7 @@ fv
 
 
 .fv_txt {
-    @include SP{
+    @include SP {
         overflow: hidden;
     }
 
@@ -274,7 +274,7 @@ our
     padding-top: 150px;
     min-height: 80vh;
 
-    @include SP{
+    @include SP {
         padding: 150px 25px 0;
     }
 
@@ -283,11 +283,11 @@ our
         margin-top: 50px;
         text-align: left;
 
-        @include SP{
+        @include SP {
             @include rem(28);
         }
 
-        .blue{
+        .blue {
             color: $cBlue;
         }
 
@@ -299,7 +299,7 @@ our
             left: 1%;
             @include rem(25);
 
-            @include SP{
+            @include SP {
                 @include rem(18);
                 top: -22px;
             }
@@ -317,18 +317,18 @@ our
         @include rem(25);
         // font-weight: 500;
 
-        @include SP{
+        @include SP {
             margin: 0px auto 50px;
         }
     }
 
     &_txt {
 
-        @include tab{
+        @include tab {
             @include rem(15);
         }
 
-        @include SP{
+        @include SP {
             @include rem(12);
         }
 
@@ -413,7 +413,7 @@ service
             margin-top: 37px;
             margin-bottom: -37px;
 
-            @include SP{
+            @include SP {
                 margin-top: 0;
             }
         }
@@ -544,6 +544,10 @@ portfolio
         &:last-child {
             margin-bottom: 0;
         }
+
+        @include tab {
+            margin-bottom: 100px;
+        }
     }
 
     &_content {
@@ -578,6 +582,8 @@ portfolio
 
 
     &_imgbox {
+
+        width: 100%;
         height: 100%;
         margin-right: 50px;
         box-shadow: 0px 10px 10px 0px rgba($cBlack, 0.5);
@@ -638,7 +644,7 @@ portfolio
 
     &_txtwrap {
         margin-left: 25px;
-        width: 62%;
+        width: 52%;
 
         @include tab {
             width: 50%;
@@ -1110,6 +1116,7 @@ skill
         padding: 8px 8px 8px 15px;
         // border-left: 5px solid #fff;
         border-left: 3px dashed $cBlue;
+
         &_sns {
             width: 90%;
             padding: 8px 8px 8px 15px;
