@@ -2245,6 +2245,10 @@ portfolio
   color: #333333;
 }
 
+.dlelete {
+  text-decoration: line-through;
+}
+
 /****************************************:
 
 skill
