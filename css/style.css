@@ -338,7 +338,7 @@ nav
 @media screen and (max-width: 1100px) and (min-width: 769px) {
   #nav-toggle {
     position: fixed;
-    bottom: 13%;
+    bottom: 2%;
     right: 30px;
     width: 100px;
     height: 100px;
@@ -2178,6 +2178,38 @@ portfolio
   font-size: 20px;
   /*IE9以前に対応する*/
   font-size: 1.25rem;
+}
+
+.portfolio_txt.__min {
+  display: none;
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .portfolio_txt.__min.__pcnon {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio_txt.__min.__pcnon {
+    display: block;
+  }
+}
+
+.portfolio_txt.__mb {
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  .portfolio_txt.__mb {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio_txt.__mb {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 1100px) and (min-width: 769px) {
