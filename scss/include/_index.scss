@@ -673,6 +673,8 @@ portfolio
             display: none;
 
             &.__pcnon {
+                display: none;
+
                 @include tab {
                     display: block;
                 }
@@ -683,6 +685,7 @@ portfolio
             }
 
         }
+
         &.__mb {
             margin-bottom: 40px;
 
@@ -716,7 +719,7 @@ portfolio
             @include rem(10);
             line-height: 2;
 
-           
+
         }
 
         @include SP {
@@ -757,7 +760,7 @@ portfolio
 }
 
 .dlelete {
-    text-decoration:line-through;
+    text-decoration: line-through;
 }
 
 /****************************************:

@@ -2184,6 +2184,10 @@ portfolio
   display: none;
 }
 
+.portfolio_txt.__min.__pcnon {
+  display: none;
+}
+
 @media screen and (max-width: 769px) and (min-width: 480px) {
   .portfolio_txt.__min.__pcnon {
     display: block;
