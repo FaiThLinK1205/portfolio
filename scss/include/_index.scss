@@ -670,7 +670,7 @@ portfolio
         @include rem(20);
 
         &.__min {
-            display: none;
+            display: block;
 
             &.__pcnon {
                 display: none;

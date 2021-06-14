@@ -2181,7 +2181,7 @@ portfolio
 }
 
 .portfolio_txt.__min {
-  display: none;
+  display: block;
 }
 
 .portfolio_txt.__min.__pcnon {
