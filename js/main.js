@@ -1,5 +1,17 @@
 "use strict";
 
+const btn = document.getElementsByClassName('btn');
+for(let i = 0; i < btn.length;i++){
+  btn[i].addEventListener('mouseenter', e => {
+    btn[i].classList.add('active');
+  });
+  
+  btn[i].addEventListener('mouseleave', e => {
+    btn[i].classList.remove('active');
+  });
+}
+
+
 $(() => {
 
   //ページ内リンクスムーススクロール
@@ -45,13 +57,15 @@ $(() => {
 
 
 
-  // ボタン操作
-  let btn = $(".btn");
-  btn.hover(() => {
-    btn.addClass('active');
-  }, function () {
-    btn.removeClass('active');
-  });
+  // ボタン操作 jsじゃなくてjQueryで操作したいならこっち使う
+  // const btn = $(".btn");
+  // $(btn).hover(function() {
+  //   $(this).addClass('active');
+  // }, function () {
+  //   $(this).removeClass('active');
+  // });
+
+
 
 
   //文字を一文字ずつ囲う処理（タグは入っていない前提です）
@@ -85,10 +99,10 @@ $(() => {
 
 
 // ふわふわ
-let fuwaBO = $('.about_bg_bo');
-let fuwaSO = $('.about_bg_so');
-let fuwaBE = $('.about_bg_be');
-let fuwaSE = $('.about_bg_se');
+const fuwaBO = $('.about_bg_bo');
+const fuwaSO = $('.about_bg_so');
+const fuwaBE = $('.about_bg_be');
+const fuwaSE = $('.about_bg_se');
 let fuwaMax = 60;
 let fuwaMin = 40;
 let fuwaTime = 15;
@@ -246,13 +260,16 @@ $(document).ready(function () {
     event.preventDefault();
   });
 
-});
-// AOSアニメーション
-AOS.init({
-  offset: 200,
-  delay: 100,
-  duration: 1500,
-  easing: 'liner',
-  once: true,
+
 
 });
+
+// AOSアニメーション
+// AOS.init({
+//   offset: 200,
+//   delay: 100,
+//   duration: 1500,
+//   easing: 'liner',
+//   once: true,
+
+// });

@@ -1,0 +1,67 @@
+/* fadeInに使用するcss */
+
+/* fadeUp */
+.fadeUp {
+	animation-name: fadeUpAnime;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+/* fadeLeft */
+.fadeLeft {
+	animation-name: fadeLeftAnime;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+  overflow: hidden;
+}
+
+/* fadeRight */
+.fadeRight {
+	animation-name: fadeRightAnime;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+  overflow: hidden;
+}
+
+.fadeUpTrigger, .fadeLeftTrigger, .fadeRightTrigger {
+	opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+	from {
+		opacity: 0;
+		transform: translateY(40px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeLeftAnime {
+	from {
+		opacity: 0;
+		transform: translateX(40px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fadeRightAnime {
+	from {
+		opacity: 0;
+		transform: translateX(-40px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
