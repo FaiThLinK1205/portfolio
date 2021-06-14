@@ -669,6 +669,37 @@ portfolio
         line-height: 2;
         @include rem(20);
 
+        &.__min {
+            display: block;
+
+            &.__pcnon {
+                display: none;
+
+                @include tab {
+                    display: block;
+                }
+
+                @include SP {
+                    display: block;
+                }
+            }
+
+        }
+
+        &.__mb {
+            margin-bottom: 40px;
+
+            @include tab {
+                margin-bottom: 0;
+            }
+
+            @include SP {
+                margin-bottom: 0;
+            }
+
+        }
+
+
         @include pc_tab {
 
             @include rem(14);
@@ -687,6 +718,8 @@ portfolio
         @include tab {
             @include rem(10);
             line-height: 2;
+
+
         }
 
         @include SP {
@@ -724,6 +757,10 @@ portfolio
 
 
 
+}
+
+.dlelete {
+    text-decoration: line-through;
 }
 
 /****************************************:
