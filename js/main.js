@@ -1,5 +1,17 @@
 "use strict";
 
+const btn = document.getElementsByClassName('btn');
+for(let i = 0; i < btn.length;i++){
+  btn[i].addEventListener('mouseenter', e => {
+    btn[i].classList.add('active');
+  });
+  
+  btn[i].addEventListener('mouseleave', e => {
+    btn[i].classList.remove('active');
+  });
+}
+
+
 $(() => {
 
   //ページ内リンクスムーススクロール
@@ -45,13 +57,15 @@ $(() => {
 
 
 
-  // ボタン操作
-  let btn = $(".btn");
-  btn.hover(() => {
-    btn.addClass('active');
-  }, function () {
-    btn.removeClass('active');
-  });
+  // ボタン操作 jsじゃなくてjQueryで操作したいならこっち使う
+  // const btn = $(".btn");
+  // $(btn).hover(function() {
+  //   $(this).addClass('active');
+  // }, function () {
+  //   $(this).removeClass('active');
+  // });
+
+
 
 
   //文字を一文字ずつ囲う処理（タグは入っていない前提です）
@@ -85,10 +99,10 @@ $(() => {
 
 
 // ふわふわ
-let fuwaBO = $('.about_bg_bo');
-let fuwaSO = $('.about_bg_so');
-let fuwaBE = $('.about_bg_be');
-let fuwaSE = $('.about_bg_se');
+const fuwaBO = $('.about_bg_bo');
+const fuwaSO = $('.about_bg_so');
+const fuwaBE = $('.about_bg_be');
+const fuwaSE = $('.about_bg_se');
 let fuwaMax = 60;
 let fuwaMin = 40;
 let fuwaTime = 15;
@@ -115,11 +129,11 @@ function fuwaUp(val1, val2, count1, count2, part, fuwaPart){
 
     // 値の増減（fuwaMin <= val1 <=fuwaMax)
     if(val1 >= fuwaMin && val1 <= fuwaMax){
-      // 前の処理がマイナスだったら
+      // 前の処理がマイナスだったら、ふわふわが最大化したあと
       if(y > val1){
         val1 -= count1;
       }
-      // 前の処理がプラスだったら
+      // 前の処理がプラスだったら、ふわふわが最小化したあと
       else if(y <= val1){
         val1 += count1;
       }
@@ -127,7 +141,7 @@ function fuwaUp(val1, val2, count1, count2, part, fuwaPart){
 
     // 値の増減（上限下限以外のとき）
     else{
-      // 前の処理がマイナスだったら
+      // 前の処理がマイナスだったら、ふわふわが最大化したあと
       if(y > val1){
         val1 += count1;
       }
@@ -144,11 +158,11 @@ function fuwaUp(val1, val2, count1, count2, part, fuwaPart){
 
     // 値の増減（fuwaMin <= val1 <=fuwaMax)
     if(val2 >= fuwaMin && val2 <= fuwaMax){
-      // 前の処理がマイナスだったら
+      // 前の処理がマイナスだったら、ふわふわが最大化したあと
       if(w > val2){
         val2 -= count2;
       }
-      // 前の処理がプラスだったら
+      // 前の処理がプラスだったら、ふわふわが最小化したあと
       else if(w <= val2){
         val2 += count2;
       }
@@ -156,11 +170,11 @@ function fuwaUp(val1, val2, count1, count2, part, fuwaPart){
 
       // 値の増減（上限下限以外のとき）
     else{
-      // 前の処理がマイナスだったら
+      // 前の処理がマイナスだったら、ふわふわが最大化したあと
       if(w > val2){
         val2 += count2;
       }
-      // 前の処理がプラスだったら
+      // 前の処理がプラスだったら、ふわふわが最小化したあと
       else if(w <= val2){
         val2 -= count2;
       }
@@ -212,6 +226,12 @@ fuwaUp(bR1, bR2, .4, .0, 'BR', fuwaSE);
 fuwaUp(bL1, bL2, .3, .0, 'BL', fuwaSE);
 
 
+// 関数でラップする!!! by kinoshitasan
+// ラッパークラス・クラスをラップしたもの！
+// function fuwaUpForfuwaBO(val1, val2, count1, count2, part){
+//   fuwaUp(val1, val2, count1, count2, part, fuwaBO);
+// }
+// fuwaUpForfuwaBO(tL1, tL2, .15, .0, 'TL');
 
 
 
@@ -240,13 +260,16 @@ $(document).ready(function () {
     event.preventDefault();
   });
 
-});
-// AOSアニメーション
-AOS.init({
-  offset: 200,
-  delay: 100,
-  duration: 1500,
-  easing: 'liner',
-  once: true,
+
 
 });
+
+// AOSアニメーション
+// AOS.init({
+//   offset: 200,
+//   delay: 100,
+//   duration: 1500,
+//   easing: 'liner',
+//   once: true,
+
+// });
